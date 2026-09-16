@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "status": "interno_no_publicar",
+  "generated_on": "2026-09-16",
+  "scope": "Cronologia sobria de trabajo, priorizando 2022-2026.",
+  "events": [
+    {
+      "id": "EV-2022-08-GUILLERMO",
+      "date": "2022-08-04/2022-08-05",
+      "actors": ["Jezu", "Guillermo/The Loud Channel", "terceros"],
+      "summary": "Capturas preservadas muestran conversaciones del conflicto con Guillermo y referencias a busqueda/exposicion de datos.",
+      "sources": ["evidence/guillermo/", "evidence/otros/"],
+      "source_type": "primaria_visual",
+      "certainty": "media_alta",
+      "recognized_by_jezu": "El expediente previo registra admisiones sobre doxxing/exposicion de datos.",
+      "third_party_allegation": "Alcance, intencion y autoria de cada accion concreta requieren analisis individual."
+    },
+    {
+      "id": "EV-2023-02-18-KIRMO",
+      "date": "2023-02-18",
+      "actors": ["Kirmo", "Jezu", "Guillermo"],
+      "summary": "Capturas muestran iniciativa visible de Kirmo para trolear/ganarse la confianza de Guillermo y participacion posterior de Jezu.",
+      "sources": ["evidence/kirmo/2023-02-18_kirmo_ganarse-confianza-guille.png", "evidence/kirmo/2023-02-18_kirmo_todo-sea-pa-trolearlo.png", "evidence/kirmo/2023-02-18_kirmo_trolear-guille-inicio.png"],
+      "source_type": "primaria_visual",
+      "certainty": "alta_para_lo_visible_media_para_contexto_completo",
+      "recognized_by_jezu": "Participacion posterior y responsabilidad por manejar mal una situacion con una menor.",
+      "third_party_allegation": "Que Jezu originara u ordenara todo el plan no queda demostrado solo por estas capturas."
+    },
+    {
+      "id": "EV-2023-04-18-SUPERCOLE",
+      "date": "2023-04-18",
+      "actors": ["supercole", "Jezu", "por confirmar"],
+      "summary": "Referencia pendiente a conversacion donde supercole se retracta/corrige una acusacion tras investigar.",
+      "sources": ["private-references/library_direct_import_audit.json"],
+      "source_type": "referencia_no_materializada",
+      "certainty": "baja",
+      "recognized_by_jezu": "pendiente",
+      "third_party_allegation": "pendiente"
+    },
+    {
+      "id": "EV-2023-05-17-LENY",
+      "date": "2023-05-17",
+      "actors": ["Leniloq/Menita", "Jezu"],
+      "summary": "Invitacion Google My Business para compartir propiedad de Leny preservada como captura extraida.",
+      "sources": ["evidence/leniloq-menita/fecha-desconocida_fase3-053_correo-invitacion-propietario-leny.png", "evidence/leniloq-menita/fecha-desconocida_fase3-083_correo-invitacion-leny-duplicado.png"],
+      "source_type": "primaria_visual_extraida",
+      "certainty": "alta_sobre_invitacion_limitada_sobre_alcance",
+      "recognized_by_jezu": "Separar acceso inicial de uso posterior indebido.",
+      "third_party_allegation": "No prueba robo ni autorizacion para todos los usos posteriores."
+    },
+    {
+      "id": "EV-2024-02-22-FUNA",
+      "date": "2024-02-22",
+      "actors": ["autores de funa", "Jezu", "terceros"],
+      "summary": "Referencia a la funa/video 'Jezu G - Un usuario patetico y cobarde'.",
+      "sources": ["data/fase2_dataset.json"],
+      "source_type": "secundaria_dataset",
+      "certainty": "media",
+      "recognized_by_jezu": "Existen disculpas antiguas con admisiones sobre doxxing, cuenta y conflictos.",
+      "third_party_allegation": "Pendiente de captura directa y desglose de afirmaciones."
+    },
+    {
+      "id": "EV-2025-02-26-FAN-DE-LUCKY",
+      "date": "2025-02-26",
+      "actors": ["Jezu", "terceros"],
+      "summary": "Conversacion relacionada con cuenta/publicaciones y familiares.",
+      "sources": ["evidence/fan-de-lucky/2025-02-26_fase3-037_discord-jesu-borra-cuenta-familiares.png"],
+      "source_type": "primaria_visual_extraida",
+      "certainty": "media",
+      "recognized_by_jezu": "pendiente de redaccion especifica",
+      "third_party_allegation": "Autoria/control de Fan de Lucky requiere corroboracion."
+    },
+    {
+      "id": "EV-2025-09-03-WILDO-RAY",
+      "date": "2025-09-03",
+      "actors": ["Jezu", "Ray/Wildo/Ruitzo", "terceros"],
+      "summary": "Piezas vinculadas a preguntas, testimonios y conflicto con Ray/Wildo.",
+      "sources": ["evidence/wildo-ray/2025-09-03_fase3-047_discord-pregunta-waldo.png", "evidence/wildo-ray/"],
+      "source_type": "primaria_visual_contextual",
+      "certainty": "media",
+      "recognized_by_jezu": "Uso indebido de cuenta/canal de Leniloq contra Ray y uso inapropiado de imagen segun expediente previo.",
+      "third_party_allegation": "No todo ataque de terceros contra Ray queda automaticamente atribuido a Jezu."
+    },
+    {
+      "id": "EV-2025-12-21-MENITA",
+      "date": "2025-12-21",
+      "actors": ["Menita/Leniloq", "Jezu", "Ray como contexto"],
+      "summary": "Dataset registra que Menita afirma que no murio y Jezu reconoce mal manejo/haberse hecho pasar por ella ante Ray.",
+      "sources": ["data/fase2_dataset.json", "private-references/library_direct_import_audit.json"],
+      "source_type": "secundaria_dataset_pendiente_original",
+      "certainty": "media",
+      "recognized_by_jezu": "Mal manejo de la situacion y uso indebido de identidad/cuenta en el conflicto.",
+      "third_party_allegation": "La formulacion 'cuenta de una chica muerta' queda limitada por evidencia posterior."
+    },
+    {
+      "id": "EV-2026-04-RESPUESTA",
+      "date": "2026-04-19/2026-04-20",
+      "actors": ["Jezu", "publico de X/YouTube"],
+      "summary": "Respuesta publica de Jezu y referencias a aclaraciones sobre acusaciones graves.",
+      "sources": ["evidence/brigidos/fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png", "data/fase2_dataset.json"],
+      "source_type": "primaria_visual_parcial_y_dataset",
+      "certainty": "media",
+      "recognized_by_jezu": "Reconoce errores concretos y niega etiquetas sexuales fuertes no demostradas.",
+      "third_party_allegation": "Formulaciones como 'corruptor de menores' requieren desagregarse en hechos concretos."
+    },
+    {
+      "id": "EV-2026-07-09-BRIGIDOS",
+      "date": "2026-07/2026-09",
+      "actors": ["Los Brigidos/Neo-Brigidos", "Jezu", "terceros"],
+      "summary": "Documento reciente y video 'Jezu G Lo que quiso ocultar' reformulan acusaciones sobre Kirmo, Leniloq/Menita, menores, Ray/Wildo y Fan de Lucky.",
+      "sources": ["docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-2.docx", "data/fase3_claim_matrix.json"],
+      "source_type": "secundaria_acusatoria_y_matriz",
+      "certainty": "alta_documento_media_baja_video_sin_transcripcion",
+      "recognized_by_jezu": "Varias conductas concretas, no todas las inferencias o etiquetas.",
+      "third_party_allegation": "Responder por afirmacion original, separando hechos, testimonios e interpretaciones."
+    }
+  ]
+}

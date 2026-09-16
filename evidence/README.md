@@ -25,6 +25,17 @@ Las carpetas antiguas o alternativas pueden permanecer por historial, pero el ma
 - Duplicados exactos por SHA-256: 0
 - Requieren redacción antes de publicación: 104
 
+## Importación directa desde Library
+
+El 2026-09-16 se intentó localizar por nombre exacto las capturas directas indicadas en la conversación de trabajo. No aparecieron los binarios UUID en las rutas locales revisadas, por lo que no se copiaron archivos que no estuvieran realmente disponibles.
+
+El detalle queda en:
+
+- `private-references/library_direct_import_audit.json`
+- campo `direct_library_import_audit` de `evidence/manifest.json`
+
+Algunas piezas ya existen como equivalentes preservados desde documentos o extracciones previas, pero no como el binario directo original de Library. Mantener esa distinción para no mezclar "evidencia ya preservada" con "original directo recuperado".
+
 ## Reglas
 
 - No publicar contenido íntimo ni datos personales sensibles.

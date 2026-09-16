@@ -1786,5 +1786,241 @@
     }
   ],
   "duplicates": [],
-  "last_updated_on": "2026-09-16"
+  "last_updated_on": "2026-09-16",
+  "direct_library_import_audit": [
+    {
+      "repo_equivalent": "data/fase2_dataset.json:S09",
+      "never_publish": false,
+      "action": "No se copio binario; mantener como hueco prioritario de Library.",
+      "source_file": "cf4fb209-e0da-46bd-a9b0-8a88fcd13cad.png",
+      "case": "leniloq-menita",
+      "status": "direct_original_not_found",
+      "description": "Menita/Jesus 21-12-2025, reaparicion, disculpa y reconocimiento de mal manejo"
+    },
+    {
+      "repo_equivalent": "evidence/leniloq-menita/fecha-desconocida_fase3-053_correo-invitacion-propietario-leny.png",
+      "never_publish": false,
+      "action": "No duplicar hasta recuperar el binario UUID; equivalente ya preservado con SHA en manifest.",
+      "source_file": "1cac77a3-628e-409a-a42d-ffd8586cd1f0.png",
+      "case": "leniloq-menita",
+      "status": "repo_equivalent_preserved",
+      "description": "Invitacion Google My Business Leny, 17-05-2023"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "b37035d6-1905-4189-9f9c-bdd453304c59.png",
+      "case": "eyden",
+      "status": "direct_original_not_found",
+      "description": "Eyden/Jesus, malentendido"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "aaa701a9-2367-4499-b5d4-454cf9c9af2c.png",
+      "case": "eyden",
+      "status": "direct_original_not_found",
+      "description": "Eyden/Jesus, postura neutral/conversacion calmada"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "efd9274f-dd4f-41df-852e-7dff68f9ec75.png",
+      "case": "eyden",
+      "status": "direct_original_not_found",
+      "description": "Eyden/Jesus, directo de Ray Mioda / Leniloq"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "6ca47e93-86d5-4b01-aa6d-d8f19d01241d.png",
+      "case": "eyden",
+      "status": "direct_original_not_found",
+      "description": "Eyden/Jesus, diferencia de edad con Leni"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "d937fafb-cbe2-48a5-8e40-192e31cf778d.png",
+      "case": "eyden",
+      "status": "direct_original_not_found",
+      "description": "Eyden/Jesus, reflexion sobre Leni/Menita"
+    },
+    {
+      "repo_equivalent": "evidence/wildo-ray/fecha-desconocida_fase3-084_comentario-ray-mioda-leniloq-acoso.png",
+      "never_publish": false,
+      "action": "No duplicar hasta recuperar el binario UUID; equivalente ya preservado con SHA en manifest.",
+      "source_file": "767a7958-7cbf-4eb3-80cb-b765fbf6a697.png",
+      "case": "wildo-ray",
+      "status": "repo_equivalent_preserved",
+      "description": "Comentario de Ray Mioda relacionado con Jezu"
+    },
+    {
+      "repo_equivalent": "data/fase2_dataset.json:S11",
+      "never_publish": false,
+      "action": "Registrar pendiente de binario directo y URL/fecha exacta.",
+      "source_file": "c53e06c9-2805-4865-ab73-4c894e47f1d6.png",
+      "case": "respuestas-jezu",
+      "status": "direct_original_not_found",
+      "description": "Captura del video Jezu G - Un usuario patetico y cobarde"
+    },
+    {
+      "repo_equivalent": "evidence/brigidos/fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png",
+      "never_publish": false,
+      "action": "Equivalente visual preservado; conservar transcripcion de fuente secundaria en dataset.",
+      "source_file": "b7f4b328-026d-4921-a658-a0f287bb61e7.png",
+      "case": "respuestas-jezu",
+      "status": "repo_equivalent_preserved",
+      "description": "Video Respondiendo a difamaciones"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; probable evidencia contextual, no primaria sobre los hechos.",
+      "source_file": "83108e77-10ef-4add-b976-d0885d589a32.png",
+      "case": "respuestas-jezu",
+      "status": "direct_original_not_found",
+      "description": "Analytics iniciales de Respondiendo a difamaciones"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "32946B74-12B7-4EE7-8BC3-4CBA93DBDC0F.png",
+      "case": "respuestas-jezu",
+      "status": "direct_original_not_found",
+      "description": "Hilo de X 20-04-2026 sobre acusaciones/corruptor de menores"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "9521F727-DDB5-4265-B03D-0E3E417CAE25.png",
+      "case": "respuestas-jezu",
+      "status": "direct_original_not_found",
+      "description": "Continuacion del hilo/aclaracion"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "D08E2AEB-BB30-43EF-8EC0-02439F102E01.png",
+      "case": "respuestas-jezu",
+      "status": "direct_original_not_found",
+      "description": "Aclaracion adicional sobre omisiones/mala memoria"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "a26d61ab-7df6-4aa2-a197-2d0713a725c8.png",
+      "case": "respuestas-jezu",
+      "status": "direct_original_not_found",
+      "description": "Otra aclaracion antigua en X"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "7118E76D-6580-4928-82C3-C91C2D8FBF49.jpeg",
+      "case": "respuestas-jezu",
+      "status": "direct_original_not_found",
+      "description": "Post reenlazando video/contexto"
+    },
+    {
+      "repo_equivalent": "data/fase2_dataset.json:S04/S03",
+      "never_publish": false,
+      "action": "Registrar pendiente de captura directa.",
+      "source_file": "a3dcf2cc-b4e6-4512-8281-582eb39953da.png",
+      "case": "respuestas-jezu",
+      "status": "direct_original_not_found",
+      "description": "Comentario donde se vuelven publicas disculpas"
+    },
+    {
+      "repo_equivalent": "data/fase2_dataset.json:S04",
+      "never_publish": false,
+      "action": "Registrar pendiente de captura directa.",
+      "source_file": "CA226529-311D-45C7-A742-D799DF7BDA3B.png",
+      "case": "respuestas-jezu",
+      "status": "direct_original_not_found",
+      "description": "Disculpa que menciona uso de cuenta de Leniloq"
+    },
+    {
+      "repo_equivalent": "evidence/leniloq-menita/fecha-desconocida_fase3-070_comentarios-leniloq-original.png",
+      "never_publish": false,
+      "action": "No duplicar hasta recuperar el binario UUID; equivalente ya preservado con SHA en manifest.",
+      "source_file": "34ad32d6-2d58-48a8-9b1b-3395569117bd.png",
+      "case": "leniloq-menita",
+      "status": "repo_equivalent_preserved",
+      "description": "Comentario de Menita sobre Leniloq/Guillermo"
+    },
+    {
+      "repo_equivalent": "evidence/brigidos/fecha-desconocida_fase3-052_discord-dinkdummy-interaccion-jezu.png",
+      "never_publish": false,
+      "action": "Equivalente posible, no confirmado; mantener pendiente de binario directo.",
+      "source_file": "0a5bec24-176f-4bec-9ede-74bcc09c6738.png",
+      "case": "brigidos",
+      "status": "direct_original_not_found",
+      "description": "Conversacion con Puck/Neo-Brigidos 1"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "e33bca21-b9ff-4027-b96e-0d55ee2cafcb.png",
+      "case": "brigidos",
+      "status": "direct_original_not_found",
+      "description": "Conversacion con Puck/Neo-Brigidos 2"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "6f4d7c14-6e75-4fc9-ba7d-221753cdf28b.png",
+      "case": "brigidos",
+      "status": "direct_original_not_found",
+      "description": "Puck aclara que se estaba entendiendo mal la conversacion"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+      "source_file": "4e04be51-d3d2-4638-9ea3-7743bd37117a.png",
+      "case": "brigidos",
+      "status": "direct_original_not_found",
+      "description": "Chat Hector/Jesus sobre guion/veracidad"
+    },
+    {
+      "repo_equivalent": "evidence/brigidos/fecha-desconocida_fase3-039_streamyard-niveles-acusaciones.png",
+      "never_publish": false,
+      "action": "Equivalente posible, no confirmado; mantener pendiente de binario directo.",
+      "source_file": "6f81db26-a78b-478e-bb57-7d64610d6999.png",
+      "case": "brigidos",
+      "status": "direct_original_not_found",
+      "description": "Chat Puck/Hector sobre conseguir testimonio en audio"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Mantener hueco especifico; no afirmar hasta preservar captura/URL.",
+      "source_file": "defensa-wildo-ray-cara-publica-2021",
+      "case": "wildo-ray",
+      "status": "not_found_by_name_or_description",
+      "description": "Defensa: rostro de Wildo/Ray ya publicado por el mismo en 2021"
+    },
+    {
+      "repo_equivalent": null,
+      "never_publish": false,
+      "action": "Mantener hueco especifico; no afirmar hasta preservar captura.",
+      "source_file": "supercole-2023-04-18-retractacion",
+      "case": "otros",
+      "status": "not_found_by_name_or_description",
+      "description": "Conversacion con supercole del 18-04-2023 donde retracta/corrige una acusacion tras investigar"
+    }
+  ]
 }

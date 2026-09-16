@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "status": "interno_no_publicar",
+  "generated_on": "2026-09-16",
+  "scope": "Acusaciones graves en documento reciente y video 'Jezu G Lo que quiso ocultar'.",
+  "items": [
+    {
+      "id": "R01",
+      "afirmacion_original": "Jezu habria originado, ordenado o manipulado a Kirmo para infiltrarse/molestar a Guillermo.",
+      "fuente": "Documento reciente y video, pendiente de transcripcion completa.",
+      "hechos_documentados": "Capturas de Kirmo muestran iniciativa visible de Kirmo y participacion posterior de Jezu.",
+      "admisiones_de_jezu": "Participacion posterior y responsabilidad por manejar mal una situacion con una menor.",
+      "evidencia_que_limita_o_contradice": "Las capturas no muestran que Jezu originara desde cero el plan.",
+      "informacion_sacada_de_contexto": "Convertir participacion posterior en autoria total del plan; o negar toda participacion por la iniciativa de Kirmo.",
+      "que_si_se_puede_concluir": "Hubo participacion de Jezu y la situacion fue mal manejada.",
+      "que_no_se_puede_concluir": "Que Jezu haya ordenado todo desde el inicio solo con esas capturas.",
+      "estado_provisional": "requiere_redaccion_precisa"
+    },
+    {
+      "id": "R02",
+      "afirmacion_original": "Jezu robo/uso la cuenta de una chica muerta.",
+      "fuente": "Documento reciente, video y versiones previas del conflicto.",
+      "hechos_documentados": "Existe invitacion de propiedad de 'Leny'; el expediente registra reaparicion de Menita/Leniloq; hay admisiones sobre uso indebido posterior.",
+      "admisiones_de_jezu": "Mal manejo de la cuenta/identidad y uso indebido en conflicto con Ray.",
+      "evidencia_que_limita_o_contradice": "La invitacion y relatos previos limitan 'robo' como descripcion del acceso inicial; la reaparicion limita 'chica muerta' como hecho actual.",
+      "informacion_sacada_de_contexto": "Mezclar entrega/acceso voluntario con uso posterior indebido; mezclar creencia historica sobre muerte con evidencia posterior.",
+      "que_si_se_puede_concluir": "Hubo acceso a cuenta/recurso y uso posterior indebido reconocido.",
+      "que_no_se_puede_concluir": "Que el acceso inicial este probado como robo o que 'chica muerta' sea descripcion factual sostenida.",
+      "estado_provisional": "separar_acceso_de_uso_posterior"
+    },
+    {
+      "id": "R03",
+      "afirmacion_original": "Formulaciones como 'corruptor de menores', grooming o equivalentes.",
+      "fuente": "Documento reciente, video y discusiones de 2026.",
+      "hechos_documentados": "Hay capturas/testimonios con menores o situaciones vinculadas a menores; en Kirmo hay participacion posterior de Jezu.",
+      "admisiones_de_jezu": "Responsabilidad adulta y negligencia en situaciones donde habia menores alrededor del conflicto.",
+      "evidencia_que_limita_o_contradice": "La presencia de menores o participacion en comunidades no prueba por si sola instrucciones, intencion sexual o grooming.",
+      "informacion_sacada_de_contexto": "Pasar de errores graves con menores alrededor del conflicto a una etiqueta sexual fuerte sin evidencia directa.",
+      "que_si_se_puede_concluir": "Hubo manejo irresponsable y situaciones que no deben minimizarse.",
+      "que_no_se_puede_concluir": "Grooming/pedofilia/corrupcion sexual como hecho probado sin evidencia explicita.",
+      "estado_provisional": "requiere_maxima_precision"
+    },
+    {
+      "id": "R04",
+      "afirmacion_original": "Jezu habria acosado o danado a Ray/Wildo mediante cuenta de Leniloq, imagenes, edits o terceros.",
+      "fuente": "Documento reciente, video y materiales previos.",
+      "hechos_documentados": "Hay comentarios/testimonios de Ray, piezas visuales y admisiones previas sobre uso indebido de cuenta/canal de Leniloq contra Ray y uso inapropiado de imagen.",
+      "admisiones_de_jezu": "Uso indebido del canal/cuenta de Leniloq contra Ray y uso de imagen/cara de Ray/Wildo en forma inapropiada.",
+      "evidencia_que_limita_o_contradice": "Falta la defensa de publicacion previa de la cara en 2021; no toda accion de terceros queda atribuida a Jezu.",
+      "informacion_sacada_de_contexto": "Convertir admisiones concretas en autoria total de todo ataque posterior.",
+      "que_si_se_puede_concluir": "Hubo conductas reconocidas por Jezu que afectaron a Ray/Wildo.",
+      "que_no_se_puede_concluir": "Autoria automatica de todos los ataques o publicaciones de terceros sin cadena de evidencia.",
+      "estado_provisional": "parcialmente_documentado"
+    },
+    {
+      "id": "R05",
+      "afirmacion_original": "Jezu habria controlado Fan de Lucky o usado esa cuenta para difundir datos/imagenes.",
+      "fuente": "Documento reciente.",
+      "hechos_documentados": "Existen capturas atribuidas a Fan de Lucky y conversaciones sobre publicaciones/familiares.",
+      "admisiones_de_jezu": "Pendiente de asociar con admision concreta.",
+      "evidencia_que_limita_o_contradice": "Las capturas muestran publicaciones, pero no prueban por si solas control real de la cuenta por Jezu.",
+      "informacion_sacada_de_contexto": "Pasar de existencia de publicaciones a autoria personal sin cadena de cuenta, URL, fecha y contexto.",
+      "que_si_se_puede_concluir": "La cuenta/publicaciones existen en el corpus y requieren privacidad alta.",
+      "que_no_se_puede_concluir": "Control/autoria de Jezu sin corroboracion adicional.",
+      "estado_provisional": "pendiente_corroboracion_de_autoria"
+    }
+  ]
+}
