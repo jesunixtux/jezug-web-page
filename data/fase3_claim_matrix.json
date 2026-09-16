@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "phase": "fase3_claim_matrix",
+  "status": "interno_no_publicar",
+  "generated_on": "2026-09-16",
+  "recent_sources_scope": [
+    "docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-2.docx",
+    "Video público localizado por búsqueda: 'Jezu G la historia que quiso ocultar' / canal Los brigidos MAS BRIGIDOS QUE NUNCA. URL de canal: https://www.youtube.com/@Losbrigidos/videos"
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "afirmacion": "Jezu originó u ordenó que Kirmo se infiltrara o molestara a Guillermo.",
+      "fuente": "docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-2.docx y video 'Jezu G Lo que quiso ocultar' (pendiente de transcripción completa).",
+      "evidencia_presentada_por_la_fuente": "La fuente reciente usa capturas y narración acusatoria sobre Kirmo/Guillermo.",
+      "evidencia_primaria_en_el_repo": [
+        "evidence/kirmo/2023-02-18_kirmo_ganarse-confianza-guille.png",
+        "evidence/kirmo/2023-02-18_kirmo_todo-sea-pa-trolearlo.png",
+        "evidence/kirmo/2023-02-18_kirmo_trolear-guille-inicio.png"
+      ],
+      "que_si_se_puede_concluir": "Las capturas muestran iniciativa visible de Kirmo para trolear o ganarse la confianza de Guillermo y muestran participación/respuesta de Jezu, incluida una sugerencia.",
+      "que_no_se_puede_concluir": "No se puede concluir solo con estas capturas que Jezu originó todo el plan desde cero ni que no tuvo ninguna participación.",
+      "problema_detectado": "atribucion_de_intencion",
+      "estado": "requiere_redaccion_precisa"
+    },
+    {
+      "id": "C02",
+      "afirmacion": "Jezu robó la cuenta de Leniloq o usó la cuenta de una chica muerta.",
+      "fuente": "docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-2.docx y video 'Jezu G Lo que quiso ocultar'.",
+      "evidencia_presentada_por_la_fuente": "Formulaciones sobre cuenta de Leniloq/Menita, supuesta muerte y uso posterior.",
+      "evidencia_primaria_en_el_repo": [
+        "evidence/md-grupal/fecha-desconocida_fase3-026_dinkdummy-cuenta-leniloq.png",
+        "evidence/leniloq-menita/fecha-desconocida_fase3-053_correo-invitacion-propietario-leny.png",
+        "evidence/leniloq-menita/fecha-desconocida_fase3-066_youtube-comunidad-menita-explicaciones.png",
+        "evidence/leniloq-menita/fecha-desconocida_fase3-070_comentarios-leniloq-original.png",
+        "evidence/leniloq-menita/fecha-desconocida_fase3-076_youtube-canal-menita.png",
+        "evidence/leniloq-menita/fecha-desconocida_fase3-078_comentario-leniloq-no-soy-juguete.png",
+        "evidence/leniloq-menita/fecha-desconocida_fase3-083_correo-invitacion-leny-duplicado.png",
+        "evidence/leniloq-menita/fecha-desconocida_fase3-087_comentario-leniloq-edad-relacion.jpg",
+        "evidence/leniloq-menita/fecha-desconocida_fase3-095_youtube-canal-leniloq.png",
+        "evidence/md-grupal/fecha-desconocida_dinkdummy_mencion-jezu-cuenta-leniloq.png"
+      ],
+      "que_si_se_puede_concluir": "Hay evidencia visual de una invitación de propiedad de Leny y capturas donde la acusación sobre la cuenta circula como declaración de terceros.",
+      "que_no_se_puede_concluir": "La invitación no prueba autorización para todos los usos posteriores; las declaraciones de terceros no prueban por sí solas robo ni muerte.",
+      "problema_detectado": "correccion_factual",
+      "estado": "separar_acceso_de_uso_posterior"
+    },
+    {
+      "id": "C03",
+      "afirmacion": "Fan de Lucky se usó para publicar o difundir fotos/datos vinculados a familiares o terceros.",
+      "fuente": "docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-2.docx.",
+      "evidencia_presentada_por_la_fuente": "Capturas de publicaciones atribuidas a Fan de Lucky y reacciones de terceros.",
+      "evidencia_primaria_en_el_repo": [
+        "evidence/fan-de-lucky/fecha-desconocida_fase3-028_tweet-fan-de-lucky-whatsapp-familiares.png",
+        "evidence/fan-de-lucky/fecha-desconocida_fase3-034_tweet-fan-de-lucky-foto-censurada-1.png",
+        "evidence/fan-de-lucky/fecha-desconocida_fase3-035_perfil-fan-de-lucky.png",
+        "evidence/fan-de-lucky/fecha-desconocida_fase3-036_tweet-fan-de-lucky-foto-censurada-2.png",
+        "evidence/fan-de-lucky/2025-02-26_fase3-037_discord-jesu-borra-cuenta-familiares.png",
+        "evidence/fan-de-lucky/fecha-desconocida_fase3-041_tweet-fan-de-lucky-foto-censurada-3.png",
+        "evidence/fan-de-lucky/fecha-desconocida_fase3-045_tweet-cordial-anon-imagen-rostro.png",
+        "evidence/fan-de-lucky/fecha-desconocida_fase3-046_tweet-cordial-anon-meme-rostro.png"
+      ],
+      "que_si_se_puede_concluir": "Existen capturas de publicaciones atribuidas a Fan de Lucky con imágenes/personas censuradas y conversaciones sobre no involucrar familiares.",
+      "que_no_se_puede_concluir": "No se puede atribuir control real de la cuenta a Jezu solo por las capturas; falta cadena de cuenta, URL, fechas completas y contexto.",
+      "problema_detectado": "evidencia_insuficiente",
+      "estado": "pendiente_corroboracion_de_autoria"
+    },
+    {
+      "id": "C04",
+      "afirmacion": "Jezu ejecutó un registro o suscripción con el correo de Danel en Grindr u otro sitio.",
+      "fuente": "docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-2.docx.",
+      "evidencia_presentada_por_la_fuente": "Capturas de conversación sobre correo, Grindr y artículos de contexto.",
+      "evidencia_primaria_en_el_repo": [
+        "evidence/otros/fecha-desconocida_fase3-059_discord-danel-monetizar.png",
+        "evidence/otros/2022-08-05_fase3-060_discord-correo-grindr-danel.png",
+        "evidence/menores/fecha-desconocida_fase3-069_articulo-menores-apps-citas.png",
+        "evidence/otros/fecha-desconocida_fase3-071_articulo-riesgos-grindr.png",
+        "evidence/otros/fecha-desconocida_fase3-077_discord-danel-videos-chismosos.png"
+      ],
+      "que_si_se_puede_concluir": "Hay una captura donde se menciona la idea o declaración de suscribir un correo a Grindr.",
+      "que_no_se_puede_concluir": "No hay prueba visual de que el registro se haya ejecutado o producido efectos.",
+      "problema_detectado": "evidencia_insuficiente",
+      "estado": "intencion_o_declaracion_no_equivale_a_ejecucion"
+    },
+    {
+      "id": "C05",
+      "afirmacion": "Jezu obtuvo o intentó obtener datos mediante IP logger.",
+      "fuente": "docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-2.docx.",
+      "evidencia_presentada_por_la_fuente": "Capturas de conversación sobre IP logger y resultado técnico.",
+      "evidencia_primaria_en_el_repo": [
+        "evidence/otros/fecha-desconocida_fase3-027_discord-ip-logger-resultados.png",
+        "evidence/otros/2022-08-04_fase3-067_discord-ip-facebook-busqueda.png",
+        "evidence/otros/2022-08-04_fase3-068_discord-iplogger-url.png"
+      ],
+      "que_si_se_puede_concluir": "Las capturas muestran conversación sobre usar IP logger y una captura de resultado con campos técnicos censurados.",
+      "que_no_se_puede_concluir": "No se identifica de forma completa a la persona afectada ni se reconstruye la cadena de envío/apertura.",
+      "problema_detectado": "falta_de_contexto",
+      "estado": "requiere_cadena_de_custodia"
+    },
+    {
+      "id": "C06",
+      "afirmacion": "Jezu acosó o dañó a Ray/Wildo/Ruitzo mediante cuentas, imágenes o edits.",
+      "fuente": "docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-2.docx y video 'Jezu G Lo que quiso ocultar'.",
+      "evidencia_presentada_por_la_fuente": "Testimonios, comentarios, capturas de perfiles, dibujos/edits y referencias a Ray/Waldo/Ruitzo.",
+      "evidencia_primaria_en_el_repo": [
+        "evidence/wildo-ray/fecha-desconocida_fase3-014_youtube-canal-alejandro-diaz-waldo.png",
+        "evidence/wildo-ray/2025-09-03_fase3-047_discord-pregunta-waldo.png",
+        "evidence/wildo-ray/fecha-desconocida_fase3-054_blue-extreme-audio-visualizer.png",
+        "evidence/wildo-ray/fecha-desconocida_fase3-062_discord-ruitzo-foto-edit.png",
+        "evidence/wildo-ray/fecha-desconocida_fase3-063_avatar-personaje.jpg",
+        "evidence/wildo-ray/fecha-desconocida_fase3-064_discord-testimonio-ruitzo-edits-exnovia.png",
+        "evidence/wildo-ray/fecha-desconocida_fase3-079_discord-ruitzo-testimonio-datos.png",
+        "evidence/wildo-ray/fecha-desconocida_fase3-080_discord-blue-que-hago.png",
+        "evidence/wildo-ray/fecha-desconocida_fase3-084_comentario-ray-mioda-leniloq-acoso.png",
+        "evidence/wildo-ray/fecha-desconocida_fase3-085_ray-mioda-audio-visualizer.png",
+        "evidence/wildo-ray/fecha-desconocida_fase3-089_youtube-canal-ruitzo.png",
+        "evidence/wildo-ray/fecha-desconocida_fase3-090_dibujo-burla-ruitzo.jpg",
+        "evidence/wildo-ray/fecha-desconocida_fase3-093_stream-ray-mioda-pregunta-edad.png"
+      ],
+      "que_si_se_puede_concluir": "Hay capturas de testimonios/declaraciones de Ray/Ruitzo y piezas visuales o comentarios vinculados al conflicto.",
+      "que_no_se_puede_concluir": "No cada captura prueba autoría material de Jezu ni intención específica; varias son declaraciones de terceros o material secundario.",
+      "problema_detectado": "inferencia",
+      "estado": "clasificar_por_tipo_de_prueba"
+    },
+    {
+      "id": "C07",
+      "afirmacion": "Las capturas prueban grooming/pedofilia o conducta sexual de Jezu con menores.",
+      "fuente": "docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-2.docx y video 'Jezu G Lo que quiso ocultar'.",
+      "evidencia_presentada_por_la_fuente": "Capturas con declaraciones, edades, etiquetas y textos sensibles.",
+      "evidencia_primaria_en_el_repo": [
+        "evidence/menores/fecha-desconocida_fase3-003_texto-relato-sensible-menor-1.png",
+        "evidence/menores/fecha-desconocida_fase3-004_texto-relato-sensible-menor-2.png",
+        "evidence/menores/fecha-desconocida_fase3-006_texto-dinkdummy-experiencias.png",
+        "evidence/menores/fecha-desconocida_fase3-032_testimonio-de-angel.png",
+        "evidence/menores/fecha-desconocida_fase3-042_texto-nostalgia-acusaciones-menores.png",
+        "evidence/menores/fecha-desconocida_fase3-044_discord-dinkdummy-edad-contenido-inapropiado.png",
+        "evidence/menores/fecha-desconocida_fase3-069_articulo-menores-apps-citas.png",
+        "evidence/menores/fecha-desconocida_fase3-073_captura-wombo-persona-censurada.png",
+        "evidence/leniloq-menita/fecha-desconocida_fase3-087_comentario-leniloq-edad-relacion.jpg",
+        "evidence/menores/fecha-desconocida_fase3-092_discord-leni-darky-edad-relacion.jpg",
+        "evidence/menores/fecha-desconocida_fase3-098_discord-puck-menor-memes.png"
+      ],
+      "que_si_se_puede_concluir": "Hay material sensible donde se habla de menores, edades, acusaciones o relatos personales.",
+      "que_no_se_puede_concluir": "No debe presentarse como prueba directa de grooming/pedofilia por Jezu sin evidencia primaria explícita y contexto completo.",
+      "problema_detectado": "generalizacion",
+      "estado": "privacidad_alta_no_publicar_crudo"
+    },
+    {
+      "id": "C08",
+      "afirmacion": "La wiki o el video reciente establecen por sí mismos la verdad completa de los hechos.",
+      "fuente": "Loquendo Wiki/Fandom, canal Los Brígidos y búsqueda pública del video.",
+      "evidencia_presentada_por_la_fuente": "Capturas de wiki, historial de ediciones, miniaturas y resultado público de YouTube.",
+      "evidencia_primaria_en_el_repo": [
+        "evidence/brigidos/fecha-desconocida_fase3-061_loquendo-wiki-revision-jezu.png",
+        "evidence/brigidos/fecha-desconocida_fase3-075_fandom-historial-ediciones-jezu.jpg",
+        "evidence/brigidos/fecha-desconocida_fase3-086_loquendo-wiki-articulo-jezu.png",
+        "evidence/brigidos/fecha-desconocida_fase3-088_loquendo-wiki-cambios-leniloq.png",
+        "evidence/brigidos/fecha-desconocida_fase3-099_fandom-discusiones-wiki-jezu.jpg",
+        "evidence/brigidos/fecha-desconocida_fase3-100_fandom-lista-revisiones-jezu.png"
+      ],
+      "que_si_se_puede_concluir": "Se puede documentar cómo se narró/editó públicamente el caso y que el video reciente aparece en resultados públicos.",
+      "que_no_se_puede_concluir": "No se puede usar wiki, miniaturas o resultados de búsqueda como prueba automática de los hechos narrados.",
+      "problema_detectado": "falta_de_contexto",
+      "estado": "requiere_transcripcion_y_cotejo_del_video"
+    }
+  ]
+}
