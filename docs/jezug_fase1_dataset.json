@@ -1,0 +1,427 @@
+{
+  "schema_version": "1.0",
+  "phase": 1,
+  "title": "Expediente maestro Jezu G",
+  "status": "preliminary_internal_not_for_publication",
+  "generated_on": "2026-09-16",
+  "editorial_rules": [
+    "separate_fact_allegation_user_version_and_opinion",
+    "prefer_primary_sources",
+    "verify_auto_transcripts_against_original_audio",
+    "redact_minors_and_private_data",
+    "never_publish_intimate_content",
+    "maintain_correction_log"
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "name": "viejas_capturas_parte_1_2026-09-08.docx",
+      "type": "Documento de terceros / compilación adversarial",
+      "use": "Leniloq/Menita, Ray Mioda, datos personales, antecedentes 2022-2024",
+      "caution": "Contiene conclusiones y lenguaje valorativo; usar las capturas y citas primarias por separado."
+    },
+    {
+      "id": "S02",
+      "name": "viejas_capturas_parte_2_2026-09-08.docx",
+      "type": "Documento de terceros / compilación adversarial",
+      "use": "Guillermo/The Loud Channel, menores, Ángel, hechos 2022-2026, Fan de Lucky 09",
+      "caution": "No tratar sus conclusiones como hechos sin corroboración primaria."
+    },
+    {
+      "id": "S03",
+      "name": "[Spanish (auto-generated)] Respondiendo a difamaciones [DownSub.com].txt",
+      "type": "Transcripción automática de declaración de Jezu",
+      "use": "Admisiones, negaciones y versión propia publicada en 2026",
+      "caution": "Transcripción automática; verificar audio antes de citar textualmente en web."
+    },
+    {
+      "id": "S04",
+      "name": "[Spanish (auto-generated)] Tenemos que hablar-Unas sinceras disculpas por parte de jezu g [DownSub.c.txt",
+      "type": "Transcripción automática de disculpas de Jezu",
+      "use": "Admisiones y disculpas a varias personas, incluido el caso Kirmo, Ángel, Guillermo y Wildo/Ray",
+      "caution": "Transcripción automática; fecha exacta y palabras deben verificarse con el video original."
+    },
+    {
+      "id": "S05",
+      "name": "minutos_acusaciones_jezu_g.txt",
+      "type": "Índice de acusaciones extraído de SRT",
+      "use": "Mapa de temas de la funa y minutos para verificación",
+      "caution": "Es un resumen de subtítulos, no prueba independiente."
+    },
+    {
+      "id": "S06",
+      "name": "2023-02-18_kirmo_trolear_guille_1.png",
+      "type": "Captura directa de Discord",
+      "use": "Kirmo manifiesta iniciativa de 'trolear al Guille'",
+      "caution": "Conservar completa; anonimizar identificadores técnicos si se publica."
+    },
+    {
+      "id": "S07",
+      "name": "2023-02-18_kirmo_confianza_guille_2.png",
+      "type": "Captura directa de Discord",
+      "use": "Kirmo intenta ganarse la confianza de Guillermo; Jezu responde y sugiere 'Di que eres mujer...'",
+      "caution": "Muestra iniciativa de Kirmo y participación/facilitación de Jezu; no usar para exoneración total."
+    },
+    {
+      "id": "S08",
+      "name": "2023-02-18_kirmo_trolear_guille_3.png",
+      "type": "Captura directa de Discord",
+      "use": "Kirmo dice 'todo sea pa trolearlo'; Jezu advierte que Guillermo puede ponerse coqueto",
+      "caution": "Relevante para distinguir iniciativa, participación y conocimiento del riesgo."
+    },
+    {
+      "id": "S09",
+      "name": "cf4fb209-e0da-46bd-a9b0-8a88fcd13cad.png",
+      "type": "Captura directa de Discord (21/12/2025)",
+      "use": "Menita reaparece, dice que no murió y se disculpa por haber hecho creer que murió; Jezu reconoce que manejó mal la situación y haberse hecho pasar por ella frente a Ray",
+      "caution": "No publicar datos de cuenta ni otros identificadores privados."
+    },
+    {
+      "id": "S10",
+      "name": "1cac77a3-628e-409a-a42d-ffd8586cd1f0.png",
+      "type": "Captura de correo / Google My Business (17/05/2023)",
+      "use": "Invitación para compartir propiedad de 'Leny', útil para demostrar acceso transferido/consentido en al menos un recurso",
+      "caution": "No demuestra por sí sola el alcance total de acceso a todas las cuentas/canales."
+    },
+    {
+      "id": "S11",
+      "name": "[Spanish (auto-generated)] Aclarando las cosas  Explicacion de las acusaciones de @Graciaspeadios [D.txt",
+      "type": "Transcripción automática de directo/debate",
+      "use": "Contexto de 2026, discusión pública, peticiones de hablar en privado y posiciones de varias partes",
+      "caution": "Muchos hablantes; requiere identificación y audio original antes de publicar citas."
+    },
+    {
+      "id": "S12",
+      "name": "Revisión de actividad reciente sobre Jezu G, tiojezug y JEVZGames",
+      "type": "Informe de investigación previo",
+      "use": "Rastreo de reactivación pública 2026 y enlaces/títulos visibles",
+      "caution": "Sirve como índice; volver a verificar enlaces antes de publicar la web."
+    },
+    {
+      "id": "S13",
+      "name": "c53e06c9-2805-4865-ab73-4c894e47f1d6.png",
+      "type": "Captura de YouTube",
+      "use": "Existencia del video 'Jezu G - Un usuario patético y cobarde' y datos visibles de publicación",
+      "caution": "No prueba por sí sola el contenido del video."
+    }
+  ],
+  "chronology": [
+    {
+      "date": "Mediados de 2022",
+      "summary": "Comienza el conflicto con Guillermo/The Loud Channel según la reconstrucción de documentos de terceros. El origen exacto debe verificarse con materiales primarios.",
+      "sources": [
+        "S02"
+      ]
+    },
+    {
+      "date": "15 dic 2022",
+      "summary": "Documento de terceros ubica un directo en el que Jezu expuso información personal vinculada a Guillermo. Años después, Jezu reconoce que fue incorrecto revisar/exponer información personal de Guillermo y califica el doxxeo como grave.",
+      "sources": [
+        "S02",
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "date": "Finales de 2022 - 2023",
+      "summary": "Leniloq pasa de conflicto con Jezu a amistad y, según el propio documento acusatorio, se ofrece a seguir obteniendo información de Guillermo. El mismo documento dice que antes de su supuesta muerte confió la cuenta a Jezu para que la usara; esto es incompatible con resumir el acceso como un simple robo.",
+      "sources": [
+        "S01"
+      ]
+    },
+    {
+      "date": "18 feb 2023",
+      "summary": "Conversación directa con Kirmo: Kirmo dice que intentará trolear a Guillermo y ganarse su confianza. Jezu participa, responde y propone una táctica. Las capturas apoyan iniciativa propia de Kirmo, pero también participación de Jezu.",
+      "sources": [
+        "S06",
+        "S07",
+        "S08"
+      ]
+    },
+    {
+      "date": "17 may 2023",
+      "summary": "Existe una invitación de Google My Business para compartir la propiedad de 'Leny' con Jezu. Es una pieza de evidencia de transferencia/permiso, aunque no define todo el alcance de las credenciales de otras plataformas.",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "date": "2023-2024",
+      "summary": "Jezu reconoce posteriormente uso indebido del canal/cuenta de Leniloq para meterse personalmente con Ray Mioda/Wildo y reconoce otras conductas de hostigamiento, uso de datos o imágenes y conflictos prolongados.",
+      "sources": [
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "date": "2024",
+      "summary": "Se produce la funa principal y se agregan acusaciones sobre doxxing, menores, la cuenta de Leniloq, multicuentas, Ray/Wildo y Guillermo. El corpus actual mezcla evidencia directa, testimonios y conclusiones editoriales; deben separarse.",
+      "sources": [
+        "S05",
+        "S01",
+        "S02"
+      ]
+    },
+    {
+      "date": "2024-2025",
+      "summary": "Jezu publica disculpas que contienen admisiones concretas: bromas/hostigamiento, exposición de terceros, uso de datos, uso de la cara de Wildo/Ray, perjuicio a Ángel y responsabilidad adulta frente a Kirmo.",
+      "sources": [
+        "S04"
+      ]
+    },
+    {
+      "date": "2025",
+      "summary": "Según la declaración posterior de Jezu, hubo un período de acercamiento o 'segunda oportunidad' con parte de quienes lo habían expuesto. La cronología exacta requiere conservar mensajes de ese período.",
+      "sources": [
+        "S03"
+      ]
+    },
+    {
+      "date": "21 dic 2025",
+      "summary": "Menita reaparece en una conversación con Jezu, afirma que no murió y pide perdón por haber hecho creer a otros que había muerto. Jezu reconoce que manejó mal el asunto y que hacerse pasar por ella ante Ray contribuyó al conflicto.",
+      "sources": [
+        "S09"
+      ]
+    },
+    {
+      "date": "19 abr 2026",
+      "summary": "Consta una publicación de 'Respondiendo a difamaciones'. Jezu niega grooming/pedofilia, reconoce negligencias y errores concretos y plantea que algunas formulaciones posteriores exageraron los hechos.",
+      "sources": [
+        "S03"
+      ]
+    },
+    {
+      "date": "2026",
+      "summary": "Continúan discusiones, documentos y directos de terceros. En un debate/transmisión se registran peticiones para hablar en privado y cerrar temas, junto con nuevas acusaciones y reproches.",
+      "sources": [
+        "S11"
+      ]
+    },
+    {
+      "date": "2026 (reactivaciones posteriores)",
+      "summary": "Informes previos localizaron nueva actividad pública de terceros sobre 'Jezu G'. Debe verificarse cada publicación antes de incorporarla a la versión pública del archivo.",
+      "sources": [
+        "S12"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "A01",
+      "topic": "Exposición/doxxing de Guillermo y terceros vinculados",
+      "claim": "Se acusa a Jezu de exponer datos personales de Guillermo y de personas de su entorno.",
+      "direct": "S02 describe capturas de Facebook, teléfono e institución; S03 reconoce como grave el doxxeo a Guillermo; S04 incluye disculpas por exponer a un cercano y por meter a familiares/terceros.",
+      "jezu": "Reconoce que estuvo mal revisar/exponer información personal y que no debía involucrar familiares ni personas ajenas.",
+      "status": "DOCUMENTADO / RECONOCIDO EN LO ESENCIAL",
+      "notes": "Antes de publicar, verificar el alcance exacto de cada dato y nunca reproducir los datos personales originales.",
+      "sources": [
+        "S02",
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "id": "A02",
+      "topic": "Acceso a la cuenta/canal de Leniloq: 'robo' vs. transferencia",
+      "claim": "Versiones posteriores lo resumen como que Jezu robó o se apropió de la cuenta de una chica que se creía muerta.",
+      "direct": "S01, pese a ser acusatorio, afirma que Leniloq confió la cuenta a Jezu para que la usara; S10 muestra una invitación de propiedad de 'Leny'.",
+      "jezu": "Sostiene que no robó la cuenta y que le fue cedida/entregada.",
+      "status": "FORMULACIÓN 'ROBO' NO RESPALDADA POR EL CORPUS ACTUAL",
+      "notes": "Separar estrictamente cómo obtuvo acceso de cómo utilizó la cuenta después. La transferencia no justifica usos posteriores.",
+      "sources": [
+        "S01",
+        "S10",
+        "S03"
+      ]
+    },
+    {
+      "id": "A03",
+      "topic": "Uso indebido de la cuenta/identidad de Leniloq",
+      "claim": "Jezu habría usado la cuenta/identidad de Leniloq en conflictos con Ray Mioda/Wildo y otros.",
+      "direct": "S01 lo documenta desde la perspectiva acusatoria; S03 admite que no debió usar mal el canal de Leniloq para meterse con Ray; S09 contiene una admisión similar en conversación con Menita.",
+      "jezu": "Reconoce el uso indebido y se disculpa; disputa que el acceso original haya sido robo.",
+      "status": "DOCUMENTADO / RECONOCIDO",
+      "notes": "Una página pública debería asumir responsabilidad aquí sin mezclarlo con la falsa formulación de 'cuenta robada'.",
+      "sources": [
+        "S01",
+        "S03",
+        "S09"
+      ]
+    },
+    {
+      "id": "A04",
+      "topic": "Estado de Leniloq/Menita ('chica muerta')",
+      "claim": "Circula que Jezu usó 'la cuenta de una chica muerta'.",
+      "direct": "S01 ya registra que posteriormente se supo que Leniloq no había muerto; S09 muestra a Menita diciendo en 2025 que no murió y que lamenta haber hecho creer lo contrario.",
+      "jezu": "Afirma que Menita es Leniloq y que reapareció.",
+      "status": "LA FORMULACIÓN ACTUAL 'CHICA MUERTA' ES FACTUALMENTE ENGAÑOSA",
+      "notes": "Históricamente Jezu sí creyó que podía haber muerto en el momento del uso de la cuenta; ese contexto debe conservarse.",
+      "sources": [
+        "S01",
+        "S09",
+        "S03"
+      ]
+    },
+    {
+      "id": "A05",
+      "topic": "Kirmo / menor y supuesta orden de infiltrarse o acosar a Guillermo",
+      "claim": "Se acusa a Jezu de influir o mandar a una menor a infiltrarse/molestar a Guillermo.",
+      "direct": "S06-S08 muestran a Kirmo diciendo por iniciativa propia que intentará trolear a Guillermo y ganarse su confianza. Jezu responde, anima y propone una táctica. S04 contiene una disculpa de Jezu por no haber sido el adulto responsable y por haberla 'mandado a hacer cosas' que podían exponerla.",
+      "jezu": "Sostiene que Kirmo se metió por iniciativa propia, pero reconoce que debió frenarla y que participó de forma irresponsable.",
+      "status": "MIXTO / REQUIERE REDACCIÓN PRECISA",
+      "notes": "No es sostenible decir simplemente 'Jezu no tuvo nada que ver'. Tampoco las capturas apoyan bien la versión fuerte 'Jezu originó y ordenó todo desde cero'. Redacción sugerida: Kirmo muestra iniciativa propia; Jezu facilitó/alentó parte de la interacción y reconoce responsabilidad adulta.",
+      "sources": [
+        "S06",
+        "S07",
+        "S08",
+        "S04",
+        "S02"
+      ]
+    },
+    {
+      "id": "A06",
+      "topic": "Ángel: datos personales entregados a Guillermo",
+      "claim": "Jezu habría facilitado el nombre/datos de Ángel a Guillermo haciéndolos pasar por información de otra persona.",
+      "direct": "S01/S02 describen el episodio; S04 incluye una disculpa explícita por difundir datos de Ángel a Guillermo.",
+      "jezu": "Reconoce que estuvo mal y que, siendo Ángel menor, debió actuar de forma responsable.",
+      "status": "DOCUMENTADO / RECONOCIDO EN LO ESENCIAL",
+      "notes": "No publicar el nombre completo ni otros datos personales de Ángel.",
+      "sources": [
+        "S01",
+        "S02",
+        "S04"
+      ]
+    },
+    {
+      "id": "A07",
+      "topic": "Contenido íntimo de Guillermo y menores presentes",
+      "claim": "Se acusa a Jezu de compartir una imagen íntima de Guillermo en un grupo con menores y de hablar de ella frente a menores.",
+      "direct": "S02 y S05 contienen la acusación; S03 admite haber enviado por privado una captura censurada y haber compartido el link del servidor con menores presentes, pero disputa la caracterización más grave y afirma conservar solo una versión censurada.",
+      "jezu": "Reconoce que no debió enviar la captura aunque estuviera censurada y que no midió las consecuencias.",
+      "status": "PARCIALMENTE RECONOCIDO; DETALLES CLAVE EN DISPUTA",
+      "notes": "Necesitamos el archivo original o captura contemporánea para resolver si hubo alguna versión sin censura y quiénes la recibieron. No alojar contenido íntimo en la web.",
+      "sources": [
+        "S02",
+        "S05",
+        "S03"
+      ]
+    },
+    {
+      "id": "A08",
+      "topic": "Etiqueta 'corruptor de menores' / grooming / pedofilia",
+      "claim": "Algunas discusiones derivaron en etiquetas de 'corruptor de menores', y posteriormente en rumores de pedofilia/grooming.",
+      "direct": "S03 explica que la etiqueta de corrupción se vinculó a la captura íntima censurada y al enlace del servidor; niega grooming. En el corpus actual no se ha localizado evidencia directa de que Jezu haya realizado grooming o conducta sexual con un menor.",
+      "jezu": "Niega grooming/pedofilia; reconoce negligencia y falta de límites en situaciones con menores.",
+      "status": "NO PRESENTAR GROOMING/PEDOFILIA COMO HECHO; 'CORRUPTOR' ES UNA CARACTERIZACIÓN DISPUTADA",
+      "notes": "La web debe describir hechos concretos y evitar etiquetas penales/morales no establecidas.",
+      "sources": [
+        "S03",
+        "S05",
+        "S02"
+      ]
+    },
+    {
+      "id": "A09",
+      "topic": "Ray Mioda/Wildo: uso de cuenta, cara y conflicto",
+      "claim": "Se acusa a Jezu de atacar a Ray/Wildo usando la cuenta de Leniloq/multicuentas y de usar su imagen.",
+      "direct": "S01 describe el conflicto; S03 reconoce uso indebido del canal de Leniloq contra Ray; S04 pide disculpas por usar la cara de Wildo/Ray y por resentimiento.",
+      "jezu": "Reconoce esas conductas como incorrectas; el alcance de otras acusaciones (p. ej. instigar acoso a familiares) requiere prueba original.",
+      "status": "PARTE CENTRAL DOCUMENTADA / OTRAS EXTENSIONES PENDIENTES",
+      "notes": "Conservar el contexto de que Ray había ayudado previamente a Jezu, pero no usar eso como excusa.",
+      "sources": [
+        "S01",
+        "S03",
+        "S04",
+        "S05"
+      ]
+    },
+    {
+      "id": "A10",
+      "topic": "Danel/MontañaVHS y uso de correo",
+      "claim": "Hay versiones que afirman que Jezu usó el correo de Danel para registrarlo en una app/sitio de citas.",
+      "direct": "S01 habla de la idea/intención de usar el correo. S04, en disculpas, dice que jugó con el correo y tuvo intenciones de usarlo, pero afirma que finalmente no hizo nada.",
+      "jezu": "Reconoce la intención como incorrecta y sostiene que no ejecutó el registro.",
+      "status": "INTENCIÓN RECONOCIDA; EJECUCIÓN NO ESTABLECIDA EN EL CORPUS ACTUAL",
+      "notes": "No repetir como hecho que fue inscrito en Grindr u otro sitio sin una prueba primaria de ejecución.",
+      "sources": [
+        "S01",
+        "S04"
+      ]
+    },
+    {
+      "id": "A11",
+      "topic": "Fan de Lucky 09 / fotos de familiares de Guillermo (2025)",
+      "claim": "Se acusa a Jezu de usar una multicuenta para publicar/spamear fotos vinculadas a familiares de Guillermo.",
+      "direct": "S02 describe la cuenta y el episodio; una transcripción de conversación posterior también lo reprocha. S04 contiene disculpas generales por involucrar familiares.",
+      "jezu": "Ha reconocido que no debía involucrar familiares o terceros; falta emparejar esa admisión con cada publicación concreta.",
+      "status": "FUERTEMENTE SEÑALADO, PERO ARCHIVAR PRIMARIOS ANTES DE PUBLICAR",
+      "notes": "Recuperar tweets/capturas originales, fechas y contexto. Nunca republicar fotos privadas innecesariamente.",
+      "sources": [
+        "S02",
+        "S04"
+      ]
+    },
+    {
+      "id": "A12",
+      "topic": "IP logger / obtención de datos técnicos",
+      "claim": "Documentos de terceros afirman que Jezu utilizó un IP logger y obtuvo datos técnicos de usuarios.",
+      "direct": "S01 menciona una captura del IP logger y declaraciones de Jezu sobre dispositivos/proveedor/país. El corpus actual aún no está organizado con los originales independientes.",
+      "jezu": "No se ha incorporado todavía una respuesta específica y completa para cada uso del logger.",
+      "status": "PENDIENTE DE VERIFICACIÓN PRIMARIA Y CONTEXTO",
+      "notes": "Recuperar captura original, URL/fecha si existe y determinar qué datos se obtuvieron, se publicaron o solo se observaron.",
+      "sources": [
+        "S01"
+      ]
+    },
+    {
+      "id": "A13",
+      "topic": "Manipulación emocional / 'mitómano' / valoraciones de carácter",
+      "claim": "Se formularon acusaciones de manipulación emocional, mentira, hipocresía y protagonismo.",
+      "direct": "S05 registra estas afirmaciones como parte del video, pero son en gran medida interpretaciones sobre conducta y carácter.",
+      "jezu": "Ha reconocido mentiras o malas decisiones concretas en algunos episodios, pero eso no convierte etiquetas globales en hechos verificables.",
+      "status": "OPINIÓN/INTERPRETACIÓN; RESPONDER SOLO CON HECHOS CONCRETOS",
+      "notes": "La web no debería intentar 'demostrar' personalidad o motivos de nadie.",
+      "sources": [
+        "S05",
+        "S03",
+        "S04"
+      ]
+    }
+  ],
+  "recognized_conduct_for_apology": [
+    "Exponer o revisar información personal de Guillermo y permitir que el conflicto escalara hacia datos personales.",
+    "Involucrar a familiares, cercanos o personas ajenas a disputas que no les correspondían.",
+    "Usar de manera indebida la cuenta/canal de Leniloq en un conflicto con Ray Mioda/Wildo.",
+    "Usar la imagen/cara de Wildo/Ray en contenido que el propio Jezu considera hoy inapropiado.",
+    "Facilitar datos de Ángel a Guillermo; reconoce especialmente la gravedad por tratarse de un menor.",
+    "No actuar como adulto responsable frente a Kirmo y participar/facilitar una interacción arriesgada con Guillermo.",
+    "Compartir una captura íntima censurada de Guillermo; aunque disputa caracterizaciones posteriores, reconoce que no debió enviarla.",
+    "Compartir el enlace del servidor de Guillermo en un entorno donde había menores y no medir el riesgo.",
+    "Tener la intención de usar el correo de Danel para molestarlo, aunque afirma no haber ejecutado el registro.",
+    "Bromas, directos, hostigamiento y contenido dirigido a personas que no le habían hecho nada o que excedió límites razonables.",
+    "No aclarar a tiempo varios episodios, dar versiones apresuradas o incompletas y, en al menos un punto, haber afirmado algo falso para que dejaran de molestarlo (p. ej. versión sobre vender el canal de Leniloq, según documento de terceros)."
+  ],
+  "not_established_or_disputed": [
+    "Que Jezu haya robado la cuenta de Leniloq: el propio documento acusatorio describe una entrega/confianza de la cuenta y existe evidencia de una invitación de propiedad.",
+    "Que Leniloq/Menita esté muerta: existe conversación directa de 2025 donde ella afirma que no murió y se disculpa por haber hecho creer lo contrario.",
+    "Que Jezu haya realizado grooming o conducta sexual con menores: no se ha localizado evidencia directa de ello en el corpus organizado hasta ahora.",
+    "Que la etiqueta 'corruptor de menores' sea una conclusión probada: el expediente debe describir conductas concretas, no convertir una etiqueta controvertida en hecho.",
+    "Que Kirmo actuara únicamente por una orden inicial de Jezu: las capturas recuperadas muestran iniciativa explícita de Kirmo, aunque Jezu participa y facilita.",
+    "Que Jezu ejecutara el registro del correo de Danel en una app/sitio de citas: se ha localizado evidencia de intención y una disculpa por esa intención, pero no prueba primaria de ejecución.",
+    "Que todas las molestias o ataques de terceros contra Ray/Wildo fueran ordenados por Jezu: esa causalidad requiere pruebas individualizadas.",
+    "Que la imagen íntima de Guillermo fuera necesariamente compartida sin censura: el corpus actual contiene versiones contradictorias y falta el original contemporáneo."
+  ],
+  "missing_evidence": [
+    "Export o capturas completas del MD grupal de Discord al que Jezu fue agregado para debatir/discutir la funa.",
+    "Conversación completa y continua con Kirmo (no solo las tres capturas recuperadas), para evitar selección de fragmentos.",
+    "Video/audio original del directo de diciembre de 2022 y sus timestamps, preservando una copia redaccionada para trabajo interno.",
+    "Original contemporáneo de la captura íntima de Guillermo y evidencia de cómo fue enviada (sin publicar el contenido íntimo).",
+    "Posts/mensajes originales realizados desde la cuenta de Leniloq contra Ray Mioda/Wildo y contra Guillermo.",
+    "Evidencia primaria del episodio de Danel para decidir si hubo solo intención o ejecución del registro con su correo.",
+    "Tweets/capturas originales de Fan de Lucky 09 de febrero de 2025 y contexto completo de las fotos vinculadas a familiares.",
+    "Copia original del video/funa 2024 y del video 'Gracias a todos', con transcripción y timestamps verificados.",
+    "Copias verificadas de publicaciones o videos 2026 posteriores ('Jezu G Lo que quiso ocultar' y respuestas), con fecha absoluta y URL archivada.",
+    "Identificación cronológica de cuándo se publicó el video de disculpas S04 y enlace original si sigue disponible.",
+    "Listado de edades solo por rangos y fechas de los menores implicados (sin publicar fechas de nacimiento ni datos identificativos)."
+  ]
+}
