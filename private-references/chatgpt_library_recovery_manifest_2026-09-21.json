@@ -1,0 +1,107 @@
+{
+  "generated_at": "2026-09-21",
+  "purpose": "Direct originals recovered from prior ChatGPT conversations / Library. Hashes computed from recovered binaries.",
+  "binary_status": "recovered_and_hashed_locally; pending physical copy into GitHub evidence tree",
+  "files": [
+    {
+      "path": "leniloq-menita/cf4fb209-e0da-46bd-a9b0-8a88fcd13cad.png",
+      "size_bytes": 504434,
+      "sha256": "f5003ea0e55d124d699e3b34108f9d78deca11cec0fac1a513a544495c5b0916"
+    },
+    {
+      "path": "brigidos/0a5bec24-176f-4bec-9ede-74bcc09c6738.png",
+      "size_bytes": 50647,
+      "sha256": "f9d5231e186e378787dd9822f09a0a97f9cd32b7235605f5bd4701856439ecbe"
+    },
+    {
+      "path": "brigidos/4e04be51-d3d2-4638-9ea3-7743bd37117a.png",
+      "size_bytes": 194174,
+      "sha256": "ebc5aa0a4433c1fdc59b3c9ce88f1b5590791224b585dc35ac5df8d14769401f"
+    },
+    {
+      "path": "brigidos/6f4d7c14-6e75-4fc9-ba7d-221753cdf28b.png",
+      "size_bytes": 56664,
+      "sha256": "8ca81928d07620027a0b1cfe3bdf965847932e8f2ee3c048a7ddc8a5e7b165a0"
+    },
+    {
+      "path": "brigidos/6f81db26-a78b-478e-bb57-7d64610d6999.png",
+      "size_bytes": 217921,
+      "sha256": "faf6c8ba643a26bc209311a2ba825eb05314f7e6297441838386b7c9eab33b82"
+    },
+    {
+      "path": "brigidos/e33bca21-b9ff-4027-b96e-0d55ee2cafcb.png",
+      "size_bytes": 171040,
+      "sha256": "7990129a675fae468741f7bf60e8e17e999f36caf0e234eef380117efcc6fc71"
+    },
+    {
+      "path": "eyden/6ca47e93-86d5-4b01-aa6d-d8f19d01241d.png",
+      "size_bytes": 245758,
+      "sha256": "7d7e8a8ebd6eb7624a862455750baed77760cba2f6f65f5beedefeb0b7888223"
+    },
+    {
+      "path": "eyden/aaa701a9-2367-4499-b5d4-454cf9c9af2c.png",
+      "size_bytes": 142485,
+      "sha256": "b66d675b320fceb7d6f3750cdd187ed88944c1558a80f1c48f0efc32cedab37f"
+    },
+    {
+      "path": "eyden/b37035d6-1905-4189-9f9c-bdd453304c59.png",
+      "size_bytes": 151453,
+      "sha256": "33b33121dbf9479ceaf29123d2bb5c1703bd60d6c8b4ae5c63e4d9b039a07338"
+    },
+    {
+      "path": "eyden/d937fafb-cbe2-48a5-8e40-192e31cf778d.png",
+      "size_bytes": 189746,
+      "sha256": "7b5f15ba3a5ad2eda5796fb53f167611b64b63880c9d883db44fb790968c1810"
+    },
+    {
+      "path": "eyden/efd9274f-dd4f-41df-852e-7dff68f9ec75.png",
+      "size_bytes": 204234,
+      "sha256": "c154f02a9d0ab18a4d86fe50f10c6081a38e08d10456e4b118be982c500beb55"
+    },
+    {
+      "path": "respuestas-jezu/32946B74-12B7-4EE7-8BC3-4CBA93DBDC0F.png",
+      "size_bytes": 755749,
+      "sha256": "01f1f09949b12b9cf3db1fa7063ae53607460c90e424f48193b660dd20bcb01f"
+    },
+    {
+      "path": "respuestas-jezu/7118E76D-6580-4928-82C3-C91C2D8FBF49.jpeg",
+      "size_bytes": 212146,
+      "sha256": "a810e062014a3d2a59e775b7dbe368bfe1531a2e17aad2965227c5c6bb8ee474"
+    },
+    {
+      "path": "respuestas-jezu/83108e77-10ef-4add-b976-d0885d589a32.png",
+      "size_bytes": 125235,
+      "sha256": "05f1e823a73d22ee547a970399257b19ec09bad1c0cbbdd5fc30c86ca788fe54"
+    },
+    {
+      "path": "respuestas-jezu/9521F727-DDB5-4265-B03D-0E3E417CAE25.png",
+      "size_bytes": 658231,
+      "sha256": "fe6759038c7a747dd00661ed49201f09a2ae6a4fc85ec3b49c914a3f88ad3dae"
+    },
+    {
+      "path": "respuestas-jezu/CA226529-311D-45C7-A742-D799DF7BDA3B.png",
+      "size_bytes": 914532,
+      "sha256": "c666e21e25214a7ee8c00c655228782ff33a1c8ec6a1fff58adb7b079034c12c"
+    },
+    {
+      "path": "respuestas-jezu/D08E2AEB-BB30-43EF-8EC0-02439F102E01.png",
+      "size_bytes": 898513,
+      "sha256": "5af6d32020e7a4822231888a6887334913e74a91dbbbf973552b52c9a6363b6c"
+    },
+    {
+      "path": "respuestas-jezu/a26d61ab-7df6-4aa2-a197-2d0713a725c8.png",
+      "size_bytes": 253364,
+      "sha256": "82f6bd82617c50eacdf037e1b99db7d6bd3562360460eb40025d02a1a71e751c"
+    },
+    {
+      "path": "respuestas-jezu/a3dcf2cc-b4e6-4512-8281-582eb39953da.png",
+      "size_bytes": 84435,
+      "sha256": "e1e430e2ad7b0e0c6c0e8085b57954e845e26b14b4f1a02b13088e3e5427ed95"
+    },
+    {
+      "path": "respuestas-jezu/c53e06c9-2805-4865-ab73-4c894e47f1d6.png",
+      "size_bytes": 640296,
+      "sha256": "0dbb7010a3e133419c4ab2fceb98d607e3aca216103f301df14a621707fa4b74"
+    }
+  ]
+}
