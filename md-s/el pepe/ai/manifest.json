@@ -1,0 +1,604 @@
+{
+  "schema_version": "1.0",
+  "collection": "discord-el-pepe",
+  "bundle": "part-01",
+  "status": "derived_for_ai_review",
+  "source_policy": "Numeric PNG files in md-s/el pepe/ are immutable originals. Everything under ai/ is derived and may be regenerated.",
+  "semantic_policy": "This bundle performs no OCR and makes no factual conclusions. It only reduces image weight and groups consecutive screenshots.",
+  "context_from_archivist": {
+    "description": "Grupo de MD en el que varios participantes, incluido Jezu, se burlaban o insultaban a Danel / Montaña VHS.",
+    "warning": "Este contexto es aportado por el archivista y no sustituye la verificación mensaje por mensaje."
+  },
+  "selection_policy": {
+    "spam": "El archivista indicó que spam y contenido repetitivo no relevante puede quedar fuera de la selección documental.",
+    "caution": "Una omisión por spam no debe ocultar mensajes que cambien el sentido, autoría, secuencia o contexto de una interacción."
+  },
+  "source_count": 31,
+  "source_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "files": [
+    {
+      "index": 0,
+      "original": "md-s/el pepe/0.png",
+      "original_bytes": 749993,
+      "original_sha256": "05c77266ea094b417bca359cf6bcf4d0715dab5a7000a4cdb48b553686468386",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0000.webp",
+      "optimized_bytes": 67180,
+      "optimized_sha256": "0977712c2d3e2b1e49977d4c7c16a50de3631597a9922bae1bcf64081a8ab9d4",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 1,
+      "original": "md-s/el pepe/1.png",
+      "original_bytes": 689459,
+      "original_sha256": "fea3dd5d738f5aded78d428247afcb043a31ba92a9b6d377c4e69f94ba6e965e",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0001.webp",
+      "optimized_bytes": 36948,
+      "optimized_sha256": "a5437c7e5ed1ad40af74d5f9d1306750409f01d080cd9131b9885bb3c82dcce7",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 2,
+      "original": "md-s/el pepe/2.png",
+      "original_bytes": 923657,
+      "original_sha256": "ac433ff7b065a0ab3fa59961a823f807b9a409894f229aac37896fec8037bdc9",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0002.webp",
+      "optimized_bytes": 46366,
+      "optimized_sha256": "51d162cebf502b98a57e80559e2df706ca44dab6d1d829effb0adbc358d3e25c",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 3,
+      "original": "md-s/el pepe/3.png",
+      "original_bytes": 592678,
+      "original_sha256": "e92880150ff6951692bf63294a7663605f31f2465c11c55cc3942e0b9b182b3b",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0003.webp",
+      "optimized_bytes": 59520,
+      "optimized_sha256": "fc3116e4db3e1f1b9b11152b57d1848bbd99e10abd17569d03ef01f35db32730",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 4,
+      "original": "md-s/el pepe/4.png",
+      "original_bytes": 437070,
+      "original_sha256": "cf20e99e5711219ad7370c9fe4907cde56ba7398d66a9a3d13fc904f968242a2",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0004.webp",
+      "optimized_bytes": 65032,
+      "optimized_sha256": "860af489f85251df36bbe02a2bc29b8f35ccc42b68bc004f8a7f2fd7c735b0e3",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 5,
+      "original": "md-s/el pepe/5.png",
+      "original_bytes": 346639,
+      "original_sha256": "5f80e30cbd622bc8574e0839ca0543395ffefb53489cc4ba28ab08fac092a65c",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0005.webp",
+      "optimized_bytes": 73756,
+      "optimized_sha256": "1eaf1587eb8ec0f0567eedfa857b21cc5d073c8e77cc30761e68d8e2df0e8dac",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 6,
+      "original": "md-s/el pepe/6.png",
+      "original_bytes": 395158,
+      "original_sha256": "dae76984f0dd5c49484c787314fa92cc6bcc22832bc3660d3838b51d45f194a9",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0006.webp",
+      "optimized_bytes": 85730,
+      "optimized_sha256": "d9babb7b454f6bc79253af885bbdd189afbb1b5847ef84ae812f80cc7d6109bd",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 7,
+      "original": "md-s/el pepe/7.png",
+      "original_bytes": 324851,
+      "original_sha256": "5663a65ccbb3f6788c13d7262de25e03fd3eb6ddd2156f1c4aed0f7936c8c0eb",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0007.webp",
+      "optimized_bytes": 75750,
+      "optimized_sha256": "fe23f40f035492e80c0571be2a2c711e5c32e82692022872fc2606147fc30cad",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 8,
+      "original": "md-s/el pepe/8.png",
+      "original_bytes": 348305,
+      "original_sha256": "d9af7811dc0db5d953c7a7c4cf9f16440723bb587e8dca5d4ffea0dadbb3bd34",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0008.webp",
+      "optimized_bytes": 62466,
+      "optimized_sha256": "77dacd4f294bdda9ee6b2bcca44e3b1f2265c1d4753b6b88cfcc93db33b22950",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 9,
+      "original": "md-s/el pepe/9.png",
+      "original_bytes": 360722,
+      "original_sha256": "93195d42fb20c922b1e6aadc9cf573a565b99bf3cd7cbb054849076964849c1a",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0009.webp",
+      "optimized_bytes": 81796,
+      "optimized_sha256": "3928c585cafadf73e018e44a6cbd380fbb464b5252d240a7916e26ebc38c93c2",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 10,
+      "original": "md-s/el pepe/10.png",
+      "original_bytes": 726088,
+      "original_sha256": "fab8c6e4feab8d48daec7ffe975b3f527bbe4538d4b482c99a5bfd1f8f3e4b04",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0010.webp",
+      "optimized_bytes": 62722,
+      "optimized_sha256": "931f8793d065dd91997e12f295bd80f9374de9be1b2e08c38371636480dc002a",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 11,
+      "original": "md-s/el pepe/11.png",
+      "original_bytes": 576141,
+      "original_sha256": "f67ad49ee321870fd4a4ee2e5478010a7a4adeabc361c78e74cffa8daba87854",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0011.webp",
+      "optimized_bytes": 72872,
+      "optimized_sha256": "c4537ffa03c1946ac234c2bcbabca75e1d1d8b242b914dac203eb37adc7b0f02",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 12,
+      "original": "md-s/el pepe/12.png",
+      "original_bytes": 757765,
+      "original_sha256": "8cca5e9d7332e36c4c35dafbbe99d33805bdea640006d37dc7d4cd16f184e97c",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0012.webp",
+      "optimized_bytes": 66596,
+      "optimized_sha256": "6e56363c96a6bc0cbe27c900db04652871f5fc3306053b7a8dac1d948e1cd5df",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 13,
+      "original": "md-s/el pepe/13.png",
+      "original_bytes": 404188,
+      "original_sha256": "4a021fbdec31ef2cbe6db9cacc53a6b9de994473f5fc368c741c07c984001dcd",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0013.webp",
+      "optimized_bytes": 62692,
+      "optimized_sha256": "3df95744fdfe49e3e91f52169bcc6774b6a3c6fc0d860ff5d3aedec16ed0d418",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 14,
+      "original": "md-s/el pepe/14.png",
+      "original_bytes": 317500,
+      "original_sha256": "18b8083df2e3cfa5624ede12820ac0da4c1ebe88e5cf6afaa3d5e619fbf99dfe",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0014.webp",
+      "optimized_bytes": 72240,
+      "optimized_sha256": "763e0edda4e00b0c2b5502e21b73ab349565381a6a29fa19bf3273208a30e30d",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 15,
+      "original": "md-s/el pepe/15.png",
+      "original_bytes": 590586,
+      "original_sha256": "f31748f5fded609752e0afda21d11aef21536b8af07fbfd6a14979e23163b3a1",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0015.webp",
+      "optimized_bytes": 77602,
+      "optimized_sha256": "4dbf7cb25ed92a1beaa83ffb17052ddcc2d282c1ff76e485c9ebca2dc84f66a0",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 16,
+      "original": "md-s/el pepe/16.png",
+      "original_bytes": 576352,
+      "original_sha256": "37b4b08835a1df8169a948b57c73137d3e00f2127d562aa3d71d77367191f756",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0016.webp",
+      "optimized_bytes": 74270,
+      "optimized_sha256": "a0d20d80da7260f2fe7f3545e03d8bd418b32e442be79a450f74ea5e154be3e1",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 17,
+      "original": "md-s/el pepe/17.png",
+      "original_bytes": 420221,
+      "original_sha256": "ef316bbf7809a694ae9ad1c8427e97ac12ab57068265a59e4895cc0f2d0a26b5",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0017.webp",
+      "optimized_bytes": 72086,
+      "optimized_sha256": "7b4baf0502a3c8aa57eab6134b0b5b668421bd6b1c6da00d1c9d3d076221b342",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 18,
+      "original": "md-s/el pepe/18.png",
+      "original_bytes": 310073,
+      "original_sha256": "9529654a1620303ddf74e6f4b7dadaa1014165f851ca74ba09f9299bb9d62306",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0018.webp",
+      "optimized_bytes": 69046,
+      "optimized_sha256": "c7fc15f9b09f78f15af2b77391b7bce673707fa75dd1c81a41849cc440b10cc5",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 19,
+      "original": "md-s/el pepe/19.png",
+      "original_bytes": 374182,
+      "original_sha256": "67d10cd4e5064fe4bf14271fcbf53b92a49be44bda9f73339f5606bba9e0be32",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0019.webp",
+      "optimized_bytes": 61974,
+      "optimized_sha256": "3d9119f19f977fbf7225c948987b068acac182aa5119efa26ddd0a4587700116",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 20,
+      "original": "md-s/el pepe/20.png",
+      "original_bytes": 325390,
+      "original_sha256": "a1ac75d736f01c0f7c6986054865f26123c733d92d83d85e34e2f7724133c126",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0020.webp",
+      "optimized_bytes": 74654,
+      "optimized_sha256": "88a08b338711c2b077c4f2f86ae158bc9e168d91cd1c9f5dee3acbf73ee89f82",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 21,
+      "original": "md-s/el pepe/21.png",
+      "original_bytes": 496259,
+      "original_sha256": "a3611c6d43a7e299f0b48f5a7f786f94dc5e4d9a3fa269b95b6af72f60b293ef",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0021.webp",
+      "optimized_bytes": 70648,
+      "optimized_sha256": "3502d575af4d8e40c8c9d3710c94e3b72948961bf5c7e38bb29e492cd150b0bf",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 22,
+      "original": "md-s/el pepe/22.png",
+      "original_bytes": 601562,
+      "original_sha256": "639e4193815f4ba7a86e25ee62c98566d29ba8df9fb42a8b594e22459de810a7",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0022.webp",
+      "optimized_bytes": 71694,
+      "optimized_sha256": "39c53ec11b9d66f5b39cd2877ad1e74f0e0408d07fdfc17a3e5600adc67bd2a7",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 23,
+      "original": "md-s/el pepe/23.png",
+      "original_bytes": 345443,
+      "original_sha256": "00d633c5206b3c766bc74bb61bf969d78b13d2d72413ca1d729b544096468eda",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0023.webp",
+      "optimized_bytes": 76574,
+      "optimized_sha256": "d92d23690d23891084d8a4d3d98b6ea33b9dd4650e45e5de69f2b782bcd53e7a",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 24,
+      "original": "md-s/el pepe/24.png",
+      "original_bytes": 504612,
+      "original_sha256": "b33bfc673a6d38f29df3acef0e22212c857f30b06ace3f2260460685c2200b37",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0024.webp",
+      "optimized_bytes": 78768,
+      "optimized_sha256": "bb09338322017576331570edda2e1ab8dd630d94b1b6a76ee57d15dc4125ffb9",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 25,
+      "original": "md-s/el pepe/25.png",
+      "original_bytes": 378597,
+      "original_sha256": "cd4861a5fc5c45a8ee8ce9ff7a7ac4d6f09dbd1c2f7ba240a7401dc9c55fcb58",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0025.webp",
+      "optimized_bytes": 48448,
+      "optimized_sha256": "744134d6793f31155108fff53b92bb51b87722a79c67bda9919f4feee7d605c5",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 26,
+      "original": "md-s/el pepe/26.png",
+      "original_bytes": 405239,
+      "original_sha256": "83ede5b639a74d661bedeb27793c11fd9ca3804f2db1df40b8edd00bc263a7df",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0026.webp",
+      "optimized_bytes": 63078,
+      "optimized_sha256": "854de3c54ff57209c622d899c54f9db199b1eff4a19aec7f5f8aacbd9c300811",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 27,
+      "original": "md-s/el pepe/27.png",
+      "original_bytes": 435057,
+      "original_sha256": "19b32e1c7c90191611b3f7389e79bd1a28b50f235b47bb8dfc6bd89daf40c9c5",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0027.webp",
+      "optimized_bytes": 67198,
+      "optimized_sha256": "b0ca69ba5b607638ebee5ec9a8f5dbde4acd44753f9ed01bed95e66f87d69296",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 28,
+      "original": "md-s/el pepe/28.png",
+      "original_bytes": 499453,
+      "original_sha256": "2c0d7b2f4f13fa5ebf6eaadd2963bd4b72059a3dfd3cafc23571ac06d6808333",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0028.webp",
+      "optimized_bytes": 57278,
+      "optimized_sha256": "5efb05d94023707d08125a426c2339a63b33f8cf3a05368b4c9258970c5e0a98",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 29,
+      "original": "md-s/el pepe/29.png",
+      "original_bytes": 525702,
+      "original_sha256": "5241e52ccef6dc28da3c7365ccefaac59041794a53331cccffe67bd15b5d2651",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0029.webp",
+      "optimized_bytes": 55560,
+      "optimized_sha256": "3dcb9e1c1c8f62a3eaa97994fe54ed0fb2c767fe20db1226f4c8c9bb315971d0",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    },
+    {
+      "index": 30,
+      "original": "md-s/el pepe/30.png",
+      "original_bytes": 587878,
+      "original_sha256": "7cc839724f6791897d58ee3e91b4f91126a0532cbf9255a0188a5a31e2d4e889",
+      "original_width": 1282,
+      "original_height": 1500,
+      "optimized": "md-s/el pepe/ai/optimized/0030.webp",
+      "optimized_bytes": 57730,
+      "optimized_sha256": "cef11d1c504813598928bb8ce525909795de9f6a12eca8d3089259254c012d6d",
+      "optimized_width": 1282,
+      "optimized_height": 1500
+    }
+  ],
+  "review_pages": [
+    {
+      "path": "md-s/el pepe/ai/pages/part-01-page-001__000-002.webp",
+      "sources": [
+        "0.png",
+        "1.png",
+        "2.png"
+      ],
+      "width": 1330,
+      "height": 4690,
+      "bytes": 153360,
+      "sha256": "d211d3c8b7e7afada9630d8584de914961d972a295e12882126156ea8076a2d1",
+      "page": 1
+    },
+    {
+      "path": "md-s/el pepe/ai/pages/part-01-page-002__003-005.webp",
+      "sources": [
+        "3.png",
+        "4.png",
+        "5.png"
+      ],
+      "width": 1330,
+      "height": 4690,
+      "bytes": 202092,
+      "sha256": "b5a34aa10968c68859219e1f36d16ee0b3731ec671df41f206ecdac249594204",
+      "page": 2
+    },
+    {
+      "path": "md-s/el pepe/ai/pages/part-01-page-003__006-008.webp",
+      "sources": [
+        "6.png",
+        "7.png",
+        "8.png"
+      ],
+      "width": 1330,
+      "height": 4690,
+      "bytes": 226054,
+      "sha256": "6b30378d62b6e260487de8bd3111b4c6e73ed8e8191b2847d7da4a3d1e642c51",
+      "page": 3
+    },
+    {
+      "path": "md-s/el pepe/ai/pages/part-01-page-004__009-011.webp",
+      "sources": [
+        "9.png",
+        "10.png",
+        "11.png"
+      ],
+      "width": 1330,
+      "height": 4690,
+      "bytes": 221818,
+      "sha256": "7db7baafca06dcf056933afecc1bf72e5c7b399899daf084e437de951b47f8b0",
+      "page": 4
+    },
+    {
+      "path": "md-s/el pepe/ai/pages/part-01-page-005__012-014.webp",
+      "sources": [
+        "12.png",
+        "13.png",
+        "14.png"
+      ],
+      "width": 1330,
+      "height": 4690,
+      "bytes": 205592,
+      "sha256": "8c7b6303faeeb7475968022fc34f82667557d450e52af7d5e6210a31749efea4",
+      "page": 5
+    },
+    {
+      "path": "md-s/el pepe/ai/pages/part-01-page-006__015-017.webp",
+      "sources": [
+        "15.png",
+        "16.png",
+        "17.png"
+      ],
+      "width": 1330,
+      "height": 4690,
+      "bytes": 224366,
+      "sha256": "8b99bef2a96a5bf04679aa0ea4950ffc6b8028973f51fd6572812445a06dca60",
+      "page": 6
+    },
+    {
+      "path": "md-s/el pepe/ai/pages/part-01-page-007__018-020.webp",
+      "sources": [
+        "18.png",
+        "19.png",
+        "20.png"
+      ],
+      "width": 1330,
+      "height": 4690,
+      "bytes": 208890,
+      "sha256": "0aaa344c95f8023a55c7c7346e077a6a17bcfb26d8dd82a7c7745d80244b1170",
+      "page": 7
+    },
+    {
+      "path": "md-s/el pepe/ai/pages/part-01-page-008__021-023.webp",
+      "sources": [
+        "21.png",
+        "22.png",
+        "23.png"
+      ],
+      "width": 1330,
+      "height": 4690,
+      "bytes": 222630,
+      "sha256": "3f9b44f3b603f4d9ec227887340a8e935df66287842555614590d95b64523fd5",
+      "page": 8
+    },
+    {
+      "path": "md-s/el pepe/ai/pages/part-01-page-009__024-026.webp",
+      "sources": [
+        "24.png",
+        "25.png",
+        "26.png"
+      ],
+      "width": 1330,
+      "height": 4690,
+      "bytes": 191924,
+      "sha256": "dcf688f40027c69a90b239dd0a49acb1cb465537d1349785b40b11ea1456175d",
+      "page": 9
+    },
+    {
+      "path": "md-s/el pepe/ai/pages/part-01-page-010__027-029.webp",
+      "sources": [
+        "27.png",
+        "28.png",
+        "29.png"
+      ],
+      "width": 1330,
+      "height": 4690,
+      "bytes": 183632,
+      "sha256": "4bef5922065c6aab613ad20268eb7f58059fb2eb6cc6e6a964b90a13c707a130",
+      "page": 10
+    },
+    {
+      "path": "md-s/el pepe/ai/pages/part-01-page-011__030-030.webp",
+      "sources": [
+        "30.png"
+      ],
+      "width": 1330,
+      "height": 1582,
+      "bytes": 58634,
+      "sha256": "e1d187ddb786919d7b6abfd8d724f9fc0e84fce58501529acc57e46ff2056854",
+      "page": 11
+    }
+  ],
+  "totals": {
+    "original_bytes": 15326820,
+    "optimized_individual_bytes": 2068274,
+    "review_pages_bytes": 2098992,
+    "optimized_individual_ratio": 0.1349
+  }
+}
