@@ -2,11 +2,13 @@
   {
     "repo_equivalent": "data/fase2_dataset.json:S09",
     "never_publish": false,
-    "action": "No se copio binario; mantener como hueco prioritario de Library.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "cf4fb209-e0da-46bd-a9b0-8a88fcd13cad.png",
     "case": "leniloq-menita",
-    "status": "direct_original_not_found",
-    "description": "Menita/Jesus 21-12-2025, reaparicion, disculpa y reconocimiento de mal manejo"
+    "status": "located_in_chatgpt_library",
+    "description": "Menita/Jesus 21-12-2025, reaparicion, disculpa y reconocimiento de mal manejo",
+    "library_file_id": "libfile_6afaf544d55081918b37a65f802a377d",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": "evidence/leniloq-menita/fecha-desconocida_fase3-053_correo-invitacion-propietario-leny.png",
@@ -20,47 +22,57 @@
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "b37035d6-1905-4189-9f9c-bdd453304c59.png",
     "case": "eyden",
-    "status": "direct_original_not_found",
-    "description": "Eyden/Jesus, malentendido"
+    "status": "located_in_chatgpt_library",
+    "description": "Eyden/Jesus, malentendido",
+    "library_file_id": "libfile_4fc93eda3fec81918c7a197f26a92679",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "aaa701a9-2367-4499-b5d4-454cf9c9af2c.png",
     "case": "eyden",
-    "status": "direct_original_not_found",
-    "description": "Eyden/Jesus, postura neutral/conversacion calmada"
+    "status": "located_in_chatgpt_library",
+    "description": "Eyden/Jesus, postura neutral/conversacion calmada",
+    "library_file_id": "libfile_16f501e164f881918b4e3e1067c9df77",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "efd9274f-dd4f-41df-852e-7dff68f9ec75.png",
     "case": "eyden",
-    "status": "direct_original_not_found",
-    "description": "Eyden/Jesus, directo de Ray Mioda / Leniloq"
+    "status": "located_in_chatgpt_library",
+    "description": "Eyden/Jesus, directo de Ray Mioda / Leniloq",
+    "library_file_id": "libfile_570282d5909881918fc95b8f79296e7c",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "6ca47e93-86d5-4b01-aa6d-d8f19d01241d.png",
     "case": "eyden",
-    "status": "direct_original_not_found",
-    "description": "Eyden/Jesus, diferencia de edad con Leni"
+    "status": "located_in_chatgpt_library",
+    "description": "Eyden/Jesus, diferencia de edad con Leni",
+    "library_file_id": "libfile_07937cd485f8819185867b3324e5bf88",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "d937fafb-cbe2-48a5-8e40-192e31cf778d.png",
     "case": "eyden",
-    "status": "direct_original_not_found",
-    "description": "Eyden/Jesus, reflexion sobre Leni/Menita"
+    "status": "located_in_chatgpt_library",
+    "description": "Eyden/Jesus, reflexion sobre Leni/Menita",
+    "library_file_id": "libfile_05e2e1add0908191b112e94e4b8f77e6",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": "evidence/wildo-ray/fecha-desconocida_fase3-084_comentario-ray-mioda-leniloq-acoso.png",
@@ -92,38 +104,46 @@
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; probable evidencia contextual, no primaria sobre los hechos.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "83108e77-10ef-4add-b976-d0885d589a32.png",
     "case": "respuestas-jezu",
-    "status": "direct_original_not_found",
-    "description": "Analytics iniciales de Respondiendo a difamaciones"
+    "status": "located_in_chatgpt_library",
+    "description": "Analytics iniciales de Respondiendo a difamaciones",
+    "library_file_id": "libfile_745d0ff9531c8191ab9084d8ba351d85",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "32946B74-12B7-4EE7-8BC3-4CBA93DBDC0F.png",
     "case": "respuestas-jezu",
-    "status": "direct_original_not_found",
-    "description": "Hilo de X 20-04-2026 sobre acusaciones/corruptor de menores"
+    "status": "located_in_chatgpt_library",
+    "description": "Hilo de X 20-04-2026 sobre acusaciones/corruptor de menores",
+    "library_file_id": "libfile_23b8c120ca6c8191b1a8d404cdffb73b",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "9521F727-DDB5-4265-B03D-0E3E417CAE25.png",
     "case": "respuestas-jezu",
-    "status": "direct_original_not_found",
-    "description": "Continuacion del hilo/aclaracion"
+    "status": "located_in_chatgpt_library",
+    "description": "Continuacion del hilo/aclaracion",
+    "library_file_id": "libfile_a1de6dba098881919fb2abdbf0a295a2",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "D08E2AEB-BB30-43EF-8EC0-02439F102E01.png",
     "case": "respuestas-jezu",
-    "status": "direct_original_not_found",
-    "description": "Aclaracion adicional sobre omisiones/mala memoria"
+    "status": "located_in_chatgpt_library",
+    "description": "Aclaracion adicional sobre omisiones/mala memoria",
+    "library_file_id": "libfile_85bb698c0b508191825fa082094669f4",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
@@ -137,29 +157,35 @@
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "7118E76D-6580-4928-82C3-C91C2D8FBF49.jpeg",
     "case": "respuestas-jezu",
-    "status": "direct_original_not_found",
-    "description": "Post reenlazando video/contexto"
+    "status": "located_in_chatgpt_library",
+    "description": "Post reenlazando video/contexto",
+    "library_file_id": "libfile_a21647d2ad088191a2a14cdaf59bec69",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": "data/fase2_dataset.json:S04/S03",
     "never_publish": false,
-    "action": "Registrar pendiente de captura directa.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "a3dcf2cc-b4e6-4512-8281-582eb39953da.png",
     "case": "respuestas-jezu",
-    "status": "direct_original_not_found",
-    "description": "Comentario donde se vuelven publicas disculpas"
+    "status": "located_in_chatgpt_library",
+    "description": "Comentario donde se vuelven publicas disculpas",
+    "library_file_id": "libfile_3c7850378d588191a59570ce01b59cf9",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": "data/fase2_dataset.json:S04",
     "never_publish": false,
-    "action": "Registrar pendiente de captura directa.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "CA226529-311D-45C7-A742-D799DF7BDA3B.png",
     "case": "respuestas-jezu",
-    "status": "direct_original_not_found",
-    "description": "Disculpa que menciona uso de cuenta de Leniloq"
+    "status": "located_in_chatgpt_library",
+    "description": "Disculpa que menciona uso de cuenta de Leniloq",
+    "library_file_id": "libfile_f561fe3feb188191b34a0caf52964edd",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": "evidence/leniloq-menita/fecha-desconocida_fase3-070_comentarios-leniloq-original.png",
@@ -173,47 +199,57 @@
   {
     "repo_equivalent": "evidence/brigidos/fecha-desconocida_fase3-052_discord-dinkdummy-interaccion-jezu.png",
     "never_publish": false,
-    "action": "Equivalente posible, no confirmado; mantener pendiente de binario directo.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "0a5bec24-176f-4bec-9ede-74bcc09c6738.png",
     "case": "brigidos",
-    "status": "direct_original_not_found",
-    "description": "Conversacion con Puck/Neo-Brigidos 1"
+    "status": "located_in_chatgpt_library",
+    "description": "Conversacion con Puck/Neo-Brigidos 1",
+    "library_file_id": "libfile_1df858a35ef48191880449c20ce57dbf",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "e33bca21-b9ff-4027-b96e-0d55ee2cafcb.png",
     "case": "brigidos",
-    "status": "direct_original_not_found",
-    "description": "Conversacion con Puck/Neo-Brigidos 2"
+    "status": "located_in_chatgpt_library",
+    "description": "Conversacion con Puck/Neo-Brigidos 2",
+    "library_file_id": "libfile_7eb6966a85588191a85e24058a5faff5",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "6f4d7c14-6e75-4fc9-ba7d-221753cdf28b.png",
     "case": "brigidos",
-    "status": "direct_original_not_found",
-    "description": "Puck aclara que se estaba entendiendo mal la conversacion"
+    "status": "located_in_chatgpt_library",
+    "description": "Puck aclara que se estaba entendiendo mal la conversacion",
+    "library_file_id": "libfile_04110bf06e9881918751e4bb53ba80f5",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "4e04be51-d3d2-4638-9ea3-7743bd37117a.png",
     "case": "brigidos",
-    "status": "direct_original_not_found",
-    "description": "Chat Hector/Jesus sobre guion/veracidad"
+    "status": "located_in_chatgpt_library",
+    "description": "Chat Hector/Jesus sobre guion/veracidad",
+    "library_file_id": "libfile_af81e1c5c6908191883434b5f8ab3084",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": "evidence/brigidos/fecha-desconocida_fase3-039_streamyard-niveles-acusaciones.png",
     "never_publish": false,
-    "action": "Equivalente posible, no confirmado; mantener pendiente de binario directo.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "6f81db26-a78b-478e-bb57-7d64610d6999.png",
     "case": "brigidos",
-    "status": "direct_original_not_found",
-    "description": "Chat Puck/Hector sobre conseguir testimonio en audio"
+    "status": "located_in_chatgpt_library",
+    "description": "Chat Puck/Hector sobre conseguir testimonio en audio",
+    "library_file_id": "libfile_054b06ec2e7081918eadac45f41e2632",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
