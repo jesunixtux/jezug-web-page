@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "status": "internal_in_progress",
+  "rules": {
+    "originals_immutable": true,
+    "edited_versions_must_be_labeled": true,
+    "edited_versions_require_change_log": true,
+    "automatic_transcripts_must_be_verified_before_literal_quote": true
+  },
+  "entries": [
+    {
+      "id": "TR-2024-RAY-01",
+      "title": "Jezu G - Un usuario patético y cobarde",
+      "author_or_channel": "Ray Mioda",
+      "date": "2024-02-22",
+      "media_type": "livestream/video",
+      "original_url": "https://www.youtube.com/watch?v=7bu0Jlj9AFI",
+      "url_source": "YouTube defamation complaint email archive; decoded from quoted-printable representation",
+      "availability_status": "not_reverified",
+      "transcript_original_path": null,
+      "transcript_format_expected": "srt",
+      "transcript_status": "SRT referenced by minutos_acusaciones_jezu_g.txt but direct SRT binary not yet recovered",
+      "derived_index": "minutos_acusaciones_jezu_g.txt",
+      "edited_path": null
+    },
+    {
+      "id": "TR-2026-JEZU-01",
+      "title": "Respondiendo a difamaciones",
+      "author_or_channel": "Jezu G",
+      "date": "2026-04-19",
+      "media_type": "video",
+      "original_url": null,
+      "availability_status": "url_pending_recovery",
+      "transcript_original_path": "transcripts/original/respondiendo-a-difamaciones.auto.txt",
+      "transcript_format": "txt",
+      "transcript_origin": "Spanish auto-generated / DownSub",
+      "transcript_status": "preserved_original",
+      "edited_path": null
+    },
+    {
+      "id": "TR-2026-JEZU-02",
+      "title": "Tenemos que hablar - Unas sinceras disculpas por parte de Jezu G",
+      "author_or_channel": "Jezu G",
+      "date": null,
+      "media_type": "video",
+      "original_url": null,
+      "availability_status": "url_pending_recovery",
+      "transcript_original_path": null,
+      "transcript_format_expected": "txt or srt",
+      "transcript_status": "referenced in Fase 1 dataset; direct transcript not yet located in current Library search",
+      "edited_path": null
+    },
+    {
+      "id": "TR-2026-DIRECTO-01",
+      "title": "Aclarando las cosas / Explicación de las acusaciones de @Graciaspeadios",
+      "author_or_channel": "varios participantes",
+      "date": "2026-03",
+      "media_type": "livestream/directo",
+      "original_url": null,
+      "availability_status": "url_pending_recovery",
+      "transcript_original_path": "transcripts/original/aclarando-las-cosas-graciaspeadios.auto.txt",
+      "transcript_format": "txt",
+      "transcript_origin": "Spanish auto-generated",
+      "transcript_status": "preserved_original",
+      "edited_path": null
+    },
+    {
+      "id": "TR-2026-BRIGIDOS-01",
+      "title": "Jezu G Lo que quiso ocultar",
+      "author_or_channel": "Los brigidos MAS BRIGIDOS QUE NUNCA",
+      "date": "2026-07",
+      "media_type": "video",
+      "original_url": null,
+      "availability_status": "historical_url_or_id_pending_verification",
+      "transcript_original_path": null,
+      "transcript_format_expected": "srt",
+      "transcript_status": "a full SRT was previously referenced in the working corpus; direct file still needs recovery",
+      "edited_path": null
+    },
+    {
+      "id": "TR-2026-YT-PRIVACY-01",
+      "title": "Jezu G: la historia que quiso ocultar",
+      "author_or_channel": null,
+      "date": "2026-07",
+      "media_type": "video",
+      "original_url": "https://www.youtube.com/watch?v=Mz2INmlEkak",
+      "availability_status": "historical_link_from_privacy_case",
+      "transcript_original_path": null,
+      "transcript_status": "pending",
+      "edited_path": null,
+      "notes": "Keep separate from similarly titled entries unless source verification establishes they are the same upload."
+    }
+  ]
+}
