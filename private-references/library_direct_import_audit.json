@@ -86,11 +86,13 @@
   {
     "repo_equivalent": "data/fase2_dataset.json:S11",
     "never_publish": false,
-    "action": "Registrar pendiente de binario directo y URL/fecha exacta.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "c53e06c9-2805-4865-ab73-4c894e47f1d6.png",
     "case": "respuestas-jezu",
-    "status": "direct_original_not_found",
-    "description": "Captura del video Jezu G - Un usuario patetico y cobarde"
+    "status": "located_in_chatgpt_library",
+    "description": "Captura del video Jezu G - Un usuario patetico y cobarde",
+    "library_file_id": "libfile_71a6f79e9428819192148839bbef2583",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": "evidence/brigidos/fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png",
@@ -148,11 +150,13 @@
   {
     "repo_equivalent": null,
     "never_publish": false,
-    "action": "Registrar pendiente; no hay binario local recuperable por nombre.",
+    "action": "Binario directo localizado en ChatGPT Library. Pendiente de copiar al repositorio y registrar SHA-256 en evidence/manifest.json.",
     "source_file": "a26d61ab-7df6-4aa2-a197-2d0713a725c8.png",
     "case": "respuestas-jezu",
-    "status": "direct_original_not_found",
-    "description": "Otra aclaracion antigua en X"
+    "status": "located_in_chatgpt_library",
+    "description": "Otra aclaracion antigua en X",
+    "library_file_id": "libfile_287ccf48ec1881918b9cf4fa297bb0f3",
+    "located_at": "2026-09-21"
   },
   {
     "repo_equivalent": null,
