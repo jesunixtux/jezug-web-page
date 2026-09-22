@@ -28,6 +28,18 @@ Algunas capturas tienen equivalentes ya preservados en el repo, pero no el binar
 - Comentario Leniloq/Menita: preservado como `evidence/leniloq-menita/fecha-desconocida_fase3-070_comentarios-leniloq-original.png`.
 - Respuesta publica de Jezu: preservada parcialmente como `evidence/brigidos/fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`.
 
+## Recuperación desde ChatGPT Library — 2026-09-21
+
+Una nueva búsqueda sobre archivos conservados en conversaciones anteriores localizó varios binarios directos que la auditoría del 16/09 había marcado como no encontrados. Entre ellos hay material de:
+
+- Menita/Leniloq;
+- conversaciones con Eyden;
+- hilo de X y disculpas públicas de abril de 2026;
+- conversaciones Puck/Neo-Brigidos y Hector/Puck;
+- capturas de videos previamente registradas solo por referencia.
+
+La existencia de estos archivos en Library ya está registrada en `private-references/library_direct_import_audit.json` con sus identificadores persistentes. **Aún debe distinguirse entre “localizado en Library” y “copiado físicamente al repositorio”**; no afirmar lo segundo hasta incorporar el binario y registrar su hash en `evidence/manifest.json`.
+
 ## Sigue faltando
 
 - Binario directo de `cf4fb209-e0da-46bd-a9b0-8a88fcd13cad.png` sobre Menita/Jesus del 21/12/2025.
