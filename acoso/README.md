@@ -40,3 +40,14 @@ El manifest canónico sigue siendo `evidence/manifest.json`.
 ## Nota importante
 
 Este directorio **no es una acusación legal** contra ninguna persona o grupo. Documenta material que puede ser pertinente para denuncias de plataforma o revisión legal posterior. La calificación jurídica de “acoso”, “hostigamiento”, “difamación”, etc. depende de hechos concretos, contexto y jurisdicción.
+
+
+## Separación metodológica
+
+Este expediente no debe utilizarse como contrapeso moral del historial anterior.
+
+- El hecho de que existan conductas anteriores reconocidas no invalida por sí solo un reclamo actual de privacidad o hostigamiento.
+- El hecho de que exista hostigamiento posterior no reduce ni modifica la responsabilidad por hechos anteriores.
+- Las conclusiones de esta carpeta deben limitarse al patrón, contenido y consecuencias documentables de las publicaciones/reclamos de 2026.
+
+Para metodología general ver `docs/fase3_metodologia.md`.
