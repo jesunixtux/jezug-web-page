@@ -1,228 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-root="../" data-page="transparencia">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#10131c">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="referrer" content="no-referrer">
   <meta name="description" content="Declaración de transparencia, titularidad y límites del archivo histórico Alejandría.">
-  <title>Transparencia y alcance — Alejandría</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --page: #10131c;
-      --sidebar: #141925;
-      --surface: #191f2d;
-      --surface-2: #202637;
-      --border: #2a3347;
-      --text: #edf0fa;
-      --muted: #abb5cc;
-      --soft: #7f8da9;
-      --accent: #8495ff;
-      --accent-strong: #697cf6;
-      --accent-surface: rgba(119, 136, 252, .13);
-      --max: 1040px;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-    body {
-      margin: 0;
-      background: var(--page);
-      color: var(--text);
-      font: 16px/1.7 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; text-decoration: none; }
-    a:focus-visible, button:focus-visible { outline: 2px solid #b5bdff; outline-offset: 4px; }
-    .shell { display: grid; grid-template-columns: 252px minmax(0, 1fr); min-height: 100vh; }
-    .sidebar {
-      position: sticky; top: 0; height: 100vh; min-height: 700px;
-      display: flex; flex-direction: column;
-      background: linear-gradient(180deg, #171c29 0%, #111622 100%);
-      border-right: 1px solid var(--border);
-      padding: 32px 22px 26px;
-    }
-    .brand { margin: 0 10px; }
-    .brand strong {
-      display: block; font: 700 30px/1.12 Georgia, "Times New Roman", serif;
-      letter-spacing: -.6px; color: #f0f1fd;
-    }
-    .brand small {
-      display: block; margin-top: 5px; color: #8e9bcb;
-      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
-    }
-    .side-rule { height: 1px; margin: 30px 4px 18px; background: var(--border); }
-    .nav { display: grid; gap: 6px; }
-    .nav a {
-      display: flex; gap: 13px; align-items: center; padding: 11px 14px;
-      border-radius: 9px; color: var(--muted); font-size: 14px;
-      transition: background .15s, color .15s;
-    }
-    .nav a:hover { color: white; background: #252c40; }
-    .nav a.active { background: rgba(113, 128, 242, .18); color: #c0caff; font-weight: 650; }
-    .nav svg { width: 19px; height: 19px; flex: none; stroke: currentColor; stroke-width: 1.7; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-    .side-note {
-      border-top: 1px solid var(--border); padding: 22px 12px 0;
-      margin-top: auto; color: var(--soft);
-      font: italic 15px/1.7 Georgia, "Times New Roman", serif;
-    }
-    .side-note span { display: block; margin-top: 12px; width: 28px; height: 2px; background: var(--accent); opacity: .8; }
-    .workspace { min-width: 0; }
-    .topbar {
-      min-height: 75px; border-bottom: 1px solid var(--border);
-      padding: 17px clamp(24px, 5vw, 60px);
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      background: rgba(17, 21, 31, .9);
-    }
-    .breadcrumbs { font-size: 13px; color: var(--muted); }
-    .breadcrumbs b { color: #e6eafd; font-weight: 550; }
-    .breadcrumbs .slash { color: var(--soft); margin: 0 10px; }
-    .status { font-size: 12px; color: #b9c3dd; border: 1px solid var(--border); border-radius: 99px; padding: 5px 11px; white-space: nowrap; }
-    .status::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #a2aafc; margin-right: 8px; vertical-align: 1px; }
-    main { max-width: calc(var(--max) + 120px); margin: 0 auto; padding: 35px clamp(24px, 5vw, 60px) 85px; }
-    .eyebrow { color: #acb8ed; font-size: 11px; text-transform: uppercase; letter-spacing: 2.7px; font-weight: 700; }
-    .hero {
-      position: relative; overflow: hidden; isolation: isolate;
-      min-height: 300px; border: 1px solid var(--border); border-radius: 14px;
-      background:
-        radial-gradient(ellipse at 93% 5%, rgba(99, 115, 196, .20), transparent 42%),
-        linear-gradient(115deg, #1c2333 2%, #151b29 55%, #1b2334 100%);
-      padding: clamp(30px, 5vw, 58px);
-    }
-    .hero::before {
-      content: ""; position: absolute; z-index: -1; pointer-events: none;
-      right: -95px; top: -120px; width: 480px; height: 480px; border-radius: 50%;
-      border: 1px solid rgba(173, 183, 243, .10);
-      box-shadow: 0 0 0 63px rgba(178, 187, 243, .017), 0 0 0 130px rgba(178, 187, 243, .016);
-      transform: rotate(-13deg);
-    }
-    .hero::after {
-      content: ""; position: absolute; z-index: -1; pointer-events: none;
-      right: 55px; bottom: -120px; width: 275px; height: 345px;
-      border: 1px solid rgba(188, 195, 247, .09); border-radius: 6px;
-      transform: rotate(-18deg);
-      background: repeating-linear-gradient(0deg, transparent 0 21px, rgba(167, 178, 229, .045) 22px, transparent 23px);
-    }
-    h1, h2, h3 { margin: 0; line-height: 1.25; }
-    h1 { font: 700 clamp(39px, 5vw, 61px)/1.14 Georgia, "Times New Roman", serif; letter-spacing: -.9px; margin: 13px 0 12px; }
-    .hero-lead { font: 21px/1.45 Georgia, "Times New Roman", serif; max-width: 700px; color: #d7deef; }
-    .accent-line { width: 41px; height: 3px; background: var(--accent); margin: 22px 0; }
-    .hero-intro { max-width: 700px; margin: 0; color: var(--muted); font-size: 15px; }
-    .section { margin-top: 28px; }
-    .alert {
-      padding: 24px 26px; border-radius: 12px;
-      border: 1px solid rgba(146, 160, 255, .35);
-      background: linear-gradient(100deg, rgba(98, 117, 224, .14), rgba(48, 62, 102, .08));
-    }
-    .alert-top { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #c1c9ff; font-weight: 700; letter-spacing: .3px; margin-bottom: 10px; }
-    .alert-top svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.7; }
-    .alert p { margin: 0; max-width: 850px; font-size: 16px; line-height: 1.85; }
-    .alert strong { color: #fff; }
-    .section-header { margin: 0 0 15px; }
-    .section-header h2 { font: 700 25px/1.3 Georgia, "Times New Roman", serif; }
-    .section-header p { margin: 7px 0 0; color: var(--muted); font-size: 14px; max-width: 740px; }
-    .cards { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 15px; }
-    .card, .statement {
-      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-      padding: 24px 25px;
-    }
-    .card-icon { width: 39px; height: 39px; padding: 9px; border-radius: 9px; margin-bottom: 13px; color: #a4b2ff; background: var(--accent-surface); }
-    .card h3 { font-size: 16px; margin-bottom: 9px; font-weight: 650; }
-    .card p, .statement p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.85; }
-    .statement { padding: 27px 30px; }
-    .statement p + p { margin-top: 15px; }
-    .statement strong { color: var(--text); }
-    .principles { display: grid; gap: 12px; list-style: none; padding: 0; margin: 0; }
-    .principles li {
-      display: grid; grid-template-columns: 37px minmax(0,1fr); gap: 13px;
-      padding: 18px 20px; border: 1px solid var(--border); border-radius: 10px;
-      background: var(--surface);
-    }
-    .number { color: #a8b4ff; font: 700 16px Georgia, serif; }
-    .principles b { display: block; font-size: 15px; margin-bottom: 3px; }
-    .principles span:last-child { color: var(--muted); font-size: 14px; }
-    .closing {
-      margin-top: 32px; border-top: 1px solid var(--border); padding-top: 24px;
-      display: flex; justify-content: space-between; align-items: center;
-      gap: 20px; color: var(--soft); font-size: 12px;
-    }
-    .closing strong { display: block; color: #e1e5f2; font: 700 21px Georgia, serif; margin-bottom: 3px; }
-    .closing time { white-space: nowrap; }
-    @media (max-width: 850px) {
-      .shell { grid-template-columns: 1fr; }
-      .sidebar { position: static; height: auto; min-height: 0; padding: 22px 20px 12px; }
-      .brand { margin: 0 4px; }
-      .brand strong { font-size: 27px; }
-      .side-rule, .side-note { display: none; }
-      .nav { display: flex; overflow-x: auto; gap: 5px; margin-top: 19px; padding-bottom: 5px; scrollbar-width: thin; }
-      .nav a { white-space: nowrap; flex: none; padding: 9px 13px; font-size: 13px; }
-      .nav svg { width: 16px; height: 16px; }
-      .topbar { min-height: 61px; }
-    }
-    @media (max-width: 620px) {
-      main { padding-top: 22px; }
-      .hero { min-height: 0; padding: 28px 23px; }
-      .hero-lead { font-size: 18px; }
-      .cards { grid-template-columns: 1fr; }
-      .card, .statement { padding: 21px; }
-      .alert { padding: 20px; }
-      .closing { flex-direction: column; align-items: flex-start; gap: 10px; }
-      .status { font-size: 11px; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .nav a { transition: none; } }
-  </style>
+  <title>Transparencia — Alejandría</title>
+  <script src="../assets/theme.js"></script>
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/search-index.js" defer></script>
+  <script src="../assets/site.js" defer></script>
 </head>
 <body>
-  <div class="shell">
-    <aside class="sidebar" aria-label="Navegación lateral">
-      <div class="brand">
-        <strong>Alejandría</strong>
-        <small>Archivo histórico</small>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand-row">
+        <a class="brand" href="../index.html" aria-label="Alejandría — Inicio"><strong>Alejandría<span aria-hidden="true">.</span></strong><small>Archivo histórico</small></a>
+        <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" hidden>Menú <span aria-hidden="true">☰</span></button>
       </div>
-      <div class="side-rule"></div>
-      <nav class="nav" aria-label="Secciones de transparencia">
-        <a href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10h-7v-7h-4v7H3z"/></svg>Inicio</a>
-        <a class="active" href="#inicio" aria-current="page">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10h-7v-7h-4v7H3z"/></svg>
-          Transparencia
-        </a>
-        <a href="#titularidad">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12h6"/></svg>
-          Titularidad
-        </a>
-        <a href="#limitaciones">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5m0 3h.01"/></svg>
-          Limitaciones
-        </a>
-        <a href="#lectura">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6c1.5 0 2 .8 2 2v14c0-1.2-.5-2-2-2H4zM20 5h-6c-1.5 0-2 .8-2 2v14c0-1.2.5-2 2-2h6z"/></svg>
-          Cómo leer
-        </a>
-        <a href="#correcciones">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2-5M4 4v5h5"/><path d="M12 8v4l3 2"/></svg>
-          Correcciones
-        </a>
-        <a href="#estado">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5z"/><path d="M14 3v5h5M8 13h8M8 17h6"/></svg>
-          Estado actual
-        </a>
-      </nav>
-      <div class="side-note">
-        «Comprender el pasado también implica reconocer lo que todavía no sabemos».
-        <span aria-hidden="true"></span>
-      </div>
+      <nav id="site-nav" class="nav" aria-label="Navegación principal"><a href="../index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v11h-7v-7h-4v7H3Z"/></svg>Inicio</a>
+        <a href="../cronologia/index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Cronología</a>
+        <a href="../casos/index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h7l2 3h9v12H3Z"/></svg>Casos</a>
+        <a href="../evidencias/index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5ZM14 3v5h5M8 12h8M8 16h6"/></svg>Evidencias</a>
+        <a href="../metodologia/index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="m11 6-6 11M13 6l6 11M6 19h12"/></svg>Metodología</a>
+        <a href="../fuentes/index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6c2 0 2 1 2 2v14c0-2-1-2-2-2H4ZM20 4h-6c-2 0-2 1-2 2v14c0-2 1-2 2-2h6Z"/></svg>Fuentes</a>
+        <a href="../Informacion/index.html" aria-current="page" class="nav-separated"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg>Transparencia</a>
+        <a href="../buscar/index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>Buscar</a></nav>
+      <div class="side-note"><span class="eyebrow">En construcción</span><p>Leer con contexto.<br>Reconocer los límites.</p><a href="../Informacion/index.html#limitaciones">Sobre este archivo <span aria-hidden="true">↗</span></a></div>
     </aside>
-
     <div class="workspace">
       <header class="topbar">
-        <div class="breadcrumbs"><a href="../index.html" title="Volver al inicio">Alejandría</a> <span class="slash">/</span> <b>Información y transparencia</b></div>
-        <span class="status">En construcción</span>
+        <form class="searchbar" role="search" action="../buscar/index.html" method="get">
+          <label class="sr-only" for="site-search">Buscar en el contenido público</label>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+          <input id="site-search" name="q" type="search" placeholder="Buscar en el archivo público…" maxlength="200" enterkeyhint="search">
+          <button type="submit" aria-label="Buscar">↵</button>
+        </form>
+        <button class="theme-toggle" type="button" aria-label="Activar modo claro" aria-pressed="false" hidden><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15A8.5 8.5 0 0 1 9 4 9 9 0 1 0 20 15Z"/></svg></button>
       </header>
-
-      <main id="inicio">
-        <section class="hero" aria-labelledby="page-title">
+      <main id="contenido" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="../index.html">Alejandría</a><span aria-hidden="true">/</span><span aria-current="page">Transparencia</span></nav>
+        <section class="hero" id="inicio" aria-labelledby="page-title">
           <div class="eyebrow">Información sobre el archivo</div>
           <h1 id="page-title">Transparencia</h1>
           <div class="hero-lead">Antes de leer una versión de los hechos, es importante saber quién la presenta.</div>
@@ -314,13 +136,9 @@
           </div>
         </section>
 
-        <footer class="closing">
-          <div>
-            <strong>Alejandría</strong>
-            Archivo histórico y reconstrucción documental. Consultar con criterio.
-          </div>
-          <div>Revisión de esta página: <time datetime="2026-10-15">15 de octubre de 2026</time></div>
-        </footer>
+        <p class="revision">Revisión del contenido original: <time datetime="2026-10-15">15 de octubre de 2026</time></p>
+
+        <footer class="footer"><div><strong>Alejandría</strong><p>Archivo histórico y reconstrucción documental.</p></div><div><a href="../Informacion/index.html">Transparencia</a><span>Una perspectiva interesada, no un veredicto.</span></div></footer>
       </main>
     </div>
   </div>
