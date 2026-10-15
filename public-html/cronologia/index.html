@@ -13,13 +13,14 @@
   <link rel="stylesheet" href="../assets/site.css">
   <script src="../assets/search-index.js" defer></script>
   <script src="../assets/site.js" defer></script>
+  <script src="../assets/timeline.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <div class="layout">
     <aside class="sidebar">
       <div class="brand-row">
-        <a class="brand" href="../index.html" aria-label="Alejandría — Inicio"><strong>Alejandría<span aria-hidden="true">.</span></strong><small>Archivo histórico</small></a>
+        <a class="brand" href="../index.html" title="Volver al inicio"><strong>Alejandría<span aria-hidden="true">.</span></strong><small>Archivo histórico</small></a>
         <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" hidden>Menú <span aria-hidden="true">☰</span></button>
       </div>
       <nav id="site-nav" class="nav" aria-label="Navegación principal"><a href="../index.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v11h-7v-7h-4v7H3Z"/></svg>Inicio</a>
@@ -45,7 +46,22 @@
       <main id="contenido" tabindex="-1">
         <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="../index.html">Alejandría</a><span aria-hidden="true">/</span><span aria-current="page">Cronología</span></nav>
         <header class="page-heading"><span class="eyebrow">Orden y contexto</span><h1 id="page-title">Cronología</h1><p>Un recorrido por los acontecimientos y las fuentes que permiten situarlos en el tiempo.</p></header>
-<section class="empty-state section" id="estado" aria-labelledby="estado-title"><span class="status-pill">Pendiente de contenido público</span><h2 id="estado-title">La cronología está en preparación.</h2><p>Esta versión no publica acontecimientos fechados. Cada entrada deberá contar con una referencia pública revisada y expresar sus límites antes de incorporarse al recorrido.</p><a class="button" href="../casos/expediente-ejemplo/index.html">Ver la estructura de un expediente →</a></section>
+<section class="section" id="recorrido" aria-labelledby="recorrido-title">
+  <div class="section-header"><div><span class="eyebrow">Recorrido documental</span><h2 id="recorrido-title">Acontecimientos públicos</h2></div></div>
+  <form id="timeline-filters" class="timeline-filters" hidden>
+    <fieldset><legend>Filtrar la cronología</legend><div class="filter-grid">
+      <label for="timeline-year">Año<select id="timeline-year" name="year"><option value="">Todos los años</option></select></label>
+      <label for="timeline-case">Caso<select id="timeline-case" name="case"><option value="">Todos los casos</option></select></label>
+      <label for="timeline-type">Tipo de acontecimiento<select id="timeline-type" name="type"><option value="">Todos los tipos</option></select></label>
+      <button class="button" type="reset">Limpiar filtros</button>
+    </div></fieldset>
+  </form>
+  <p id="timeline-status" class="section-meta" role="status" aria-live="polite" aria-atomic="true">No hay acontecimientos públicos registrados. Los filtros se activarán cuando existan entradas.</p>
+  <ol id="timeline-entries" class="timeline-list" data-search-exclude></ol>
+  <div id="timeline-empty" class="empty-state section" ><span class="status-pill">Cronología en preparación</span><h3>La cronología está lista para incorporar entradas revisadas.</h3><p>Esta versión no publica acontecimientos fechados. Las futuras entradas enlazarán a su expediente y a sus referencias públicas.</p></div>
+  <noscript><p class="reading-note section">Los filtros necesitan JavaScript. Todos los acontecimientos públicos disponibles se muestran en el recorrido.</p></noscript>
+</section>
+
 <section class="section" id="lectura"><div class="section-header"><h2>Cómo leer una futura entrada</h2></div><div class="cards three"><article class="card"><span class="card-index">01 / Fecha</span><h3>Situar el registro</h3><p>La fecha del documento y la del acontecimiento pueden ser diferentes. Las fechas inciertas deberán indicarse como tales.</p></article><article class="card"><span class="card-index">02 / Referencia</span><h3>Consultar el contexto</h3><p>La entrada enlazará al expediente y a la referencia pública que sustente lo descrito.</p></article><article class="card"><span class="card-index">03 / Alcance</span><h3>Reconocer los límites</h3><p>La posición de un registro en una cronología no demuestra por sí sola una relación de causa y efecto.</p></article></div></section>
 <p class="reading-note section">Para evaluar afirmaciones, consulta los <a href="../metodologia/index.html">criterios documentales</a> y el <a href="../Informacion/index.html">aviso de transparencia</a>.</p>
 

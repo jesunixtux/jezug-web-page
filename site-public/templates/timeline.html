@@ -1,0 +1,15 @@
+<section class="section" id="recorrido" aria-labelledby="recorrido-title">
+  <div class="section-header"><div><span class="eyebrow">Recorrido documental</span><h2 id="recorrido-title">Acontecimientos públicos</h2></div></div>
+  <form id="timeline-filters" class="timeline-filters" hidden>
+    <fieldset><legend>Filtrar la cronología</legend><div class="filter-grid">
+      <label for="timeline-year">Año<select id="timeline-year" name="year"><option value="">Todos los años</option></select></label>
+      <label for="timeline-case">Caso<select id="timeline-case" name="case"><option value="">Todos los casos</option></select></label>
+      <label for="timeline-type">Tipo de acontecimiento<select id="timeline-type" name="type"><option value="">Todos los tipos</option></select></label>
+      <button class="button" type="reset">Limpiar filtros</button>
+    </div></fieldset>
+  </form>
+  <p id="timeline-status" class="section-meta" role="status" aria-live="polite" aria-atomic="true">{{status}}</p>
+  <ol id="timeline-entries" class="timeline-list" data-search-exclude>{{entries}}</ol>
+  <div id="timeline-empty" class="empty-state section" {{empty_hidden}}><span class="status-pill">{{empty_label}}</span><h3>{{empty_title}}</h3><p>{{empty_text}}</p></div>
+  <noscript><p class="reading-note section">Los filtros necesitan JavaScript. Todos los acontecimientos públicos disponibles se muestran en el recorrido.</p></noscript>
+</section>

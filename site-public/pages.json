@@ -1,11 +1,86 @@
 [
-  {"id":"inicio","title":"Inicio","description":"Alejandría: archivo histórico y reconstrucción documental. Consulta sus secciones y criterios de lectura.","route":"index.html","source":"inicio.html"},
-  {"id":"cronologia","title":"Cronología","description":"Consulta el estado de la cronología pública de Alejandría y sus criterios de lectura.","route":"cronologia/index.html","source":"cronologia.html"},
-  {"id":"casos","title":"Casos","description":"Expedientes públicos de Alejandría y ejemplo de su estructura documental.","route":"casos/index.html","source":"casos.html"},
-  {"id":"evidencias","title":"Evidencias","description":"Alcance del catálogo público de evidencias y límites de acceso a los originales.","route":"evidencias/index.html","source":"evidencias.html"},
-  {"id":"metodologia","title":"Metodología","description":"Criterios documentales de Alejandría para distinguir hechos, alegaciones e interpretaciones.","route":"metodologia/index.html","source":"metodologia.html"},
-  {"id":"fuentes","title":"Fuentes","description":"Referencias públicas de Alejandría: procedencia, contexto y disponibilidad.","route":"fuentes/index.html","source":"fuentes.html"},
-  {"id":"transparencia","title":"Transparencia","description":"Declaración de transparencia, titularidad y límites del archivo histórico Alejandría.","route":"Informacion/index.html","source":"transparencia.html"},
-  {"id":"buscar","title":"Buscar","description":"Busca entre las páginas y contenidos públicos de Alejandría.","route":"buscar/index.html","source":"buscar.html"},
-  {"id":"expediente-ejemplo","nav":"casos","title":"Estructura de un expediente","description":"Ejemplo de organización de un expediente, sin acontecimientos ni evidencias reales.","route":"casos/expediente-ejemplo/index.html","source":"expediente-ejemplo.html"}
+  {
+    "id": "inicio",
+    "title": "Inicio",
+    "description": "Alejandría: archivo histórico y reconstrucción documental. Consulta sus secciones y criterios de lectura.",
+    "route": "index.html",
+    "source": "inicio.html",
+    "public": true,
+    "search": true
+  },
+  {
+    "id": "cronologia",
+    "title": "Cronología",
+    "description": "Consulta el estado de la cronología pública de Alejandría y sus criterios de lectura.",
+    "route": "cronologia/index.html",
+    "source": "cronologia.html",
+    "public": true,
+    "search": true
+  },
+  {
+    "id": "casos",
+    "title": "Casos",
+    "description": "Expedientes públicos de Alejandría y ejemplo de su estructura documental.",
+    "route": "casos/index.html",
+    "source": "casos.html",
+    "public": true,
+    "search": true
+  },
+  {
+    "id": "evidencias",
+    "title": "Evidencias",
+    "description": "Alcance del catálogo público de evidencias y límites de acceso a los originales.",
+    "route": "evidencias/index.html",
+    "source": "evidencias.html",
+    "public": true,
+    "search": true
+  },
+  {
+    "id": "metodologia",
+    "title": "Metodología",
+    "description": "Criterios documentales de Alejandría para distinguir hechos, alegaciones e interpretaciones.",
+    "route": "metodologia/index.html",
+    "source": "metodologia.html",
+    "public": true,
+    "search": true
+  },
+  {
+    "id": "fuentes",
+    "title": "Fuentes",
+    "description": "Referencias públicas de Alejandría: procedencia, contexto y disponibilidad.",
+    "route": "fuentes/index.html",
+    "source": "fuentes.html",
+    "public": true,
+    "search": true
+  },
+  {
+    "id": "transparencia",
+    "title": "Transparencia",
+    "description": "Declaración de transparencia, titularidad y límites del archivo histórico Alejandría.",
+    "route": "Informacion/index.html",
+    "source": "transparencia.html",
+    "public": true,
+    "search": true
+  },
+  {
+    "id": "buscar",
+    "title": "Buscar",
+    "description": "Busca entre las páginas y contenidos públicos de Alejandría.",
+    "route": "buscar/index.html",
+    "source": "buscar.html",
+    "public": true,
+    "search": false
+  },
+  {
+    "id": "404",
+    "title": "Página no encontrada",
+    "description": "Página no encontrada. Regresa al inicio o busca en el contenido público de Alejandría.",
+    "route": "404.html",
+    "aliases": [
+      "404/404.html"
+    ],
+    "source": "404.html",
+    "public": true,
+    "search": false
+  }
 ]

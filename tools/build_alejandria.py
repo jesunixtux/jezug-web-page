@@ -1,8 +1,12 @@
 """Build only the explicitly listed public pages. Never scan the documentary archive."""
 from html import escape
 from html.parser import HTMLParser
+from hashlib import sha256
 import json
 from pathlib import Path
+import re
+
+from alejandria_content import load_dossiers, render_cases, render_dossier, render_timeline, safe_source, event_anchor
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "site-public"
@@ -30,7 +34,7 @@ class PublicText(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
-        skip = tag in {"script", "style", "svg", "nav", "noscript"} or attributes.get("aria-hidden") == "true"
+        skip = tag in {"script", "style", "svg", "nav", "noscript", "form"} or attributes.get("aria-hidden") == "true" or "data-search-exclude" in attributes
         if tag not in {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}:
             self.stack.append((tag, skip))
             if skip:
@@ -57,20 +61,44 @@ def substitute(template, values):
     return template
 
 
-def build():
-    pages = json.loads((SOURCE / "pages.json").read_text(encoding="utf-8"))
-    layout = (SOURCE / "layout.html").read_text(encoding="utf-8")
+def render_site(source_dir=SOURCE):
+    """Return deterministic output in memory; also used to detect outdated generated files."""
+    configured = json.loads((source_dir / "pages.json").read_text(encoding="utf-8"))
+    if not isinstance(configured, list):
+        raise ValueError("pages.json must be a list")
+    pages = []
+    for page in configured:
+        if type(page.get("public")) is not bool or type(page.get("search")) is not bool:
+            raise ValueError("Every page needs explicit public/search boolean authorization")
+        if page["public"]:
+            pages.append(page)
+    dossiers = load_dossiers(source_dir)
+    pages.extend({"id": doc["id"], "nav": "casos", "title": doc["title"], "description": doc["description"], "route": doc["route"], "public": True, "search": doc["search"], "doc": doc} for doc in dossiers)
+    settings = json.loads((source_dir / "settings.json").read_text(encoding="utf-8"))
+    base_path = settings["base_path"]
+    if not isinstance(base_path, str) or not re.fullmatch(r"/(?:[a-zA-Z0-9_-]+/)*", base_path):
+        raise ValueError("base_path must be / or an absolute subfolder such as /alejandria/")
+    layout = (source_dir / "layout.html").read_text(encoding="utf-8")
+    dossier_template = (source_dir / "templates/expediente.html").read_text(encoding="utf-8")
+    timeline_template = (source_dir / "templates/timeline.html").read_text(encoding="utf-8")
     by_id = {page["id"]: page for page in pages}
-    if len(by_id) != len(pages) or len({page["route"] for page in pages}) != len(pages):
+    routes = [route for page in pages for route in [page["route"], *page.get("aliases", [])]]
+    if len(by_id) != len(pages) or len(set(routes)) != len(routes):
         raise ValueError("Page IDs and routes must be unique")
+    if any(not isinstance(route, str) or not re.fullmatch(r"(?:[A-Za-z0-9_-]+/)*[A-Za-z0-9_-]+\.html", route) for route in routes):
+        raise ValueError("Routes must be relative HTML paths within the public site")
     index = []
+    outputs = {}
     for page in pages:
-        destination = (OUTPUT / page["route"]).resolve()
-        source = (SOURCE / "pages" / page["source"]).resolve()
-        if not destination.is_relative_to(OUTPUT.resolve()) or not source.is_relative_to((SOURCE / "pages").resolve()):
-            raise ValueError("Page paths must remain inside the public site")
-        prefix = "../" * (len(Path(page["route"]).parts) - 1)
-        content = substitute(source.read_text(encoding="utf-8"), {"root": prefix})
+        prefix = base_path if page["id"] == "404" else "../" * (len(Path(page["route"]).parts) - 1)
+        if "doc" in page:
+            content = render_dossier(page["doc"], dossier_template, substitute, prefix)
+        else:
+            source = safe_source(source_dir / "pages", page["source"], ".html")
+            content = substitute(source.read_text(encoding="utf-8"), {
+                "root": prefix, "cases": render_cases(dossiers, prefix),
+                "timeline": render_timeline(dossiers, timeline_template, substitute, prefix),
+            })
         navigation = []
         for key in NAV_IDS:
             target = by_id[key]
@@ -94,16 +122,54 @@ def build():
             "title": escape(page["title"]), "description": escape(page["description"], quote=True),
             "navigation": "\n        ".join(navigation), "breadcrumbs": breadcrumbs, "content": content,
         })
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        destination.write_text(output, encoding="utf-8", newline="\n")
-        if page["id"] != "buscar":
+        outputs[page["route"]] = output
+        for alias in page.get("aliases", []):
+            if page["id"] != "404":
+                raise ValueError("Only the 404 page supports aliases")
+            outputs[alias] = output
+        if page["search"]:
             parser = PublicText()
             parser.feed(content)
-            index.append({"title": page["title"], "url": page["route"], "text": " ".join("".join(parser.parts).split())})
-    search_file = OUTPUT / "assets" / "search-index.js"
-    search_file.parent.mkdir(parents=True, exist_ok=True)
-    search_file.write_text("/* Generated from the explicit public page list; do not edit. */\nwindow.ALEJANDRIA_SEARCH_INDEX = " + json.dumps(index, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8", newline="\n")
-    print(f"Built {len(pages)} public pages; indexed {len(index)} pages. No archive directories accessed.")
+            index.append({"title": page["title"], "url": page["route"], "kind": "Expediente" if "doc" in page else "Página", "text": " ".join("".join(parser.parts).split())})
+    # Add individual authorized chronology entries, with stable deep links.
+    if by_id["cronologia"]["search"]:
+        for doc in dossiers:
+            if not doc["search"]:
+                continue
+            for event in doc["events"]:
+                index.append({"title": event["title"], "url": by_id["cronologia"]["route"] + "#" + event_anchor(doc, event), "kind": "Acontecimiento", "text": " ".join((doc["title"], event.get("date_label") or event["date"] or "Fecha sin determinar", event["summary"]))})
+    outputs["assets/search-index.js"] = "/* Generated only from explicit public/search authorization; do not edit. */\nwindow.ALEJANDRIA_SEARCH_INDEX = " + json.dumps(index, ensure_ascii=False, indent=2) + ";\n"
+    outputs["robots.txt"] = "# Sitio en preparación. Mantener fuera de los rastreadores.\nUser-agent: *\nDisallow: /\n"
+    # Track only generated files, so revoking publication also removes old HTML safely.
+    outputs["assets/generated-files.json"] = json.dumps({route: sha256(value.encode("utf-8")).hexdigest() for route, value in outputs.items()}, indent=2) + "\n"
+    return outputs, pages, index
+
+
+def build(source_dir=SOURCE, output_dir=OUTPUT):
+    outputs, pages, index = render_site(source_dir)
+    if any(not (output_dir / route).resolve().is_relative_to(output_dir.resolve()) for route in outputs):
+        raise ValueError("Output paths must remain inside public-html, including symlinks")
+    inventory = output_dir / "assets/generated-files.json"
+    obsolete = []
+    if inventory.is_file():
+        previous = json.loads(inventory.read_text(encoding="utf-8"))
+        if not isinstance(previous, dict):
+            raise ValueError("Invalid generated file inventory")
+        for route, digest in previous.items():
+            candidate = output_dir / route
+            if not candidate.resolve().is_relative_to(output_dir.resolve()) or not re.fullmatch(r"(?:[A-Za-z0-9_-]+/)*[A-Za-z0-9_-]+\.html|assets/search-index\.js|robots\.txt", route):
+                raise ValueError("Generated inventory contains an unsafe path")
+            if route not in outputs and candidate.exists():
+                if sha256(candidate.read_text(encoding="utf-8").encode("utf-8")).hexdigest() != digest:
+                    raise ValueError(f"Previously generated file was edited; review before removing: {route}")
+                obsolete.append(candidate)
+    for route, output in outputs.items():
+        destination = output_dir / route
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_text(output, encoding="utf-8", newline="\n")
+    for candidate in obsolete:
+        candidate.unlink()  # Only unchanged files recorded by a previous build, inside the output directory.
+    print(f"Built {len(pages)} public pages and aliases; {len(index)} search entries. Only explicitly approved sources read.")
 
 
 if __name__ == "__main__":

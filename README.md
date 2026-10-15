@@ -1,6 +1,19 @@
 # jezug-web-page
 
-Archivo documental privado en construcción.
+Repositorio público en construcción: archivo documental y sitio estático Alejandría. Que un archivo esté en este repositorio no autoriza su incorporación al sitio web.
+
+## Alejandría — desarrollo web
+
+La web estática se mantiene en `public-html/` y se genera desde `site-public/`. Tiene navegación compartida, tema oscuro predeterminado y modo claro persistente, búsqueda local, una cronología con filtros preparada para recibir entradas y un sistema de expedientes estructurados. Solo incluye contenido público de ejemplo y estados vacíos; todavía no presenta expedientes históricos reales.
+
+```powershell
+python -B tools/build_alejandria.py
+python -B tools/check_alejandria.py
+python -B tools/test_alejandria.py
+python -B tools/serve_alejandria.py
+```
+
+Consulta [la guía web](site-public/README.md) para redactar expedientes, autorizar su publicación y búsqueda, y revisar las pruebas. El servidor de vista previa escucha únicamente en `127.0.0.1:8765` y sirve solo `public-html/`, incluyendo una respuesta 404 propia. No hay despliegue automático ni dominio configurado. El estado de la web es independiente del estado de revisión del archivo documental descrito a continuación.
 
 Este repositorio preserva material relacionado con la historia pública de “Jezu G”, respuestas a acusaciones, evidencia primaria y secundaria, correcciones, y un registro separado de publicaciones/hostigamiento posteriores.
 
@@ -34,6 +47,9 @@ Su objetivo es que cada afirmación importante pueda rastrearse hasta una fuente
 - `acoso/` — registro separado de publicaciones, reclamos y hostigamiento de 2026.
 - `private-references/` — auditorías internas, huecos y procedencia.
 - `notes/` — notas auxiliares.
+- `site-public/` — plantillas, páginas y expedientes autorizados para la web.
+- `public-html/` — salida estática del generador y recursos compartidos.
+- `tools/build_alejandria.py`, `tools/check_alejandria.py`, `tools/test_alejandria.py`, `tools/serve_alejandria.py` — generación, verificación, pruebas y vista previa local.
 
 ## Estado
 
@@ -43,7 +59,7 @@ Antes de cualquier publicación pública deben existir copias redactadas de mate
 
 ## Alejandría — consolidación documental (2026-10-15)
 
-Estado: **archivo privado en consolidación; no apto aún para publicación pública**.
+Estado documental: **material en consolidación; su incorporación a la web requiere revisión y autorización explícitas**. El repositorio es público; la expresión «archivo privado» de fases anteriores no describe su visibilidad actual.
 
 Punto de entrada actualizado: [inventario y mapa de fuentes](docs/fase4_inventario_alejandria.md) y [expediente cronológico 2022–2023](docs/fase4_casos_2022_2023.md). Se conservan los análisis de fases anteriores como historial, incluso cuando la actualización posterior corrige sus pendientes.
 
@@ -56,4 +72,4 @@ Fuentes añadidas recientemente: exportación JSON completa del grupo «el pepe�
 
 **Regla especial:** no abrir, procesar, descargar ni previsualizar imágenes, videos, audio, adjuntos o enlaces multimedia del grupo «el pepe», incluidos derivados PNG/WebP ya presentes en el repositorio. Solo análisis textual del JSON/HTML sin cargar recursos remotos. El workflow anterior de generación visual queda suspendido. No se autoriza publicación automática.
 
-La carpeta `public-html/` ya existe en la rama, pero queda expresamente **fuera de la fase actual**: no asumir que sus archivos actuales constituyen una web publicada ni editarla antes de completar el expediente, anonimización y revisión final.
+La fase de desarrollo web está autorizada sobre código y contenido público de ejemplo. Esto no autoriza a trasladar originales, conversaciones completas o datos personales a `public-html/`. El generador no recorre `docs/`, `evidence/`, `md-s/` ni `private-references/`; solo lee las fuentes web expresamente autorizadas. La revisión documental, anonimización y autorización de cada expediente real siguen pendientes. Una web generada localmente no equivale a un sitio publicado.

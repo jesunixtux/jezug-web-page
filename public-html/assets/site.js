@@ -32,9 +32,12 @@
   });
 
   menuButton.hidden = false;
+  const mobile = window.matchMedia("(max-width: 900px)");
   function closeMenu() {
+    const restoreFocus = mobile.matches && navigation.contains(document.activeElement);
     navigation.classList.remove("is-open");
     menuButton.setAttribute("aria-expanded", "false");
+    if (restoreFocus) menuButton.focus();
   }
   menuButton.addEventListener("click", () => {
     const open = navigation.classList.toggle("is-open");
@@ -43,9 +46,17 @@
   navigation.addEventListener("click", event => {
     if (event.target.closest("a")) closeMenu();
   });
-  window.matchMedia("(max-width: 900px)").addEventListener("change", closeMenu);
+  mobile.addEventListener("change", () => {
+    closeMenu();
+    if (!mobile.matches && document.activeElement === menuButton) navigation.querySelector("a").focus();
+  });
+  document.addEventListener("click", event => {
+    if (mobile.matches && !navigation.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+  });
+  // Collapse navigation only after its controls are wired; it remains usable if this file fails to load.
+  root.classList.add("js");
   document.addEventListener("keydown", event => {
-    const editing = event.target.closest("input, textarea, select, [contenteditable='true']");
+    const editing = event.target.closest?.("input, textarea, select, [contenteditable]:not([contenteditable='false'])");
     if (event.key === "/" && !editing && !event.ctrlKey && !event.metaKey && !event.altKey) {
       event.preventDefault();
       input.focus();
@@ -93,14 +104,14 @@
       .map(entry => ({ ...entry, score: terms.reduce((total, term) => total + (entry.normalizedTitle.includes(term) ? 3 : 0), 0) }))
       .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title, "es"));
     status.textContent = matches.length
-      ? matches.length + (matches.length === 1 ? " página encontrada" : " páginas encontradas") + " para «" + query + "»."
+      ? matches.length + (matches.length === 1 ? " resultado encontrado" : " resultados encontrados") + " para «" + query + "»."
       : "Sin resultados para «" + query + "». Prueba con otra palabra, como metodología, fuentes o transparencia.";
     for (const entry of matches) {
       const article = document.createElement("article");
       article.className = "card search-result";
       const label = document.createElement("span");
       label.className = "result-path";
-      label.textContent = "Alejandría / " + entry.title;
+      label.textContent = (entry.kind || "Página") + " / " + entry.title;
       const heading = document.createElement("h3");
       const link = document.createElement("a");
       link.href = root.dataset.root + entry.url;

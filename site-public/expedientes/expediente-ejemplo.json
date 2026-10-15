@@ -1,0 +1,17 @@
+{
+  "id": "expediente-ejemplo",
+  "title": "Estructura de un expediente",
+  "description": "Ejemplo de organización documental, sin acontecimientos, testimonios ni evidencias reales.",
+  "example": true,
+  "period": "Sin asignar",
+  "introduction": "",
+  "context": "",
+  "scope": "",
+  "events": [],
+  "claims": [],
+  "references": [],
+  "contradictions": [],
+  "undetermined": [],
+  "conclusions": [],
+  "updates": []
+}

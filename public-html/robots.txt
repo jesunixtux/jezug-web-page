@@ -1,0 +1,3 @@
+# Sitio en preparación. Mantener fuera de los rastreadores.
+User-agent: *
+Disallow: /
