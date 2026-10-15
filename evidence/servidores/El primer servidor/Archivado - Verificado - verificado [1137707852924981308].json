@@ -1,0 +1,207 @@
+{
+  "guild": {
+    "id": "842317448752529449",
+    "name": "Archivado",
+    "iconUrl": "https://cdn.discordapp.com/icons/842317448752529449/a0b5780641db0e0e2a150a0711d704dc.png?size=512"
+  },
+  "channel": {
+    "id": "1137707852924981308",
+    "type": "GuildTextChat",
+    "categoryId": "1137700862945402890",
+    "category": "Verificado",
+    "name": "verificado",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-10-15T12:06:29.778844-03:00",
+  "messages": [
+    {
+      "id": "1137707854715949117",
+      "type": "Default",
+      "timestamp": "2023-08-06T07:24:50.154-04:00",
+      "timestampEdited": "2023-08-06T07:39:43.508-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Buenos Dias Tardes O Noches",
+      "author": {
+        "id": "159985870458322944",
+        "name": "MEE6",
+        "discriminator": "4876",
+        "nickname": "MEE6",
+        "color": "#3B7770",
+        "isBot": true,
+        "roles": [
+          {
+            "id": "848239187500859393",
+            "name": "MEE6",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "965349965742366810",
+            "name": "\uD83E\uDD16BOTS",
+            "color": "#3B7770",
+            "position": 22
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/159985870458322944/765030df32975c5b23f8dfe86d6ff520.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Obtener verificación",
+          "url": null,
+          "timestamp": null,
+          "description": "Debes darle al ✅para verificarte.\nEs importante hacerlo y verificarte.",
+          "color": "#5BCEF5",
+          "images": [],
+          "fields": [
+            {
+              "name": "Antes que le des te recomiendo que leas las reglas del servidor #‖-reglas-⟪\uD83D\uDCD0⟫ .",
+              "value": "si no lo haces pues ahi veras tu",
+              "isInline": false
+            }
+          ],
+          "inlineEmojis": [
+            {
+              "id": "",
+              "name": "✅",
+              "code": "white_check_mark",
+              "isAnimated": false,
+              "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+            }
+          ]
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 12,
+          "users": [
+            {
+              "id": "159985870458322944",
+              "name": "MEE6",
+              "discriminator": "4876",
+              "nickname": "MEE6",
+              "color": "#3B7770",
+              "isBot": true,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/159985870458322944/765030df32975c5b23f8dfe86d6ff520.png?size=512"
+            },
+            {
+              "id": "506317652952875030",
+              "name": "black_ghost98.",
+              "discriminator": "0000",
+              "nickname": "Black_Ghost 98",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/506317652952875030/ab350a0b9c1b667b2ff7b30f618dfedf.png?size=512"
+            },
+            {
+              "id": "878836140927504424",
+              "name": "whole_l8",
+              "discriminator": "0000",
+              "nickname": "\uD835\uDC16\uD835\uDC21\uD835\uDC28\uD835\uDC25\uD835\uDC1E \uD835\uDC0B ᗜˬᗜ",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/878836140927504424/feed64be81c097bd908dbf8ab5ce2f79.png?size=512"
+            },
+            {
+              "id": "911339944159625246",
+              "name": "minsartist",
+              "discriminator": "0000",
+              "nickname": "MinsArtist",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/911339944159625246/9326cd877c14904a17b9303228aa77be.png?size=512"
+            },
+            {
+              "id": "949949256331034636",
+              "name": "nekos_93930",
+              "discriminator": "0000",
+              "nickname": "Neks",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/949949256331034636/6811bcab862a173edd93a3c240cc3106.png?size=512"
+            },
+            {
+              "id": "1048433086704140329",
+              "name": "angel1229",
+              "discriminator": "0000",
+              "nickname": "Angel",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512"
+            },
+            {
+              "id": "1066920481757872289",
+              "name": "puck.sito",
+              "discriminator": "0000",
+              "nickname": "\uD835\uDD7B\uD835\uDD80\uD835\uDD88\uD835\uDD90",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1066920481757872289/df6cdf8472063677ffd2479ffa8b9315.png?size=512"
+            },
+            {
+              "id": "1076998471317475410",
+              "name": "deleted_user_fb6be8efc849",
+              "discriminator": "0000",
+              "nickname": "deleted_user_fb6be8efc849",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+            },
+            {
+              "id": "1107772991024144414",
+              "name": "deleted_user_62404db11e2c",
+              "discriminator": "0000",
+              "nickname": "deleted_user_62404db11e2c",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+            },
+            {
+              "id": "1131820600529260666",
+              "name": "the_redbird_tendo",
+              "discriminator": "0000",
+              "nickname": "Sebas Cuenta Vieja Y Abandonada",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1131820600529260666/c022b06dd5842343581d941dd58f488b.png?size=512"
+            },
+            {
+              "id": "1142669020911374458",
+              "name": "deleted_user_9ff839874cbf",
+              "discriminator": "0000",
+              "nickname": "deleted_user_9ff839874cbf",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+            },
+            {
+              "id": "1284373637591339049",
+              "name": "shell_gi",
+              "discriminator": "0000",
+              "nickname": "NET4",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1284373637591339049/11935f5ce7a7ed343aa487bf1e57440f.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 1
+}
