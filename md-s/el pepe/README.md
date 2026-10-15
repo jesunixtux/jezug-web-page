@@ -42,3 +42,9 @@ Incluye:
 - `ai/README.md` — instrucciones para pasar el corpus a otra IA con menos carga.
 
 Para cualquier cita o conclusión importante, volver al PNG original.
+
+## Restricción vigente a partir del 15-10-2026
+
+**El titular ha prohibido abrir, descargar, procesar o inspeccionar cualquier archivo multimedia de este grupo.** Por tanto, aunque esta carpeta incluya 31 PNG, derivados WebP y páginas de revisión generadas anteriormente, **no deben abrirse ni regenerarse** sin que el titular retire expresamente esta restricción. La documentación anterior describe procedimientos históricos, no permiso vigente.
+
+Para nuevos análisis, emplear únicamente la exportación textual del grupo: `evidence/menores/originales/el-pepe-completo.json`. El HTML `el-pepe-transcript.html` es un derivado de lectura que contiene avatares incrustados; no abrir en un navegador que los muestre al investigar. No cargar URLs remotas de adjuntos ni seguir enlaces multimedia. El workflow de conversión visual se ha suspendido.

@@ -86,3 +86,28 @@ Alcance: documento reciente preservado en `docs/drive-downloads/2026-09-06_drive
 - Conclusion sostenida por evidencia: son fuentes relevantes de acusaciones actuales.
 - No determinado con el material actual: que cada inferencia del documento/video este demostrada por evidencia primaria.
 - Estado provisional: requiere transcripcion completa del video.
+
+## Adenda de octubre — R07 a R09
+
+**Fuentes nuevas:** exportación completa textual del grupo «el pepe» y DMs privados en `evidence/menores/originales/`. Los mensajes prueban declaraciones realizadas, no automáticamente la materialización de sus amenazas o presunciones. Consultar `docs/fase4_casos_2022_2023.md`.
+
+### R07 — Danel: amenazas, IP y afirmación de Grindr
+
+- **Documentado:** Jezu amenazó con divulgar datos en el grupo y compartió una IP atribuida a otra persona. El 05-08-2022 afirmó por Discord que había inscrito el correo de Danel en Grindr.
+- **Admisión y testimonio del autor:** admite haberse excedido durante el conflicto; sostiene retrospectivamente que **no llegó a realizar** la inscripción en Grindr y que otras declaraciones de la época también eran exageraciones. Atribuye retrospectivamente a Cris la obtención de la IP; no se ha comprobado quién la obtuvo.
+- **No determinado:** si se ejecutó registro efectivo en Grindr, si hubo perfil visible o contacto de terceros, procedencia completa de la IP y efectos concretos. Las noticias sobre delitos en aplicaciones de citas son contexto general, no evidencia de una consecuencia específica para Danel.
+- **Criterio editorial:** no minimizar amenazas ni difusión por falta de daño comprobado; tampoco convertir riesgos genéricos en consecuencias particulares acreditadas.
+
+### R08 — ¿Hubo una orden coordinada de Jezu a tres menores contra Guillermo?
+
+- **Fuente externa:** la parte 2 de Los Brígidos sostiene que Jezu influyó o dirigió a tres menores a infiltrarse/molestar a Guillermo.
+- **Documentado:** los DMs de Kirmo, Ángel y Sprout/Tord y el texto recuperado de «el pepe» muestran conductas diferenciadas. Kirmo expresó una iniciativa propia respecto de Guillermo, Jezu dio una sugerencia engañosa; Ángel recibió una propuesta de atacar verbalmente a Ruitzo y su pareja, no a Guillermo, en la conversación examinada; Sprout/Tord propuso o produjo material de burla en distintos episodios.
+- **No hallado en los textos preservados:** orden explícita de Jezu a esos tres para entrar al servidor de Guillermo y hostigarlo como operación conjunta.
+- **Límite:** no haber localizado esa orden **no prueba su inexistencia** en mensajes eliminados, servidores ajenos, llamadas o DMs ausentes. La participación voluntaria de menores tampoco elimina responsabilidad adulta por alentarlos.
+
+### R09 — Distinción entre versiones, impacto y etiquetas
+
+- Las citas literales se asignan a mensaje, autor, fecha e ID; una captura aislada se clasifica por su alcance real.
+- Los recuerdos actuales de Jezu se etiquetan como **testimonio retrospectivo**, incluso si ofrecen explicaciones plausibles.
+- No describir a ninguna persona con diagnósticos clínicos ni dar por acreditado un delito por el uso de un calificativo en documentos de parte.
+- Los conflictos con **Danel**, **Guillermo/The Loud Channel** y **Ruitzo** deben separarse antes de analizar cualquier posible patrón común.

@@ -2022,5 +2022,54 @@
       "status": "not_found_by_name_or_description",
       "description": "Conversacion con supercole del 18-04-2023 donde retracta/corrige una acusacion tras investigar"
     }
-  ]
+  ],
+  "textual_exports": [
+    {
+      "path": "menores/originales/el-pepe-completo.json",
+      "repository_path": "evidence/menores/originales/el-pepe-completo.json",
+      "git_blob_sha": "7001a62a48b05d01f7d3876a2e6e075a121dfcfb",
+      "bytes": 5821380,
+      "kind": "discord_group_json_primary",
+      "access": "private_only",
+      "multimedia_policy": "no_multimedia_access_or_remote_load"
+    },
+    {
+      "path": "menores/originales/el-pepe-transcript.html",
+      "repository_path": "evidence/menores/originales/el-pepe-transcript.html",
+      "git_blob_sha": "db76ad482bfa2935b7a67c6436f8edfa0ab20db5",
+      "bytes": 6616229,
+      "kind": "discord_group_html_derivative",
+      "access": "private_only",
+      "multimedia_policy": "no_multimedia_access_or_remote_load"
+    },
+    {
+      "path": "menores/originales/[DiscordKit] Angel_DirectMessages_20261014_233252.html",
+      "repository_path": "evidence/menores/originales/[DiscordKit] Angel_DirectMessages_20261014_233252.html",
+      "git_blob_sha": "5b4bc46c551c3cf004c2862477d86cf76afa440b",
+      "bytes": 175047,
+      "kind": "discord_dm_html_export",
+      "access": "private_only",
+      "multimedia_policy": "privacy_review_required"
+    },
+    {
+      "path": "menores/originales/[DiscordKit] 💎ANGEL💎_DirectMessages_20261015_000105.html",
+      "repository_path": "evidence/menores/originales/[DiscordKit] 💎ANGEL💎_DirectMessages_20261015_000105.html",
+      "git_blob_sha": "8d49f22a4c707bd775814a22255c86a555f5c390",
+      "bytes": 60522,
+      "kind": "discord_dm_html_export",
+      "access": "private_only",
+      "multimedia_policy": "privacy_review_required"
+    },
+    {
+      "path": "menores/originales/[DiscordKit] 𓂀 𝕊𝕡𝕣𝕠𝕦𝕥🍓 𓂀_DirectMessages_20261015_000741.html",
+      "repository_path": "evidence/menores/originales/[DiscordKit] 𓂀 𝕊𝕡𝕣𝕠𝕦𝕥🍓 𓂀_DirectMessages_20261015_000741.html",
+      "git_blob_sha": "66acf83ab997321dab4f16162c4acb5f5e094689",
+      "bytes": 162419,
+      "kind": "discord_dm_html_export",
+      "access": "private_only",
+      "multimedia_policy": "privacy_review_required"
+    }
+  ],
+  "textual_exports_last_updated_on": "2026-10-15",
+  "notes_2026_10_15": "La sección files mantiene 105 evidencias visuales auditadas en septiembre y no fue sometida a nueva inspección. Se añaden cinco archivos textuales por metadatos SHA del blob Git, sin abrir multimedia. Se preserva la fecha original last_updated_on de la auditoría visual."
 }

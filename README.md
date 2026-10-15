@@ -40,3 +40,20 @@ Su objetivo es que cada afirmación importante pueda rastrearse hasta una fuente
 El corpus sigue abierto. Una ausencia de evidencia no demuestra que un hecho no ocurriera; del mismo modo, una acusación no queda demostrada por el solo hecho de aparecer repetida en varias fuentes derivadas.
 
 Antes de cualquier publicación pública deben existir copias redactadas de material con datos personales, menores o terceros innecesarios.
+
+## Alejandría — consolidación documental (2026-10-15)
+
+Estado: **archivo privado en consolidación; no apto aún para publicación pública**.
+
+Punto de entrada actualizado: [inventario y mapa de fuentes](docs/fase4_inventario_alejandria.md) y [expediente cronológico 2022–2023](docs/fase4_casos_2022_2023.md). Se conservan los análisis de fases anteriores como historial, incluso cuando la actualización posterior corrige sus pendientes.
+
+Fuentes añadidas recientemente: exportación JSON completa del grupo «el pepe» (5.979 mensajes), versión HTML de consulta y tres conversaciones directas de Discord. Las fuentes originales están en `evidence/menores/originales/`. **El JSON es la copia de referencia para el historial grupal; el HTML es un derivado de lectura**.
+
+- [Registro de límites, privacidad y preparación para futura web](docs/fase4_preparacion_public_html.md)
+- [Correcciones y procedencia](docs/fase4_bitacora_correcciones.md)
+- [Matriz de afirmaciones](data/fase3_claim_matrix.json), ahora con adendas de octubre.
+- [Notas de recuperación pendientes](notes/fase3_huecos_pendientes.md).
+
+**Regla especial:** no abrir, procesar, descargar ni previsualizar imágenes, videos, audio, adjuntos o enlaces multimedia del grupo «el pepe», incluidos derivados PNG/WebP ya presentes en el repositorio. Solo análisis textual del JSON/HTML sin cargar recursos remotos. El workflow anterior de generación visual queda suspendido. No se autoriza publicación automática.
+
+La carpeta `public-html/` ya existe en la rama, pero queda expresamente **fuera de la fase actual**: no asumir que sus archivos actuales constituyen una web publicada ni editarla antes de completar el expediente, anonimización y revisión final.

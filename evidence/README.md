@@ -42,3 +42,14 @@ Algunas piezas ya existen como equivalentes preservados desde documentos o extra
 - No publicar datos identificatorios de menores.
 - No convertir declaraciones, acusaciones, memes, miniaturas o textos de wiki en hechos probados.
 - Antes de redacción pública, crear copias censuradas en una ruta separada; no modificar los originales.
+
+## Exportaciones de Discord añadidas el 15-10-2026
+
+Directorio privado `evidence/menores/originales/`:
+- `el-pepe-completo.json` — fuente primaria de mensajes y metadatos del grupo (5.979 mensajes).
+- `el-pepe-transcript.html` — derivado de consulta; no sustituye al JSON fuente.
+- Tres HTML [DiscordKit] preservados de conversaciones con Ángel (dos) y Sprout/Tord.
+
+El inventario visual de septiembre (`files`: 105) **no incluye estos cinco exportados**. Sus SHA de blob Git, tamaños y rutas se registran en la nueva sección `textual_exports` del `evidence/manifest.json`. No afirmar que son parte de la auditoría visual ni que todos los adjuntos fueron verificados.
+
+**Regla vigente para «el pepe»: está prohibido abrir, visualizar, descargar o procesar sus archivos multimedia, incluyendo capturas/derivados ya existentes y enlaces externos en el JSON o HTML.** No generar previews, thumbnails ni indexaciones multimedia. Para trabajar usar solo contenido textual y metadatos. La futura publicación web no deberá exponer enlaces de adjuntos, correos, IP, nombres reales ni información identificatoria de menores.

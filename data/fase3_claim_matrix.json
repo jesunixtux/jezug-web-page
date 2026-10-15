@@ -68,7 +68,7 @@
     {
       "id": "C04",
       "afirmacion": "Jezu ejecutó un registro o suscripción con el correo de Danel en Grindr u otro sitio.",
-      "fuente": "docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-2.docx.",
+      "fuente": "docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-1.docx, páginas 4–5 (afirmación original y comentario acusatorio).",
       "evidencia_presentada_por_la_fuente": "Capturas de conversación sobre correo, Grindr y artículos de contexto.",
       "evidencia_primaria_en_el_repo": [
         "evidence/otros/fecha-desconocida_fase3-059_discord-danel-monetizar.png",
@@ -77,10 +77,10 @@
         "evidence/otros/fecha-desconocida_fase3-071_articulo-riesgos-grindr.png",
         "evidence/otros/fecha-desconocida_fase3-077_discord-danel-videos-chismosos.png"
       ],
-      "que_si_se_puede_concluir": "Hay una captura donde se menciona la idea o declaración de suscribir un correo a Grindr.",
-      "que_no_se_puede_concluir": "No hay prueba visual de que el registro se haya ejecutado o producido efectos.",
+      "que_si_se_puede_concluir": "La captura documenta un mensaje de Jezu de 05-08-2022 afirmando que suscribió a Danel a Grindr; el autor declara retrospectivamente que no efectuó el registro.",
+      "que_no_se_puede_concluir": "No se preserva comprobante de alta, perfil creado o contactos derivados. El recuerdo actual del autor no verifica por sí mismo la inexistencia del registro.",
       "problema_detectado": "evidencia_insuficiente",
-      "estado": "intencion_o_declaracion_no_equivale_a_ejecucion"
+      "estado": "mensaje_documentado_ejecucion_no_verificada"
     },
     {
       "id": "C05",
@@ -162,6 +162,59 @@
       "que_no_se_puede_concluir": "No se puede usar wiki, miniaturas o resultados de búsqueda como prueba automática de los hechos narrados.",
       "problema_detectado": "falta_de_contexto",
       "estado": "requiere_transcripcion_y_cotejo_del_video"
+    },
+    {
+      "id": "C09",
+      "afirmacion": "Jezu ordenó a tres menores infiltrarse o acosar conjuntamente a Guillermo/The Loud Channel.",
+      "fuente": "docs/drive-downloads/2026-09-06_drive_documento-jezug-parte-2.docx, sección de menores; contrastar con DMs y exportación textual.",
+      "evidencia_presentada_por_la_fuente": "Relatos de terceros y capturas parciales con referencias a tres menores; no son equivalentes a una orden comprobada.",
+      "evidencia_primaria_en_el_repo": [
+        "evidence/menores/originales/el-pepe-completo.json",
+        "evidence/menores/originales/el-pepe-transcript.html",
+        "evidence/menores/originales/[DiscordKit] Angel_DirectMessages_20261014_233252.html",
+        "evidence/menores/originales/[DiscordKit] 💎ANGEL💎_DirectMessages_20261015_000105.html",
+        "evidence/menores/originales/[DiscordKit] 𓂀 𝕊𝕡𝕣𝕠𝕦𝕥🍓 𓂀_DirectMessages_20261015_000741.html"
+      ],
+      "que_si_se_puede_concluir": "Los mensajes supervivientes documentan iniciativas distintas de varios participantes y sugerencias o intervenciones concretas de Jezu, incluyendo una sugerencia engañosa a Kirmo y una propuesta ajena a Guillermo en el DM de Ángel.",
+      "que_no_se_puede_concluir": "No se localizó orden expresa de Jezu a los tres para una operación conjunta contra Guillermo en el texto preservado; la ausencia en el corpus no demuestra inexistencia en otros canales.",
+      "problema_detectado": "atribucion_colectiva_sin_cadena_completa",
+      "estado": "reconstruccion_parcial_con_fuentes_primarias"
+    },
+    {
+      "id": "C10",
+      "afirmacion": "Jezu obtuvo, difundió o amenazó con difundir información personal de Danel en noviembre de 2022.",
+      "fuente": "evidence/menores/originales/el-pepe-completo.json; declaración del autor, octubre de 2026.",
+      "evidencia_presentada_por_la_fuente": "Texto del grupo con amenazas atribuidas a Jezu (09-11-2022 y 12-01-2023) y publicación de una IP atribuida a tercero (10-11-2022).",
+      "evidencia_primaria_en_el_repo": [
+        "evidence/menores/originales/el-pepe-completo.json",
+        "evidence/menores/originales/el-pepe-transcript.html"
+      ],
+      "que_si_se_puede_concluir": "Es observable que Jezu escribió amenazas y compartió una IP en la conversación grupal. Otras personas participaron, con responsabilidades distintas.",
+      "que_no_se_puede_concluir": "No se conoce de manera independiente la forma de obtención de la IP, su atribución técnica definitiva, ni impacto concreto; el autor señala retrospectivamente que la obtuvo Cris, sin corroboración.",
+      "problema_detectado": "separar_obtencion_difusion_amenazas",
+      "estado": "conductas_documentadas_origen_no_verificado"
+    },
+    {
+      "id": "C11",
+      "afirmacion": "Cualquier ataque verbal organizado por Jezu y Ángel estaba dirigido a Guillermo.",
+      "fuente": "DM conservado con Ángel; confrontación con formulaciones generales sobre menores.",
+      "evidencia_presentada_por_la_fuente": "Intercambio del 03-01-2023 con una propuesta de ataque verbal de Jezu contra Ruitzo y su pareja.",
+      "evidencia_primaria_en_el_repo": [
+        "evidence/menores/originales/[DiscordKit] Angel_DirectMessages_20261014_233252.html",
+        "evidence/menores/originales/[DiscordKit] 💎ANGEL💎_DirectMessages_20261015_000105.html"
+      ],
+      "que_si_se_puede_concluir": "El intercambio documentado tiene por destinatarios a Ruitzo y su pareja, no a Guillermo. La propuesta de Jezu es un hecho desfavorable que debe conservarse.",
+      "que_no_se_puede_concluir": "No se puede generalizar ese mensaje a Guillermo ni concluir que nunca existiera participación en otros conflictos.",
+      "problema_detectado": "confusion_de_destinatarios",
+      "estado": "destinatario_concreto_documentado"
     }
+  ],
+  "last_updated_on": "2026-10-15",
+  "additional_primary_sources": [
+    "evidence/menores/originales/el-pepe-completo.json",
+    "evidence/menores/originales/el-pepe-transcript.html",
+    "evidence/menores/originales/[DiscordKit] Angel_DirectMessages_20261014_233252.html",
+    "evidence/menores/originales/[DiscordKit] 💎ANGEL💎_DirectMessages_20261015_000105.html",
+    "evidence/menores/originales/[DiscordKit] 𓂀 𝕊𝕡𝕣𝕠𝕦𝕥🍓 𓂀_DirectMessages_20261015_000741.html"
   ]
 }

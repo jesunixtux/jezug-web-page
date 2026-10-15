@@ -64,3 +64,17 @@ El corpus es suficiente para empezar una redaccion interna de cronologia y respu
 - materializacion de las capturas directas mas importantes que hoy solo existen como referencias;
 - copias redactadas para cualquier evidencia con menores, datos personales o terceros innecesarios;
 - revision final afirmacion por afirmacion.
+
+## Adenda de corpus — 2026-10-15
+
+**Actualización posterior que prevalece sobre los pendientes de septiembre sin borrar el registro histórico.**
+
+- Se incorporó la exportación completa de texto/metadatos del MD grupal «el pepe» en `evidence/menores/originales/el-pepe-completo.json` (5.979 mensajes, 19 cuentas según exportación). Su HTML de consulta está en la misma carpeta, como derivado.
+- Hay tres exportaciones privadas de conversaciones directas: Ángel (dos cuentas) y Sprout/Tord (una cuenta). Su inclusión permite contrastar fragmentos de capturas con conversaciones más extensas; **no garantiza recuperación de mensajes eliminados ni de otras plataformas**.
+- Los 105 ítems de `evidence/manifest.json` siguen siendo el inventario visual de septiembre. Los cinco archivos textuales nuevos se registran en `textual_exports`, aparte y sin fingir que recibieron la auditoría visual de septiembre.
+- Los dos documentos de Los Brígidos siguen preservados en `docs/drive-downloads/`. En la comprobación de metadatos de Google Drive de 2026-10-15 sus últimas modificaciones constaban ambas el 6 de septiembre de 2026. Esto se refiere solo a esos dos archivos, no a otras publicaciones.
+- Los borradores `fase3_capa1_cronologia.md`, `fase3_capa2_respuestas_graves.md` y la matriz cuentan con adendas de octubre. Consultar también `docs/fase4_casos_2022_2023.md` para separar los conflictos de Danel, Guillermo y Ruitzo.
+- Por restricción expresa del titular del archivo, **está prohibido examinar o transformar cualquier multimedia o adjunto del grupo «el pepe»**, incluso archivos locales en `md-s/el pepe/`; la revisión se limita a texto y metadatos sin acceder a enlaces.
+- Estado editorial: suficiente para **trabajo interno** y reconstrucción provisional, **insuficiente para publicación pública** hasta comprobar fuentes, anonimizar identidades y contar con la revisión de privacidad.
+
+Esta adenda no transforma recuerdos retrospectivos en hechos comprobados ni convierte la ausencia de una orden en los textos supervivientes en prueba de que nunca existiera en otros canales.

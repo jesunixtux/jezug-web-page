@@ -113,3 +113,35 @@ Esta cronologia busca ordenar hechos verificables y separar evidencia primaria, 
 - Certeza: alta sobre existencia del documento; media/baja sobre el video hasta contar con transcripcion/timestamps.
 - Reconocido por Jezu: varias conductas concretas, no todas las inferencias o etiquetas.
 - Alegacion de terceros: debe responderse por afirmacion original, evitando mezclar hechos, testimonios e interpretaciones.
+
+## Adenda de 15-10-2026 — nuevos originales y correcciones cronológicas
+
+**Nota:** adenda añadida sin borrar el borrador histórico anterior. Fuentes principales: `evidence/menores/originales/el-pepe-completo.json` y `el-pepe-transcript.html`; DMs exportados de Ángel y Sprout/Tord en esa carpeta. Solo se examinaron mensajes y metadatos, no archivos multimedia del grupo.
+
+### 09–10-11-2022 — conflicto con Danel (separado de Guillermo)
+
+En el grupo «el pepe», Jezu/N3TU escribió el 09-11-2022 una amenaza relativa a publicar datos si Danel no se disculpaba y, el 10-11-2022, publicó una dirección IP atribuida a otra persona, con datos técnicos anexos. Otras personas intervinieron, pero la participación ajena no anula la autoría de cada mensaje. **No se reproduce ningún dato privado**.
+
+- Hecho observable: mensajes amenazantes y difusión de una IP en el texto exportado.
+- Aclaración retrospectiva del autor: atribuye a «Cris» la obtención de la IP; **no verificado en fuente primaria**. Afirma que «saqué tu cell» se refería al **modelo** mostrado por la recuperación de cuenta de Google, no a un número telefónico; tampoco consta verificación independiente de ese proceso.
+- Incertidumbre: procedencia de la IP, impacto real y comunicaciones externas al grupo.
+
+### 09-11 y 29-12-2022 — actuaciones de Sprout/Tord
+
+El texto del grupo y su DM muestran iniciativas propias de Sprout/Tord en conversaciones y propuestas de burlas o montajes. Constituyen prueba de mensajes e iniciativa en momentos concretos; **no permiten extrapolar a toda su conducta**, ni eliminan la responsabilidad de Jezu cuando participó.
+
+### 03-01-2023 — conversación con Ángel sobre Ruitzo
+
+En una conversación directa preservada, Jezu propone ataques verbales coordinados contra **Ruitzo y su pareja**. Es una participación propia desfavorable al autor y debe permanecer visible. **No confundir este episodio con una instrucción relativa a Guillermo/The Loud Channel.**
+
+### 12-01-2023 — nuevas amenazas en grupo
+
+En «el pepe» aparece otra alusión de Jezu a divulgar datos de Danel. Registrar el mensaje con fecha e ID cuando se prepare el índice de citas, sin ocultarlo ni presentarlo como confirmación de una divulgación adicional.
+
+### 18-02-2023 — Kirmo / Guillermo
+
+El DM preservado muestra que Kirmo propuso primero trolear a Guillermo y Jezu aceptó y sugirió presentarse con identidad femenina. Esto prueba **iniciativa visible de Kirmo y una sugerencia de engaño de Jezu**. No demuestra por sí solo que Jezu originara una campaña general ni que careciera de responsabilidad.
+
+### 2026-10-15 — preservación y revisión
+
+Se incorporaron el JSON completo y el HTML del grupo, tres exportaciones directas, y se verificó que los documentos accesibles de Los Brígidos no habían cambiado su fecha de modificación del 06-09-2026. La reconstrucción continúa siendo provisional y el archivo privado.
