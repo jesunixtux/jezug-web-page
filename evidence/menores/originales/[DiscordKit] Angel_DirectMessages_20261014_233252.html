@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Angel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        @font-face {
+            src: url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");
+            font-family: gg sans;
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            src: url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");
+            font-family: gg sans;
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            src: url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");
+            font-family: gg sans;
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            src: url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");
+            font-family: gg sans;
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            src: url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");
+            font-family: gg sans;
+            font-weight: 800;
+            font-style: normal;
+        }
+        @font-face {
+            src: url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");
+            font-family: gg sans;
+            font-weight: 400;
+            font-style: italic;
+        }
+        @font-face {
+            src: url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");
+            font-family: gg sans;
+            font-weight: 500;
+            font-style: italic;
+        }
+        @font-face {
+            src: url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");
+            font-family: gg sans;
+            font-weight: 600;
+            font-style: italic;
+        }
+        @font-face {
+            src: url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");
+            font-family: gg sans;
+            font-weight: 700;
+            font-style: italic;
+        }
+        @font-face {
+            src: url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");
+            font-family: gg sans;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #36393e;
+            color: #dcddde;
+            font-family: "gg sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: #00aff4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            object-fit: contain;
+            image-rendering: high-quality;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .preamble {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            max-width: 100%;
+            padding: 1rem;
+        }
+
+        .preamble__guild-icon-container {
+            grid-column: 1;
+        }
+
+        .preamble__guild-icon {
+            max-width: 88px;
+            max-height: 88px;
+        }
+
+        .preamble__entries-container {
+            grid-column: 2;
+            margin-left: 1rem;
+        }
+
+        .preamble__entry {
+            margin-bottom: 0.15rem;
+            color: #ffffff;
+            font-size: 1.4rem;
+        }
+
+        .preamble__entry--small {
+            font-size: 1rem;
+        }
+
+        .chatlog {
+            padding: 1rem 0;
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .chatlog__message-group {
+            margin-bottom: 1rem;
+        }
+
+        .chatlog__message-container {
+            background-color: transparent;
+            transition: background-color 1s ease;
+        }
+
+        .chatlog__message-container--highlighted {
+            background-color: rgba(114, 137, 218, 0.2);
+        }
+
+        .chatlog__message-container--pinned {
+            background-color: rgba(249, 168, 37, 0.05);
+        }
+
+        .chatlog__message {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            padding: 0.15rem 0;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+
+        .chatlog__message:hover {
+            background-color: #32353b;
+        }
+
+        .chatlog__message:hover .chatlog__short-timestamp {
+            display: block;
+        }
+
+        .chatlog__message-aside {
+            grid-column: 1;
+            width: 72px;
+            padding: 0.15rem 0.15rem 0 0.15rem;
+            text-align: center;
+        }
+
+        .chatlog__reply-symbol {
+            height: 10px;
+            margin: 6px 4px 4px 36px;
+            border-left: 2px solid #4f545c;
+            border-top: 2px solid #4f545c;
+            border-radius: 8px 0 0 0;
+        }
+
+        .chatlog__avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .chatlog__short-timestamp {
+            display: none;
+            color: #a3a6aa;
+            font-size: 0.75rem;
+            font-weight: 500;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+
+        .chatlog__message-primary {
+            grid-column: 2;
+            min-width: 0;
+        }
+
+        .chatlog__reply {
+            display: flex;
+            margin-bottom: 0.15rem;
+            align-items: center;
+            color: #b5b6b8;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__reply-avatar {
+            width: 16px;
+            height: 16px;
+            margin-right: 0.25rem;
+            border-radius: 50%;
+        }
+
+        .chatlog__reply-author {
+            margin-right: 0.3rem;
+            font-weight: 600;
+        }
+
+        .chatlog__reply-content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__reply-link {
+            cursor: pointer;
+        }
+
+        .chatlog__reply-link * {
+            display: inline;
+            pointer-events: none;
+        }
+
+        .chatlog__reply-link .chatlog__markdown-quote {
+            display: inline;
+        }
+
+        .chatlog__reply-link .chatlog__markdown-pre {
+            display: inline;
+        }
+
+        .chatlog__reply-link:hover {
+            color: #ffffff;
+        }
+
+        .chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler) {
+            color: inherit;
+        }
+
+        .chatlog__reply-edited-timestamp {
+            margin-left: 0.25rem;
+            color: #a3a6aa;
+            font-size: 0.75rem;
+            font-weight: 500;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+
+        .chatlog__system-notification-icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        .chatlog__system-notification-author {
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .chatlog__system-notification-content {
+            color: #96989d;
+        }
+
+        .chatlog__system-notification-link {
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .chatlog__system-notification-timestamp {
+            margin-left: 0.3rem;
+            color: #a3a6aa;
+            font-size: 0.75rem;
+            font-weight: 500;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+
+        .chatlog__system-notification-timestamp a {
+            color: inherit;
+        }
+
+        .chatlog__header {
+            margin-bottom: 0.1rem;
+        }
+
+        .chatlog__author {
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .chatlog__author-tag {
+            position: relative;
+            top: -0.1rem;
+            margin-left: 0.3rem;
+            padding: 0.05rem 0.3rem;
+            border-radius: 3px;
+            background-color: #5865F2;
+            color: #ffffff;
+            font-size: 0.625rem;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .chatlog__timestamp {
+            margin-left: 0.3rem;
+            color: #a3a6aa;
+            font-size: 0.75rem;
+            font-weight: 500;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+
+        .chatlog__timestamp a {
+            color: inherit;
+        }
+
+        .chatlog__content {
+            padding-right: 1rem;
+            font-size: 0.95rem;
+            word-wrap: break-word;
+        }
+
+        .chatlog__edited-timestamp {
+            margin-left: 0.15rem;
+            color: #a3a6aa;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .chatlog__attachment {
+            position: relative;
+            width: fit-content;
+            margin-top: 0.3rem;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .chatlog__attachment--hidden {
+            cursor: pointer;
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .chatlog__attachment--hidden * {
+            pointer-events: none;
+        }
+
+        .chatlog__attachment-spoiler-caption {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 999;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #dcddde;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.05rem;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-spoiler-caption {
+            display: block;
+        }
+
+        .chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption {
+            color: #fff;
+        }
+
+        .chatlog__attachment-media {
+            max-width: 45vw;
+            max-height: 500px;
+            vertical-align: top;
+            border-radius: 3px;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-media {
+            filter: blur(44px);
+        }
+
+        .chatlog__attachment-generic {
+            max-width: 520px;
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid #292b2f;
+            border-radius: 3px;
+            background-color: #2f3136;
+            overflow: hidden;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-generic {
+            filter: blur(44px);
+        }
+
+        .chatlog__attachment-generic-icon {
+            float: left;
+            width: 30px;
+            height: 100%;
+            margin-right: 10px;
+        }
+
+        .chatlog__attachment-generic-size {
+            color: #72767d;
+            font-size: 12px;
+        }
+
+        .chatlog__attachment-generic-name {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__embed {
+            display: flex;
+            margin-top: 0.3rem;
+            max-width: 520px;
+        }
+
+        .chatlog__embed-color-pill {
+            flex-shrink: 0;
+            width: 0.25rem;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        .chatlog__embed-color-pill--default {
+            background-color: #202225;
+        }
+
+        .chatlog__embed-content-container {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem 0.6rem;
+            border: 1px solid rgba(46, 48, 54, 0.6);
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            background-color: rgba(46, 48, 54, 0.3);
+        }
+
+        .chatlog__embed-content {
+            display: flex;
+            width: 100%;
+        }
+
+        .chatlog__embed-text {
+            flex: 1;
+        }
+
+        .chatlog__embed-author-container {
+            display: flex;
+            margin-bottom: 0.5rem;
+            align-items: center;
+        }
+
+        .chatlog__embed-author-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem;
+            border-radius: 50%;
+        }
+
+        .chatlog__embed-author {
+            color: #ffffff;
+            font-size: 0.875rem;
+            font-weight: 600;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+
+        .chatlog__embed-author-link {
+            color: #ffffff;
+        }
+
+        .chatlog__embed-title {
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .chatlog__embed-description {
+            color: #dcddde;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .chatlog__embed-fields {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 0.5rem;
+        }
+
+        .chatlog__embed-field {
+            flex: 0;
+            min-width: 100%;
+            max-width: 506px;
+            padding-top: 0.6rem;
+            font-size: 0.875rem;
+        }
+
+        .chatlog__embed-field--inline {
+            flex: 1;
+            flex-basis: auto;
+            min-width: 50px;
+        }
+
+        .chatlog__embed-field-name {
+            margin-bottom: 0.2rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .chatlog__embed-field-value {
+            color: #dcddde;
+            font-weight: 500;
+        }
+
+        .chatlog__embed-thumbnail {
+            flex: 0;
+            max-width: 80px;
+            max-height: 80px;
+            margin-left: 1.2rem;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-images {
+            display: grid;
+            margin-top: 0.6rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.25rem;
+        }
+
+        .chatlog__embed-images--single {
+            display: block;
+        }
+
+        .chatlog__embed-image {
+            object-fit: cover;
+            object-position: center;
+            max-width: 500px;
+            max-height: 400px;
+            width: 100%;
+            height: 100%;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-footer {
+            margin-top: 0.6rem;
+            color: #dcddde;
+        }
+
+        .chatlog__embed-footer-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.2rem;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        .chatlog__embed-footer-text {
+            vertical-align: middle;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .chatlog__embed-generic-image {
+            object-fit: contain;
+            object-position: left;
+            max-width: 45vw;
+            max-height: 500px;
+            vertical-align: top;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-generic-video {
+            object-fit: contain;
+            object-position: left;
+            max-width: 45vw;
+            max-height: 500px;
+            vertical-align: top;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-generic-gifv {
+            object-fit: contain;
+            object-position: left;
+            max-width: 45vw;
+            max-height: 500px;
+            vertical-align: top;
+            border-radius: 3px;
+        }
+
+        .chatlog__sticker {
+            width: 180px;
+            height: 180px;
+        }
+
+        .chatlog__sticker--media {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .chatlog__reactions {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .chatlog__reaction {
+            display: flex;
+            margin: 0.35rem 0.1rem 0.1rem 0;
+            padding: 0.125rem 0.375rem;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            background-color: #2f3136;
+            align-items: center;
+        }
+
+        .chatlog__reaction:hover {
+            border: 1px solid hsla(0,0%,100%,.2);
+            background-color: transparent;
+        }
+
+        .chatlog__reaction-count {
+            min-width: 9px;
+            margin-left: 0.35rem;
+            color: #b9bbbe;
+            font-size: 0.875rem;
+        }
+
+        .chatlog__reaction:hover .chatlog__reaction-count {
+            color: #dcddde;
+        }
+
+        .chatlog__components { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .chatlog__component-button { padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; cursor: default; text-decoration: none; border: none; }
+        .chatlog__component-button--primary { background-color: #5865f2; color: #fff; }
+        .chatlog__component-button--secondary { background-color: #4f545c; color: #fff; }
+        .chatlog__component-button--success { background-color: #2d7d46; color: #fff; }
+        .chatlog__component-button--danger { background-color: #da373c; color: #fff; }
+        .chatlog__component-button--link { background-color: #4f545c; color: #fff; }
+        .chatlog__component-button img { width: 16px; height: 16px; margin-right: 8px; }
+        
+        .chatlog__poll { background-color: #2f3136; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px; margin-top: 8px; max-width: 520px; }
+        .chatlog__poll-question { font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; }
+        .chatlog__poll-question img { width: 16px; height: 16px; margin-right: 8px; }
+        .chatlog__poll-answer { display: flex; align-items: center; justify-content: space-between; background-color: #202225; padding: 8px 12px; border-radius: 4px; margin-bottom: 8px; position: relative; overflow: hidden; }
+        .chatlog__poll-answer-inner { display: flex; align-items: center; position: relative; z-index: 1; width: 100%; }
+        .chatlog__poll-answer-text { flex: 1; display: flex; align-items: center; font-weight: 500; }
+        .chatlog__poll-answer-text img { width: 16px; height: 16px; margin-right: 8px; }
+        .chatlog__poll-answer-votes { font-size: 13px; font-weight: 600; margin-left: 12px; color: #a3a6aa; }
+        .chatlog__poll-bar { position: absolute; left: 0; top: 0; bottom: 0; background-color: #5865f2; opacity: 0.2; z-index: 0; }
+
+        .chatlog__markdown {
+            max-width: 100%;
+            line-height: 1.3;
+            overflow-wrap: break-word;
+        }
+
+        .chatlog__markdown h1 {
+            margin: 1rem 0 0.5rem;
+            color: #f2f3f5;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .chatlog__markdown h2 {
+            margin: 1rem 0 0.5rem;
+            color: #f2f3f5;
+            font-size: 1.25rem;
+            line-height: 1;
+        }
+
+        .chatlog__markdown h3 {
+            margin: 1rem 0 0.5rem;
+            color: #f2f3f5;
+            font-size: 1rem;
+            line-height: 1;
+        }
+
+        .chatlog__markdown h1:first-child, h2:first-child, h3:first-child {
+            margin-top: 0.5rem;
+        }
+
+        .chatlog__markdown ul, ol {
+            margin-top: 0;
+            padding-left: 1.5rem;
+        }
+
+        .chatlog__markdown li {
+            margin-top: 0.2rem;
+        }
+
+        .chatlog__markdown-quote {
+            display: flex;
+            margin-top: 0.3rem;
+        }
+
+        .chatlog__markdown-quote-border {
+            margin-right: 0.5rem;
+            border: 2px solid #4f545c;
+            border-radius: 3px;
+        }
+
+        .chatlog__markdown-quote-content {
+            padding: 0.1rem 0;
+        }
+
+        .chatlog__markdown-pre {
+            background-color: #2f3136;
+            font-family: "Consolas", "Courier New", Courier, monospace;
+        }
+
+        .chatlog__markdown-pre--multiline {
+            margin-top: 0.25rem;
+            padding: 0.5rem;
+            border: 2px solid #282b30;
+            border-radius: 5px;
+            color: #b9bbbe;
+        }
+
+        .chatlog__markdown-pre--inline {
+            padding: 2px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+        }
+
+        .chatlog__markdown-mention {
+            border-radius: 3px;
+            padding: 0 2px;
+            background-color: rgba(88, 101, 242, 0.3);
+            color: #dee0fc;
+            font-weight: 500;
+        }
+
+        .chatlog__markdown-mention:hover {
+            background-color: #5865f2;
+            color: #ffffff;
+        }
+
+        .chatlog__markdown-timestamp {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            padding: 0 2px;
+        }
+
+        .chatlog__markdown-spoiler {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        .chatlog__markdown-spoiler--hidden {
+            cursor: pointer;
+            background-color: #202225;
+            color: rgba(0, 0, 0, 0);
+        }
+
+        .chatlog__markdown-spoiler--hidden:hover {
+            background-color: rgba(32, 34, 37, 0.8);
+        }
+
+        .chatlog__markdown-spoiler--hidden::selection {
+            color: rgba(0, 0, 0, 0);
+        }
+
+        .chatlog__emoji {
+            width: 1.375em;
+            height: 1.375em;
+            margin: 0 0.06em;
+            vertical-align: -0.4em;
+        }
+
+        .chatlog__emoji--small {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .chatlog__emoji--large {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .postamble {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .postamble__entry {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="" alt="Guild icon" loading="lazy">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry"></div>
+        <div class="preamble__entry">Angel</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1054596585159413800" class="chatlog__message-container" data-message-id="1054596585159413800">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="20/12/22, 0:10"><a href="#chatlog__message-container-1054596585159413800">20/12/22, 0:10</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1054596584635113553/unknown.png?ex=6ad0ecdb&is=6acf9b5b&hm=f3f8e9e6ef9fbbfaf3fc5d751d62956d1898f102e786251e87462480b327a66e&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1054596584635113553/unknown.png?ex=6ad0ecdb&is=6acf9b5b&hm=f3f8e9e6ef9fbbfaf3fc5d751d62956d1898f102e786251e87462480b327a66e&" alt="Image attachment" title="Image: unknown.png (52.79 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1054599171925102632" class="chatlog__message-container" data-message-id="1054599171925102632">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="20/12/22, 0:20"><a href="#chatlog__message-container-1054599171925102632">20/12/22, 0:20</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1054599171547607141/guillermo_x_jezu.png?ex=6ad0ef44&is=6acf9dc4&hm=4db8598622bc13441539342c3cbfc080c31d2e6e142fa9155e72ce34e3eb62f8&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1054599171547607141/guillermo_x_jezu.png?ex=6ad0ef44&is=6acf9dc4&hm=4db8598622bc13441539342c3cbfc080c31d2e6e142fa9155e72ce34e3eb62f8&" alt="Image attachment" title="Image: guillermo_x_jezu.png (284.91 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1054599282335956992" class="chatlog__message-container" data-message-id="1054599282335956992">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="20/12/22, 0:21">12:21 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1054599282025574441/guillermo_x_jezu.png?ex=6ad0ef5e&is=6acf9dde&hm=a067ce6d32e429d7b3f81e5133d8d42cbe4c90bbc828f26d7a72ebb70e4ed868&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1054599282025574441/guillermo_x_jezu.png?ex=6ad0ef5e&is=6acf9dde&hm=a067ce6d32e429d7b3f81e5133d8d42cbe4c90bbc828f26d7a72ebb70e4ed868&" alt="Image attachment" title="Image: guillermo_x_jezu.png (284.91 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1057044158533087282" class="chatlog__message-container" data-message-id="1057044158533087282">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="26/12/22, 18:16"><a href="#chatlog__message-container-1057044158533087282">26/12/22, 18:16</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">https://www.youtube.com/watch?v=3UyX11AYxNw</span></div><div class="chatlog__embed"><div class="chatlog__embed-color-pill" style="background-color: rgba(255, 0, 0, 1)"></div><div class="chatlog__embed-content-container"><div class="chatlog__embed-content"><div class="chatlog__embed-text"><div class="chatlog__embed-author-container"><a class="chatlog__embed-author-link" href="https://www.youtube.com/channel/UC3iyCCqZe0PEbBsCzJFnsKw"><div class="chatlog__embed-author">El Señor de la noche live</div></a></div><div class="chatlog__embed-title"><a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=3UyX11AYxNw"><div class="chatlog__markdown chatlog__markdown-preserve">Debatiendo con Blue Extreme</div></a></div><div class="chatlog__embed-description"><div class="chatlog__markdown chatlog__markdown-preserve">No me vayan a funar (no es nada hate)</div></div></div><div class="chatlog__embed-thumbnail-container"><a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/3UyX11AYxNw/maxresdefault.jpg"><img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/3UyX11AYxNw/maxresdefault.jpg" alt="Thumbnail" loading="lazy"></a></div></div></div></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1058504251153850418" class="chatlog__message-container" data-message-id="1058504251153850418">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="30/12/22, 18:57"><a href="#chatlog__message-container-1058504251153850418">30/12/22, 18:57</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">https://discord.gg/FG8rHrCF</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1058576694182690937" class="chatlog__message-container" data-message-id="1058576694182690937">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="30/12/22, 23:45"><a href="#chatlog__message-container-1058576694182690937">30/12/22, 23:45</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">https://discord.gg/JEznDnHg</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1058580201598107748" class="chatlog__message-container" data-message-id="1058580201598107748">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="30/12/22, 23:59"><a href="#chatlog__message-container-1058580201598107748">30/12/22, 23:59</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1058580200864100382/image.png?ex=6ad0ea63&is=6acf98e3&hm=14944d2fd37033fc3f060470070bb45a18de9c50b601d370fc3e50deaad09b6c&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1058580200864100382/image.png?ex=6ad0ea63&is=6acf98e3&hm=14944d2fd37033fc3f060470070bb45a18de9c50b601d370fc3e50deaad09b6c&" alt="Image attachment" title="Image: image.png (268.66 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1058580278278373436" class="chatlog__message-container" data-message-id="1058580278278373436">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="31/12/22, 0:00">12:00 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1058580277858934865/image.png?ex=6ad0ea75&is=6acf98f5&hm=56d7089d5834ac6178bdb6d1d430b3a0ad87d160fb4bdfad12936ab424e9f6b6&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1058580277858934865/image.png?ex=6ad0ea75&is=6acf98f5&hm=56d7089d5834ac6178bdb6d1d430b3a0ad87d160fb4bdfad12936ab424e9f6b6&" alt="Image attachment" title="Image: image.png (196.35 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1058616097995239574" class="chatlog__message-container" data-message-id="1058616097995239574">
+        <div class="chatlog__message"><div class="chatlog__message-aside">
+            <svg class="chatlog__system-notification-icon"><use href="#pencil-icon"></use></svg>
+        </div>
+        <div class="chatlog__message-primary">
+            <span class="chatlog__system-notification-author" title="angel1229">Angel</span>
+            <span> </span>
+            <span class="chatlog__system-notification-content">Started a call that lasted 0 minutes.</span>
+            <span class="chatlog__system-notification-timestamp" title="31/12/22, 2:22">
+                <a href="#chatlog__message-container-1058616097995239574">31/12/22, 2:22</a>
+            </span>
+        </div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1058869844419813436" class="chatlog__message-container" data-message-id="1058869844419813436">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="31/12/22, 19:10"><a href="#chatlog__message-container-1058869844419813436">31/12/22, 19:10</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Tord quiere que estemos en streamyard https://streamyard.com/vtq6fdfqpz</span></div><div class="chatlog__embed"><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class="chatlog__embed-content-container"><div class="chatlog__embed-content"><div class="chatlog__embed-text"><div class="chatlog__embed-title"><a class="chatlog__embed-title-link" href="https://streamyard.com/vtq6fdfqpz"><div class="chatlog__markdown chatlog__markdown-preserve">StreamYard | Browser-based live studio for professionals</div></a></div><div class="chatlog__embed-description"><div class="chatlog__markdown chatlog__markdown-preserve">Engage your Facebook, or YouTube, Live audience with interviews and shows; all the tools you need for professional shows right in your browser.</div></div></div><div class="chatlog__embed-thumbnail-container"><a class="chatlog__embed-thumbnail-link" href="https://streamyard.com/images/og.png"><img class="chatlog__embed-thumbnail" src="https://streamyard.com/images/og.png" alt="Thumbnail" loading="lazy"></a></div></div></div></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059696317015801977" class="chatlog__message-container" data-message-id="1059696317015801977">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 1:54"><a href="#chatlog__message-container-1059696317015801977">3/1/23, 1:54</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059696316650885182/image.png?ex=6ad1055a&is=6acfb3da&hm=bc068a743d0d9ccf55ab2e0e808e1670486a60c35841bb2abd8ce0b4d8c1dccb&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059696316650885182/image.png?ex=6ad1055a&is=6acfb3da&hm=bc068a743d0d9ccf55ab2e0e808e1670486a60c35841bb2abd8ce0b4d8c1dccb&" alt="Image attachment" title="Image: image.png (12.37 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059696373685031023" class="chatlog__message-container" data-message-id="1059696373685031023">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 1:55"><a href="#chatlog__message-container-1059696373685031023">3/1/23, 1:55</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">X<br>D</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059696408803954708" class="chatlog__message-container" data-message-id="1059696408803954708">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 1:55"><a href="#chatlog__message-container-1059696408803954708">3/1/23, 1:55</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">XD</span></div></div></div></div><div id="chatlog__message-container-1059696452265312326" class="chatlog__message-container" data-message-id="1059696452265312326">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 1:55">1:55 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059696451938168952/image.png?ex=6ad1057a&is=6acfb3fa&hm=23b9c07ff8fa7d71137a3fbed87740cf375ec9e25f8033a8534bab1248dfc86b&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059696451938168952/image.png?ex=6ad1057a&is=6acfb3fa&hm=23b9c07ff8fa7d71137a3fbed87740cf375ec9e25f8033a8534bab1248dfc86b&" alt="Image attachment" title="Image: image.png (18.65 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1059696484334973018" class="chatlog__message-container" data-message-id="1059696484334973018">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 1:55">1:55 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">no le digas que paso captura</span></div></div></div></div><div id="chatlog__message-container-1059696497874173992" class="chatlog__message-container" data-message-id="1059696497874173992">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 1:55">1:55 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">para reirnos</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059696637825519656" class="chatlog__message-container" data-message-id="1059696637825519656">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 1:56"><a href="#chatlog__message-container-1059696637825519656">3/1/23, 1:56</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Ok</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059696705949413446" class="chatlog__message-container" data-message-id="1059696705949413446">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 1:56"><a href="#chatlog__message-container-1059696705949413446">3/1/23, 1:56</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">se puso modo nazi el ruitzo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059704332087464006" class="chatlog__message-container" data-message-id="1059704332087464006">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:26"><a href="#chatlog__message-container-1059704332087464006">3/1/23, 2:26</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059704331739332608/image.png?ex=6ad10cd1&is=6acfbb51&hm=74f13a810cc6fe288f36ddd11235ceaaf12dadad6e10bb8cc319a17c729f62dc&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059704331739332608/image.png?ex=6ad10cd1&is=6acfbb51&hm=74f13a810cc6fe288f36ddd11235ceaaf12dadad6e10bb8cc319a17c729f62dc&" alt="Image attachment" title="Image: image.png (9.57 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059704445224636436" class="chatlog__message-container" data-message-id="1059704445224636436">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:27"><a href="#chatlog__message-container-1059704445224636436">3/1/23, 2:27</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Brhu ya c ardio ruitzo XD</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059704490346942524" class="chatlog__message-container" data-message-id="1059704490346942524">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:27"><a href="#chatlog__message-container-1059704490346942524">3/1/23, 2:27</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">si</span></div></div></div></div><div id="chatlog__message-container-1059704496986533888" class="chatlog__message-container" data-message-id="1059704496986533888">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:27">2:27 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">XD</span></div></div></div></div><div id="chatlog__message-container-1059704526715760651" class="chatlog__message-container" data-message-id="1059704526715760651">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:27">2:27 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">activo su modo nazi como dice</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059707614944043058" class="chatlog__message-container" data-message-id="1059707614944043058">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:39"><a href="#chatlog__message-container-1059707614944043058">3/1/23, 2:39</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059707614671409243/image.png?ex=6ad10fdf&is=6acfbe5f&hm=3ac339c1686e70759aa68efca536fd4765c22b405e12cd1fa0894a6c155af40f&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059707614671409243/image.png?ex=6ad10fdf&is=6acfbe5f&hm=3ac339c1686e70759aa68efca536fd4765c22b405e12cd1fa0894a6c155af40f&" alt="Image attachment" title="Image: image.png (43.44 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059707791742357566" class="chatlog__message-container" data-message-id="1059707791742357566">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:40"><a href="#chatlog__message-container-1059707791742357566">3/1/23, 2:40</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Pelear con ruitzo es re patético</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059707832020238356" class="chatlog__message-container" data-message-id="1059707832020238356">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:40"><a href="#chatlog__message-container-1059707832020238356">3/1/23, 2:40</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">no me digas</span></div></div></div></div><div id="chatlog__message-container-1059707874567278734" class="chatlog__message-container" data-message-id="1059707874567278734">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:40">2:40 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">el webon dijo que estaba aburrido</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059707891281575997" class="chatlog__message-container" data-message-id="1059707891281575997">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:40"><a href="#chatlog__message-container-1059707891281575997">3/1/23, 2:40</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Mejor métete con ella :V</span></div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059707890975379486/IMG-20221229-WA0013.jpg?ex=6ad11021&is=6acfbea1&hm=3a4aea728bf046d5146e4b11b6c80ee74701cdc3e5ab5945a28d1776bd55a2d3&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059707890975379486/IMG-20221229-WA0013.jpg?ex=6ad11021&is=6acfbea1&hm=3a4aea728bf046d5146e4b11b6c80ee74701cdc3e5ab5945a28d1776bd55a2d3&" alt="Image attachment" title="Image: IMG-20221229-WA0013.jpg (21.88 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059707913926611024" class="chatlog__message-container" data-message-id="1059707913926611024">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:40"><a href="#chatlog__message-container-1059707913926611024">3/1/23, 2:40</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">y se va ir</span></div></div></div></div><div id="chatlog__message-container-1059707932494790666" class="chatlog__message-container" data-message-id="1059707932494790666">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:40">2:40 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">pero el imbecil</span></div></div></div></div><div id="chatlog__message-container-1059707946017226783" class="chatlog__message-container" data-message-id="1059707946017226783">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:41">2:41 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">sigue conmigo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059707960424673300" class="chatlog__message-container" data-message-id="1059707960424673300">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:41"><a href="#chatlog__message-container-1059707960424673300">3/1/23, 2:41</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Haz lo tuyo xD</span></div></div></div></div><div id="chatlog__message-container-1059708106965274705" class="chatlog__message-container" data-message-id="1059708106965274705">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:41">2:41 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Tocale su talón de Aquiles a su novia:v</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059708132957360209" class="chatlog__message-container" data-message-id="1059708132957360209">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:41"><a href="#chatlog__message-container-1059708132957360209">3/1/23, 2:41</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059708132642791445/image.png?ex=6ad1105b&is=6acfbedb&hm=9e405eb14817937e36c2e2aaaf08352a32622967ef560e84075e99af81771673&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059708132642791445/image.png?ex=6ad1105b&is=6acfbedb&hm=9e405eb14817937e36c2e2aaaf08352a32622967ef560e84075e99af81771673&" alt="Image attachment" title="Image: image.png (121.24 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1059708144281976863" class="chatlog__message-container" data-message-id="1059708144281976863">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:41">2:41 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">X</span></div></div></div></div><div id="chatlog__message-container-1059708152968384573" class="chatlog__message-container" data-message-id="1059708152968384573">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:41">2:41 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">D</span></div></div></div></div><div id="chatlog__message-container-1059708411803082832" class="chatlog__message-container" data-message-id="1059708411803082832">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:42">2:42 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059708411534655538/image.png?ex=6ad1109d&is=6acfbf1d&hm=3bf9c0e02d65b721aab1a82f21595e8e1dd7c8e6fe740c8d836d93be143896b4&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059708411534655538/image.png?ex=6ad1109d&is=6acfbf1d&hm=3bf9c0e02d65b721aab1a82f21595e8e1dd7c8e6fe740c8d836d93be143896b4&" alt="Image attachment" title="Image: image.png (168.84 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059708538399756389" class="chatlog__message-container" data-message-id="1059708538399756389">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:43"><a href="#chatlog__message-container-1059708538399756389">3/1/23, 2:43</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Ya verás como se arde XD</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059708567436935198" class="chatlog__message-container" data-message-id="1059708567436935198">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:43"><a href="#chatlog__message-container-1059708567436935198">3/1/23, 2:43</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">XD</span></div></div></div></div><div id="chatlog__message-container-1059708781266739201" class="chatlog__message-container" data-message-id="1059708781266739201">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:44">2:44 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059708781140906025/image.png?ex=6ad110f5&is=6acfbf75&hm=4df0914a6f205f2555596ec46a66086c9a63bd93ba48ab7ebc847c135093f8f6&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059708781140906025/image.png?ex=6ad110f5&is=6acfbf75&hm=4df0914a6f205f2555596ec46a66086c9a63bd93ba48ab7ebc847c135093f8f6&" alt="Image attachment" title="Image: image.png (36.75 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059708946484572191" class="chatlog__message-container" data-message-id="1059708946484572191">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:45"><a href="#chatlog__message-container-1059708946484572191">3/1/23, 2:45</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059708946203549737/Screenshot_2022-12-31-01-26-14-381-edit_io.faceapp.jpg?ex=6ad1111d&is=6acfbf9d&hm=259d202339028a20f90ec43ca5de8043f190a4b8ba79551880df972fd31ce678&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059708946203549737/Screenshot_2022-12-31-01-26-14-381-edit_io.faceapp.jpg?ex=6ad1111d&is=6acfbf9d&hm=259d202339028a20f90ec43ca5de8043f190a4b8ba79551880df972fd31ce678&" alt="Image attachment" title="Image: Screenshot_2022-12-31-01-26-14-381-edit_io.faceapp.jpg (33.52 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1059709021461954621" class="chatlog__message-container" data-message-id="1059709021461954621">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:45">2:45 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Sin maquillaje</span></div></div></div></div><div id="chatlog__message-container-1059709043704348682" class="chatlog__message-container" data-message-id="1059709043704348682">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:45">2:45 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">:v</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059709195450064947" class="chatlog__message-container" data-message-id="1059709195450064947">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:46"><a href="#chatlog__message-container-1059709195450064947">3/1/23, 2:46</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">se volvio pedofilo</span></div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059709195068395620/image.png?ex=6ad11158&is=6acfbfd8&hm=cfc1a546b87fabc09abdafcea36a9dce079eaf9759ce8c59894ec10b534b7537&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059709195068395620/image.png?ex=6ad11158&is=6acfbfd8&hm=cfc1a546b87fabc09abdafcea36a9dce079eaf9759ce8c59894ec10b534b7537&" alt="Image attachment" title="Image: image.png (17.39 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1059709204987924500" class="chatlog__message-container" data-message-id="1059709204987924500">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:46">2:46 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">xd</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059709357559914567" class="chatlog__message-container" data-message-id="1059709357559914567">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:46"><a href="#chatlog__message-container-1059709357559914567">3/1/23, 2:46</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Dile <br>Trabaja tu pinche mantenido</span></div></div></div></div><div id="chatlog__message-container-1059709521473310770" class="chatlog__message-container" data-message-id="1059709521473310770">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:47">2:47 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Al menos no soy una deshonra como un coock</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059710028006817812" class="chatlog__message-container" data-message-id="1059710028006817812">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:49"><a href="#chatlog__message-container-1059710028006817812">3/1/23, 2:49</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059710027675471902/image.png?ex=6ad1121f&is=6acfc09f&hm=a9d7197f53dbb29b2d043febfbf2291cc092e50c190324e12604a570b303023e&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059710027675471902/image.png?ex=6ad1121f&is=6acfc09f&hm=a9d7197f53dbb29b2d043febfbf2291cc092e50c190324e12604a570b303023e&" alt="Image attachment" title="Image: image.png (52.81 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059710332777545778" class="chatlog__message-container" data-message-id="1059710332777545778">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:50"><a href="#chatlog__message-container-1059710332777545778">3/1/23, 2:50</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Dile pinche copia de jordi el niño polla</span></div></div></div></div><div id="chatlog__message-container-1059710908449955861" class="chatlog__message-container" data-message-id="1059710908449955861">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:52">2:52 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059710908496101436/FaceApp_1672725161900.jpg?ex=6ad112f1&is=6acfc171&hm=f26aeb90c0ac979c46c3b1665e3c5adaa17a6f5633a99616adf22bfe04cad879&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059710908496101436/FaceApp_1672725161900.jpg?ex=6ad112f1&is=6acfc171&hm=f26aeb90c0ac979c46c3b1665e3c5adaa17a6f5633a99616adf22bfe04cad879&" alt="Image attachment" title="Image: FaceApp_1672725161900.jpg (12.48 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059711007167094844" class="chatlog__message-container" data-message-id="1059711007167094844">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:53"><a href="#chatlog__message-container-1059711007167094844">3/1/23, 2:53</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059711006886072370/image.png?ex=6ad11308&is=6acfc188&hm=3fcc45c38f4becd9172b468e598f64952c266601593612dd20e26ac57ea71b74&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059711006886072370/image.png?ex=6ad11308&is=6acfc188&hm=3fcc45c38f4becd9172b468e598f64952c266601593612dd20e26ac57ea71b74&" alt="Image attachment" title="Image: image.png (37.61 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059711083453108234" class="chatlog__message-container" data-message-id="1059711083453108234">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:53"><a href="#chatlog__message-container-1059711083453108234">3/1/23, 2:53</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">A si si se pone rudo ponlr</span></div><div class="chatlog__attachment"><video class="chatlog__attachment-media" controls><source src="https://cdn.discordapp.com/attachments/1050499538458247169/1059711083218223155/LDoomposting_1610063589427056643238P.mp4?ex=6ad1131a&is=6acfc19a&hm=f20fb96dd9720368ef915b9cc4465a3b3933396c15093bcb4cb48ab931813a14&" title="Video: LDoomposting_1610063589427056643238P.mp4 (566.39 KB)"></video></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059711310159425556" class="chatlog__message-container" data-message-id="1059711310159425556">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:54"><a href="#chatlog__message-container-1059711310159425556">3/1/23, 2:54</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059711309853245450/image.png?ex=6ad11350&is=6acfc1d0&hm=08628f14820810cc5752a3389a8b4b97b246f6411e49541fde756847c968ece9&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059711309853245450/image.png?ex=6ad11350&is=6acfc1d0&hm=08628f14820810cc5752a3389a8b4b97b246f6411e49541fde756847c968ece9&" alt="Image attachment" title="Image: image.png (171.53 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1059711330900258816" class="chatlog__message-container" data-message-id="1059711330900258816">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:54">2:54 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">esto da en un debate</span></div></div></div></div><div id="chatlog__message-container-1059711388576141352" class="chatlog__message-container" data-message-id="1059711388576141352">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:54">2:54 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">o en una pelea</span></div></div></div></div><div id="chatlog__message-container-1059711399057702912" class="chatlog__message-container" data-message-id="1059711399057702912">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:54">2:54 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">en un directo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059711462412660736" class="chatlog__message-container" data-message-id="1059711462412660736">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__reply-symbol"></div><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__reply"><img class="chatlog__reply-avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy">
+              <div class="chatlog__reply-author" title="Angel">Angel</div>
+              <div class="chatlog__reply-content">
+                  <span class="chatlog__reply-link" onclick="scrollToMessage(event, '1059711007167094844')"><em>Click to see attachment</em></span>
+              </div></div><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:55"><a href="#chatlog__message-container-1059711462412660736">3/1/23, 2:55</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Dile al menos tengo dignidad para no ser el jordi el niño polla desnutrido</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059711501629407272" class="chatlog__message-container" data-message-id="1059711501629407272">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:55"><a href="#chatlog__message-container-1059711501629407272">3/1/23, 2:55</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059711501298049095/image.png?ex=6ad1137e&is=6acfc1fe&hm=dfd39a7d703879bfe4c341c01ee72cfe235dcc0c4553081ff1ea0e063c5bbb8b&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059711501298049095/image.png?ex=6ad1137e&is=6acfc1fe&hm=dfd39a7d703879bfe4c341c01ee72cfe235dcc0c4553081ff1ea0e063c5bbb8b&" alt="Image attachment" title="Image: image.png (12.00 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1059711625608822815" class="chatlog__message-container" data-message-id="1059711625608822815">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:55">2:55 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059711625122299914/image.png?ex=6ad1139b&is=6acfc21b&hm=3766dcc994f7fa10b0d9061dd59deb6efe5152c1c4221275d95e0752cc3c3922&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059711625122299914/image.png?ex=6ad1139b&is=6acfc21b&hm=3766dcc994f7fa10b0d9061dd59deb6efe5152c1c4221275d95e0752cc3c3922&" alt="Image attachment" title="Image: image.png (38.57 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1059711664586489887" class="chatlog__message-container" data-message-id="1059711664586489887">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:55">2:55 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">se tubo que arder</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059711694655455252" class="chatlog__message-container" data-message-id="1059711694655455252">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:55"><a href="#chatlog__message-container-1059711694655455252">3/1/23, 2:55</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Ponle esto y ponle cállate el osico ruitzo</span></div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059711694416384000/Screenshot_2023-01-03-01-35-38-357-edit_io.faceapp.jpg?ex=6ad113ac&is=6acfc22c&hm=e825a28b4d955ae1592c961ef0a443a8be62eaafafdb04347605525bbcba0107&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059711694416384000/Screenshot_2023-01-03-01-35-38-357-edit_io.faceapp.jpg?ex=6ad113ac&is=6acfc22c&hm=e825a28b4d955ae1592c961ef0a443a8be62eaafafdb04347605525bbcba0107&" alt="Image attachment" title="Image: Screenshot_2023-01-03-01-35-38-357-edit_io.faceapp.jpg (26.71 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059711954110918747" class="chatlog__message-container" data-message-id="1059711954110918747">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__reply-symbol"></div><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__reply"><img class="chatlog__reply-avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy">
+              <div class="chatlog__reply-author" title="Angel">Angel</div>
+              <div class="chatlog__reply-content">
+                  <span class="chatlog__reply-link" onclick="scrollToMessage(event, '1059711664586489887')">se tubo que arder</span>
+              </div></div><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:56"><a href="#chatlog__message-container-1059711954110918747">3/1/23, 2:56</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059711954022830150/Screenshot_2023-01-03-01-29-36-658-edit_com.google.android.googlequicksearchbox.jpg?ex=6ad113ea&is=6acfc26a&hm=7e3da9d9dabc81e93b12c778c5727819396f13a78706098b9d989c6e4126afe2&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059711954022830150/Screenshot_2023-01-03-01-29-36-658-edit_com.google.android.googlequicksearchbox.jpg?ex=6ad113ea&is=6acfc26a&hm=7e3da9d9dabc81e93b12c778c5727819396f13a78706098b9d989c6e4126afe2&" alt="Image attachment" title="Image: Screenshot_2023-01-03-01-29-36-658-edit_com.google.android.googlequicksearchbox.jpg (11.11 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1059712046742118440" class="chatlog__message-container" data-message-id="1059712046742118440">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:57">2:57 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Tuvo que arder</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059712165608685608" class="chatlog__message-container" data-message-id="1059712165608685608">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:57"><a href="#chatlog__message-container-1059712165608685608">3/1/23, 2:57</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059712165306699836/image.png?ex=6ad1141c&is=6acfc29c&hm=7d3ae84ae78b4a820c4a47b7743f420d2bea73a044047563a7946be6cdde4603&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059712165306699836/image.png?ex=6ad1141c&is=6acfc29c&hm=7d3ae84ae78b4a820c4a47b7743f420d2bea73a044047563a7946be6cdde4603&" alt="Image attachment" title="Image: image.png (41.73 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059712213155332106" class="chatlog__message-container" data-message-id="1059712213155332106">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__reply-symbol"></div><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__reply"><img class="chatlog__reply-avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy">
+              <div class="chatlog__reply-author" title="N3TU">N3TU</div>
+              <div class="chatlog__reply-content">
+                  <span class="chatlog__reply-link" onclick="scrollToMessage(event, '1059712046742118440')">Tuvo que arder</span>
+              </div></div><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:58"><a href="#chatlog__message-container-1059712213155332106">3/1/23, 2:58</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">ya mano</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059712343149396028" class="chatlog__message-container" data-message-id="1059712343149396028">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__reply-symbol"></div><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__reply"><img class="chatlog__reply-avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy">
+              <div class="chatlog__reply-author" title="Angel">Angel</div>
+              <div class="chatlog__reply-content">
+                  <span class="chatlog__reply-link" onclick="scrollToMessage(event, '1059712213155332106')">ya mano</span>
+              </div></div><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:58"><a href="#chatlog__message-container-1059712343149396028">3/1/23, 2:58</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Ok</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059712424724398140" class="chatlog__message-container" data-message-id="1059712424724398140">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:58"><a href="#chatlog__message-container-1059712424724398140">3/1/23, 2:58</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059712424460173382/image.png?ex=6ad1145a&is=6acfc2da&hm=110292374c1206e30e184d71286c7ee970009b074fd3fb7eabe5bec23699665f&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059712424460173382/image.png?ex=6ad1145a&is=6acfc2da&hm=110292374c1206e30e184d71286c7ee970009b074fd3fb7eabe5bec23699665f&" alt="Image attachment" title="Image: image.png (32.03 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059712433050112080" class="chatlog__message-container" data-message-id="1059712433050112080">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 2:58"><a href="#chatlog__message-container-1059712433050112080">3/1/23, 2:58</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Envíale este</span></div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059712432878137535/FaceApp_1672720573014.jpg?ex=6ad1145c&is=6acfc2dc&hm=d631995cd946eaf81c50628bf912951a46bf43741dbd59ef07ef6e11c2acdf7c&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059712432878137535/FaceApp_1672720573014.jpg?ex=6ad1145c&is=6acfc2dc&hm=d631995cd946eaf81c50628bf912951a46bf43741dbd59ef07ef6e11c2acdf7c&" alt="Image attachment" title="Image: FaceApp_1672720573014.jpg (4.81 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059712448069894164" class="chatlog__message-container" data-message-id="1059712448069894164">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 2:58"><a href="#chatlog__message-container-1059712448069894164">3/1/23, 2:58</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">XD</span></div></div></div></div><div id="chatlog__message-container-1059712606664933407" class="chatlog__message-container" data-message-id="1059712606664933407">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 2:59">2:59 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059712606664929300/image.png?ex=6ad11485&is=6acfc305&hm=37349cd9317cb5502d616181d76ff22c8a8196f0f3950e70285e8dbde35f2778&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059712606664929300/image.png?ex=6ad11485&is=6acfc305&hm=37349cd9317cb5502d616181d76ff22c8a8196f0f3950e70285e8dbde35f2778&" alt="Image attachment" title="Image: image.png (14.17 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059712784281112617" class="chatlog__message-container" data-message-id="1059712784281112617">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__reply-symbol"></div><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__reply"><img class="chatlog__reply-avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy">
+              <div class="chatlog__reply-author" title="Angel">Angel</div>
+              <div class="chatlog__reply-content">
+                  <span class="chatlog__reply-link" onclick="scrollToMessage(event, '1059712606664933407')"><em>Click to see attachment</em></span>
+              </div></div><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 3:00"><a href="#chatlog__message-container-1059712784281112617">3/1/23, 3:00</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Dile tu novia es una zorra de quinta ayer la Vi en xvideos</span></div></div></div></div><div id="chatlog__message-container-1059712949293420704" class="chatlog__message-container" data-message-id="1059712949293420704">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 3:00">3:00 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">La reconocí por lo pinche fea que estaba</span></div></div></div></div><div id="chatlog__message-container-1059713054260072509" class="chatlog__message-container" data-message-id="1059713054260072509">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 3:01">3:01 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><video class="chatlog__attachment-media" controls><source src="https://cdn.discordapp.com/attachments/1050499538458247169/1059713053983244318/video_1672463425829.mp4?ex=6ad114f0&is=6acfc370&hm=d6a619b131a030d1985a2326953d90608df928a5e9adeb3a87db2f1d8f32df46&" title="Video: video_1672463425829.mp4 (1.99 MB)"></video></div></div></div></div><div id="chatlog__message-container-1059713176066854993" class="chatlog__message-container" data-message-id="1059713176066854993">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 3:01">3:01 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><video class="chatlog__attachment-media" controls><source src="https://cdn.discordapp.com/attachments/1050499538458247169/1059713175781654548/video_1672463398256.mp4?ex=6ad1150d&is=6acfc38d&hm=871992044665d76e5995db6d2c74c58a6ba67873e5a0a54ab52a1889d37d7f1b&" title="Video: video_1672463398256.mp4 (1.99 MB)"></video></div></div></div></div><div id="chatlog__message-container-1059713235554676786" class="chatlog__message-container" data-message-id="1059713235554676786">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 3:02">3:02 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Envíalos xD</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059713345495769199" class="chatlog__message-container" data-message-id="1059713345495769199">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 3:02"><a href="#chatlog__message-container-1059713345495769199">3/1/23, 3:02</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059713345147654195/image.png?ex=6ad11536&is=6acfc3b6&hm=71bbfe989e7646d97ce42dbef7fda88e751ab80d3c2ff12f52127a68974671dd&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059713345147654195/image.png?ex=6ad11536&is=6acfc3b6&hm=71bbfe989e7646d97ce42dbef7fda88e751ab80d3c2ff12f52127a68974671dd&" alt="Image attachment" title="Image: image.png (180.92 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059713615462146079" class="chatlog__message-container" data-message-id="1059713615462146079">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 3:03"><a href="#chatlog__message-container-1059713615462146079">3/1/23, 3:03</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059713615168553060/723491036_IMG_image_save.png?ex=6ad11576&is=6acfc3f6&hm=e83275bdbee372196d818f779c19314294b370bb4146413fe009b43ea19bedb7&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059713615168553060/723491036_IMG_image_save.png?ex=6ad11576&is=6acfc3f6&hm=e83275bdbee372196d818f779c19314294b370bb4146413fe009b43ea19bedb7&" alt="Image attachment" title="Image: 723491036_IMG_image_save.png (3.50 MB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1059713978118447155" class="chatlog__message-container" data-message-id="1059713978118447155">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 3:05">3:05 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Dile ruitzo¿Porque esos dientes de castor ?</span></div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059713977891946506/Screenshot_2022-12-28-20-42-56-549-edit_io.faceapp.jpg?ex=6ad115cc&is=6acfc44c&hm=1328bda02132c48e5cb6b5a7bdb606ccfb4f607ca43a932cf766e3cb9348a785&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059713977891946506/Screenshot_2022-12-28-20-42-56-549-edit_io.faceapp.jpg?ex=6ad115cc&is=6acfc44c&hm=1328bda02132c48e5cb6b5a7bdb606ccfb4f607ca43a932cf766e3cb9348a785&" alt="Image attachment" title="Image: Screenshot_2022-12-28-20-42-56-549-edit_io.faceapp.jpg (26.80 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059715596125736980" class="chatlog__message-container" data-message-id="1059715596125736980">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 3:11"><a href="#chatlog__message-container-1059715596125736980">3/1/23, 3:11</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059715595760844850/image.png?ex=6ad1174e&is=6acfc5ce&hm=0b1cbeaa4e879e5132d5e7ce9800e74d43191b5de031e80356bbc498cd33d3a3&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059715595760844850/image.png?ex=6ad1174e&is=6acfc5ce&hm=0b1cbeaa4e879e5132d5e7ce9800e74d43191b5de031e80356bbc498cd33d3a3&" alt="Image attachment" title="Image: image.png (73.95 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1059715609111302194" class="chatlog__message-container" data-message-id="1059715609111302194">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 3:11">3:11 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">no me jodas</span></div></div></div></div><div id="chatlog__message-container-1059715612324143184" class="chatlog__message-container" data-message-id="1059715612324143184">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 3:11">3:11 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">XD</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059715874619138158" class="chatlog__message-container" data-message-id="1059715874619138158">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 3:12"><a href="#chatlog__message-container-1059715874619138158">3/1/23, 3:12</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Trajo a su novia xD</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059715975861248030" class="chatlog__message-container" data-message-id="1059715975861248030">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 3:12"><a href="#chatlog__message-container-1059715975861248030">3/1/23, 3:12</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059715975508930580/image.png?ex=6ad117a9&is=6acfc629&hm=c3e90eac1a553ce11c64fcdfc36a9bc3b1b79c724a8b5d96cb84bc35764de37a&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059715975508930580/image.png?ex=6ad117a9&is=6acfc629&hm=c3e90eac1a553ce11c64fcdfc36a9bc3b1b79c724a8b5d96cb84bc35764de37a&" alt="Image attachment" title="Image: image.png (87.01 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059716045021138945" class="chatlog__message-container" data-message-id="1059716045021138945">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 3:13"><a href="#chatlog__message-container-1059716045021138945">3/1/23, 3:13</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Ponme en el grupo:v</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059716095122079774" class="chatlog__message-container" data-message-id="1059716095122079774">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 3:13"><a href="#chatlog__message-container-1059716095122079774">3/1/23, 3:13</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">XD</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059716575860637696" class="chatlog__message-container" data-message-id="1059716575860637696">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 3:15"><a href="#chatlog__message-container-1059716575860637696">3/1/23, 3:15</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">yo ataco a su novia y tu a ruitzo :v</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059716638930382879" class="chatlog__message-container" data-message-id="1059716638930382879">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 3:15"><a href="#chatlog__message-container-1059716638930382879">3/1/23, 3:15</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1059716638506745856/image.png?ex=6ad11847&is=6acfc6c7&hm=a22d2930be536191b3afd81a66399826138a2edf32c76589a5c56c26686ca661&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1059716638506745856/image.png?ex=6ad11847&is=6acfc6c7&hm=a22d2930be536191b3afd81a66399826138a2edf32c76589a5c56c26686ca661&" alt="Image attachment" title="Image: image.png (112.94 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1059716644198432859" class="chatlog__message-container" data-message-id="1059716644198432859">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 3:15">3:15 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">ok</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059855916096303124" class="chatlog__message-container" data-message-id="1059855916096303124">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 12:29"><a href="#chatlog__message-container-1059855916096303124">3/1/23, 12:29</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">mano</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059866606618017973" class="chatlog__message-container" data-message-id="1059866606618017973">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__reply-symbol"></div><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__reply"><img class="chatlog__reply-avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy">
+              <div class="chatlog__reply-author" title="Angel">Angel</div>
+              <div class="chatlog__reply-content">
+                  <span class="chatlog__reply-link" onclick="scrollToMessage(event, '1059855916096303124')">mano</span>
+              </div></div><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 13:11"><a href="#chatlog__message-container-1059866606618017973">3/1/23, 13:11</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">si?</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059867341703348324" class="chatlog__message-container" data-message-id="1059867341703348324">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 13:14"><a href="#chatlog__message-container-1059867341703348324">3/1/23, 13:14</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">lo siento por irme ayer en la noche</span></div></div></div></div><div id="chatlog__message-container-1059867358325395568" class="chatlog__message-container" data-message-id="1059867358325395568">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="3/1/23, 13:14">1:14 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">es que me fui a dormir</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059867391225511956" class="chatlog__message-container" data-message-id="1059867391225511956">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 13:14"><a href="#chatlog__message-container-1059867391225511956">3/1/23, 13:14</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">ha</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059867436423319552" class="chatlog__message-container" data-message-id="1059867436423319552">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 13:14"><a href="#chatlog__message-container-1059867436423319552">3/1/23, 13:14</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">y como te la pasaste</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059867504031318187" class="chatlog__message-container" data-message-id="1059867504031318187">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 13:15"><a href="#chatlog__message-container-1059867504031318187">3/1/23, 13:15</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">despues se dio buelta la tortilla</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059867574281699348" class="chatlog__message-container" data-message-id="1059867574281699348">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 13:15"><a href="#chatlog__message-container-1059867574281699348">3/1/23, 13:15</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">lol</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059867596092088450" class="chatlog__message-container" data-message-id="1059867596092088450">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="3/1/23, 13:15"><a href="#chatlog__message-container-1059867596092088450">3/1/23, 13:15</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">no nos disculpamos pero admitio que ruitzo es algo pendejo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1059867638249041950" class="chatlog__message-container" data-message-id="1059867638249041950">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="3/1/23, 13:15"><a href="#chatlog__message-container-1059867638249041950">3/1/23, 13:15</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">si</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061101862692061216" class="chatlog__message-container" data-message-id="1061101862692061216">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="6/1/23, 22:59"><a href="#chatlog__message-container-1061101862692061216">6/1/23, 22:59</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1061101862297804871/image.png?ex=6ad1851e&is=6ad0339e&hm=4ea28d330e8abc0cbbb444e02fb0a5e33f111daa6a24582c91c4a24c68e29b60&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1061101862297804871/image.png?ex=6ad1851e&is=6ad0339e&hm=4ea28d330e8abc0cbbb444e02fb0a5e33f111daa6a24582c91c4a24c68e29b60&" alt="Image attachment" title="Image: image.png (551.53 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061101994762326107" class="chatlog__message-container" data-message-id="1061101994762326107">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="6/1/23, 23:00"><a href="#chatlog__message-container-1061101994762326107">6/1/23, 23:00</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">hasta en su grupo aparte</span></div></div></div></div><div id="chatlog__message-container-1061102256952447017" class="chatlog__message-container" data-message-id="1061102256952447017">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="6/1/23, 23:01">11:01 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">borralos</span></div></div></div></div><div id="chatlog__message-container-1061102298522202223" class="chatlog__message-container" data-message-id="1061102298522202223">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="6/1/23, 23:01">11:01 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">haz video si es nesezario</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061102322857558107" class="chatlog__message-container" data-message-id="1061102322857558107">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="6/1/23, 23:01"><a href="#chatlog__message-container-1061102322857558107">6/1/23, 23:01</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1061102322333257782/image.png?ex=6ad1858b&is=6ad0340b&hm=2c42d583f82cd91cbf5d0fc6d09fcd64546e59b2caa0e3aa035ab282020f6561&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1061102322333257782/image.png?ex=6ad1858b&is=6ad0340b&hm=2c42d583f82cd91cbf5d0fc6d09fcd64546e59b2caa0e3aa035ab282020f6561&" alt="Image attachment" title="Image: image.png (226.56 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061102477702869072" class="chatlog__message-container" data-message-id="1061102477702869072">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="6/1/23, 23:02"><a href="#chatlog__message-container-1061102477702869072">6/1/23, 23:02</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">borralos de  verdad</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061102598792417321" class="chatlog__message-container" data-message-id="1061102598792417321">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="6/1/23, 23:02"><a href="#chatlog__message-container-1061102598792417321">6/1/23, 23:02</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">ya listo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061102653721018448" class="chatlog__message-container" data-message-id="1061102653721018448">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="6/1/23, 23:03"><a href="#chatlog__message-container-1061102653721018448">6/1/23, 23:03</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">le diste a la papelera?</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061102658074722324" class="chatlog__message-container" data-message-id="1061102658074722324">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="6/1/23, 23:03"><a href="#chatlog__message-container-1061102658074722324">6/1/23, 23:03</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1061102657688838225/image.png?ex=6ad185db&is=6ad0345b&hm=c9cc29a3b0d6834fd0113912bf19ee0712b5a76db70cf5538045d3586b1157e0&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1061102657688838225/image.png?ex=6ad185db&is=6ad0345b&hm=c9cc29a3b0d6834fd0113912bf19ee0712b5a76db70cf5538045d3586b1157e0&" alt="Image attachment" title="Image: image.png (226.84 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1061102749355364524" class="chatlog__message-container" data-message-id="1061102749355364524">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="6/1/23, 23:03">11:03 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1061102749028192347/image.png?ex=6ad185f1&is=6ad03471&hm=61437486aca506d777f6ef82b7f884ff49afb65d402cd91e0b1b593387904294&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1061102749028192347/image.png?ex=6ad185f1&is=6ad03471&hm=61437486aca506d777f6ef82b7f884ff49afb65d402cd91e0b1b593387904294&" alt="Image attachment" title="Image: image.png (26.23 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1061102793282302092" class="chatlog__message-container" data-message-id="1061102793282302092">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="6/1/23, 23:03">11:03 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">ya borre todo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061102839193161738" class="chatlog__message-container" data-message-id="1061102839193161738">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="6/1/23, 23:03"><a href="#chatlog__message-container-1061102839193161738">6/1/23, 23:03</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">jamas vuelvas a manda esa imagen ni aunque fuese un meme interno</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061102903647031326" class="chatlog__message-container" data-message-id="1061102903647031326">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="6/1/23, 23:04"><a href="#chatlog__message-container-1061102903647031326">6/1/23, 23:04</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">ok</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061102929509093467" class="chatlog__message-container" data-message-id="1061102929509093467">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__reply-symbol"></div><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__reply"><div class="chatlog__reply-unknown">Original message was deleted or could not be loaded.</div></div><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="6/1/23, 23:04"><a href="#chatlog__message-container-1061102929509093467">6/1/23, 23:04</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">a y borra estó tambien</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061102971397611520" class="chatlog__message-container" data-message-id="1061102971397611520">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="6/1/23, 23:04"><a href="#chatlog__message-container-1061102971397611520">6/1/23, 23:04</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">que cosa</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061103044252684428" class="chatlog__message-container" data-message-id="1061103044252684428">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__reply-symbol"></div><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__reply"><div class="chatlog__reply-unknown">Original message was deleted or could not be loaded.</div></div><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="6/1/23, 23:04"><a href="#chatlog__message-container-1061103044252684428">6/1/23, 23:04</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">la imagen que me mandaste</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061103172011184148" class="chatlog__message-container" data-message-id="1061103172011184148">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="6/1/23, 23:05"><a href="#chatlog__message-container-1061103172011184148">6/1/23, 23:05</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">listo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061103252252405811" class="chatlog__message-container" data-message-id="1061103252252405811">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="6/1/23, 23:05"><a href="#chatlog__message-container-1061103252252405811">6/1/23, 23:05</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">y no se vuelve a hablar del tema</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1061103343612731592" class="chatlog__message-container" data-message-id="1061103343612731592">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="6/1/23, 23:05"><a href="#chatlog__message-container-1061103343612731592">6/1/23, 23:05</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">ok</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1062473993602482278" class="chatlog__message-container" data-message-id="1062473993602482278">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="10/1/23, 17:52"><a href="#chatlog__message-container-1062473993602482278">10/1/23, 17:52</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">acá está el pago XD</span></div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1062473993552134154/guillerj9.png?ex=6ad13d03&is=6acfeb83&hm=bedbeeb13c5c81cf1669adc8345b5cc94f1abe2a487ca94979385cf51a0e9629&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1062473993552134154/guillerj9.png?ex=6ad13d03&is=6acfeb83&hm=bedbeeb13c5c81cf1669adc8345b5cc94f1abe2a487ca94979385cf51a0e9629&" alt="Image attachment" title="Image: guillerj9.png (27.98 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1062476767438327829" class="chatlog__message-container" data-message-id="1062476767438327829">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="10/1/23, 18:03"><a href="#chatlog__message-container-1062476767438327829">10/1/23, 18:03</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">dice azul extreme</span></div></div></div></div><div id="chatlog__message-container-1062476795460464670" class="chatlog__message-container" data-message-id="1062476795460464670">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="10/1/23, 18:03">6:03 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">que lo saques del grupo</span></div></div></div></div><div id="chatlog__message-container-1062476828524150918" class="chatlog__message-container" data-message-id="1062476828524150918">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="10/1/23, 18:03">6:03 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">y dice que si subes el edit</span></div></div></div></div><div id="chatlog__message-container-1062476839211245658" class="chatlog__message-container" data-message-id="1062476839211245658">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="10/1/23, 18:03">6:03 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">a chuyito pandilla</span></div></div></div></div><div id="chatlog__message-container-1062476863898931210" class="chatlog__message-container" data-message-id="1062476863898931210">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="10/1/23, 18:03">6:03 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">te saca del grupo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1062477366636576860" class="chatlog__message-container" data-message-id="1062477366636576860">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="10/1/23, 18:05"><a href="#chatlog__message-container-1062477366636576860">10/1/23, 18:05</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">ha</span></div></div></div></div><div id="chatlog__message-container-1062477406096597002" class="chatlog__message-container" data-message-id="1062477406096597002">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="10/1/23, 18:05">6:05 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">si lo borré .-.</span></div></div></div></div><div id="chatlog__message-container-1062477510945808385" class="chatlog__message-container" data-message-id="1062477510945808385">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="10/1/23, 18:06">6:06 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">era un gaturro xD</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1063976168707084369" class="chatlog__message-container" data-message-id="1063976168707084369">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="14/1/23, 21:21"><a href="#chatlog__message-container-1063976168707084369">14/1/23, 21:21</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1063976168384114718/image.png?ex=6ad16e06&is=6ad01c86&hm=64e392466a7d395aca1b25e85eea204ac9b0245627eef777af168b35a477005c&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1063976168384114718/image.png?ex=6ad16e06&is=6ad01c86&hm=64e392466a7d395aca1b25e85eea204ac9b0245627eef777af168b35a477005c&" alt="Image attachment" title="Image: image.png (14.97 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1063992027177566308" class="chatlog__message-container" data-message-id="1063992027177566308">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="14/1/23, 22:24"><a href="#chatlog__message-container-1063992027177566308">14/1/23, 22:24</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1063992026988826755/image.png?ex=6ad17ccb&is=6ad02b4b&hm=99766535c2361649be3bea7c4c61655a212f45ed88186beca15096f83edea23d&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1063992026988826755/image.png?ex=6ad17ccb&is=6ad02b4b&hm=99766535c2361649be3bea7c4c61655a212f45ed88186beca15096f83edea23d&" alt="Image attachment" title="Image: image.png (13.86 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1068716622979805284" class="chatlog__message-container" data-message-id="1068716622979805284">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="27/1/23, 23:18"><a href="#chatlog__message-container-1068716622979805284">27/1/23, 23:18</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1068716622774280202/image.png?ex=6ad1896a&is=6ad037ea&hm=73c005a027e7ba7cc923d92e55a3e4c1c736674749da5865172c120616d27b78&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1068716622774280202/image.png?ex=6ad1896a&is=6ad037ea&hm=73c005a027e7ba7cc923d92e55a3e4c1c736674749da5865172c120616d27b78&" alt="Image attachment" title="Image: image.png (19.05 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1070212365087412255" class="chatlog__message-container" data-message-id="1070212365087412255">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="1/2/23, 2:21"><a href="#chatlog__message-container-1070212365087412255">1/2/23, 2:21</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1070212364818980976/guillerj9.png?ex=6ad10baf&is=6acfba2f&hm=e4d115a9ae4e1927f42ee716f297684d27a302290f0f917008c427ce8627dcd9&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1070212364818980976/guillerj9.png?ex=6ad10baf&is=6acfba2f&hm=e4d115a9ae4e1927f42ee716f297684d27a302290f0f917008c427ce8627dcd9&" alt="Image attachment" title="Image: guillerj9.png (28.00 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1070212544280674435" class="chatlog__message-container" data-message-id="1070212544280674435">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="1/2/23, 2:22">2:22 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1070212544062558308/XdMEMO.jpg?ex=6ad10bda&is=6acfba5a&hm=27f371f1cc167b801f348c7cfc8fe440491bf0c39e678f4dc496a8aa82cde812&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1070212544062558308/XdMEMO.jpg?ex=6ad10bda&is=6acfba5a&hm=27f371f1cc167b801f348c7cfc8fe440491bf0c39e678f4dc496a8aa82cde812&" alt="Image attachment" title="Image: XdMEMO.jpg (15.99 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1070212804327518249" class="chatlog__message-container" data-message-id="1070212804327518249">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="1/2/23, 2:23">2:23 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1070212804113612911/DarkyVaporeon.png?ex=6ad10c18&is=6acfba98&hm=2fcc84f6ea567dd7dc90029bdee9dd757140a01f3a10555ac3cd0084b015d53c&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1070212804113612911/DarkyVaporeon.png?ex=6ad10c18&is=6acfba98&hm=2fcc84f6ea567dd7dc90029bdee9dd757140a01f3a10555ac3cd0084b015d53c&" alt="Image attachment" title="Image: DarkyVaporeon.png (725.11 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1070213432349040650" class="chatlog__message-container" data-message-id="1070213432349040650">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="1/2/23, 2:26">2:26 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1070213432047054878/Memo_sin_cejas.png?ex=6ad10cad&is=6acfbb2d&hm=fa204ca0bec4d89a2af3ca1ebbbb13aa9c6147b0af82c5385b88f94ae4476e08&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1070213432047054878/Memo_sin_cejas.png?ex=6ad10cad&is=6acfbb2d&hm=fa204ca0bec4d89a2af3ca1ebbbb13aa9c6147b0af82c5385b88f94ae4476e08&" alt="Image attachment" title="Image: Memo_sin_cejas.png (99.87 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1070213480998785024" class="chatlog__message-container" data-message-id="1070213480998785024">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="1/2/23, 2:26">2:26 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1070213480776474684/movichairo.png?ex=6ad10cb9&is=6acfbb39&hm=3c38a82532635aebecd2d94e785909ec962e234039b10c05f73ad504d1faeca5&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1070213480776474684/movichairo.png?ex=6ad10cb9&is=6acfbb39&hm=3c38a82532635aebecd2d94e785909ec962e234039b10c05f73ad504d1faeca5&" alt="Image attachment" title="Image: movichairo.png (452.69 KB)" loading="lazy"></a></div></div></div></div><div id="chatlog__message-container-1070214330160775230" class="chatlog__message-container" data-message-id="1070214330160775230">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="1/2/23, 2:29">2:29 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1070214330307579954/GuillerTurro.png?ex=6ad10d83&is=6acfbc03&hm=6b95c6828dd68790b4daaedd8fa3b7f32a39f68aa7e80bc0e647c4fe34982524&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1070214330307579954/GuillerTurro.png?ex=6ad10d83&is=6acfbc03&hm=6b95c6828dd68790b4daaedd8fa3b7f32a39f68aa7e80bc0e647c4fe34982524&" alt="Image attachment" title="Image: GuillerTurro.png (353.90 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1070234591136317471" class="chatlog__message-container" data-message-id="1070234591136317471">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="1/2/23, 3:50"><a href="#chatlog__message-container-1070234591136317471">1/2/23, 3:50</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">jezu g el PUCK quiere hablar con el guillermo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1070244724499283978" class="chatlog__message-container" data-message-id="1070244724499283978">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="1/2/23, 4:30"><a href="#chatlog__message-container-1070244724499283978">1/2/23, 4:30</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">5 darkys captados en camara</span></div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1070244724235055144/jabali-1-e1608813697632.png?ex=6ad129d2&is=6acfd852&hm=24fc57abb21c18ecb09b002481a3da050ce6a8297863f782efb70bdc5e71732c&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1070244724235055144/jabali-1-e1608813697632.png?ex=6ad129d2&is=6acfd852&hm=24fc57abb21c18ecb09b002481a3da050ce6a8297863f782efb70bdc5e71732c&" alt="Image attachment" title="Image: jabali-1-e1608813697632.png (1.41 MB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1078763355201880164" class="chatlog__message-container" data-message-id="1078763355201880164">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="24/2/23, 16:40"><a href="#chatlog__message-container-1078763355201880164">24/2/23, 16:40</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">oye jezu g</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1078763488182288434" class="chatlog__message-container" data-message-id="1078763488182288434">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="24/2/23, 16:40"><a href="#chatlog__message-container-1078763488182288434">24/2/23, 16:40</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">que</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1078763548668334160" class="chatlog__message-container" data-message-id="1078763548668334160">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="24/2/23, 16:41"><a href="#chatlog__message-container-1078763548668334160">24/2/23, 16:41</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">me puedes mandar tu carpeta de mods</span></div></div></div></div><div id="chatlog__message-container-1078763563092549773" class="chatlog__message-container" data-message-id="1078763563092549773">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="24/2/23, 16:41">4:41 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">de minecraft</span></div></div></div></div><div id="chatlog__message-container-1078763585293000774" class="chatlog__message-container" data-message-id="1078763585293000774">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="24/2/23, 16:41">4:41 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">quiero saber algo</span></div></div></div></div><div id="chatlog__message-container-1078764662260240514" class="chatlog__message-container" data-message-id="1078764662260240514">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="24/2/23, 16:45">4:45 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">jezu g</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1078764722129735812" class="chatlog__message-container" data-message-id="1078764722129735812">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="24/2/23, 16:45"><a href="#chatlog__message-container-1078764722129735812">24/2/23, 16:45</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">Mejor te mando mi carpeta de mods</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1078767492111028244" class="chatlog__message-container" data-message-id="1078767492111028244">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="24/2/23, 16:56"><a href="#chatlog__message-container-1078767492111028244">24/2/23, 16:56</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">y no me mando nada</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1078771591191736371" class="chatlog__message-container" data-message-id="1078771591191736371">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="24/2/23, 17:13"><a href="#chatlog__message-container-1078771591191736371">24/2/23, 17:13</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">https://www.mediafire.com/file/iwxvefnhdcylrnv/mods.rar/file</span></div><div class="chatlog__embed"><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class="chatlog__embed-content-container"><div class="chatlog__embed-content"><div class="chatlog__embed-text"><div class="chatlog__embed-title"><a class="chatlog__embed-title-link" href="https://www.mediafire.com/file/iwxvefnhdcylrnv/mods.rar/file"><div class="chatlog__markdown chatlog__markdown-preserve">mods</div></a></div></div><div class="chatlog__embed-thumbnail-container"><a class="chatlog__embed-thumbnail-link" href="https://static.mediafire.com/images/filetype/download/zip.jpg"><img class="chatlog__embed-thumbnail" src="https://static.mediafire.com/images/filetype/download/zip.jpg" alt="Thumbnail" loading="lazy"></a></div></div></div></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1078909256897679502" class="chatlog__message-container" data-message-id="1078909256897679502">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="25/2/23, 2:20"><a href="#chatlog__message-container-1078909256897679502">25/2/23, 2:20</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">oye mano abre el server carajo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1089295830793584661" class="chatlog__message-container" data-message-id="1089295830793584661">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="25/3/23, 18:12"><a href="#chatlog__message-container-1089295830793584661">25/3/23, 18:12</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1089295830571298906/image.png?ex=6ad141cc&is=6acff04c&hm=2b37b60e77f527f34b5981661aeca3a256b16d1a1e0c694c37c6c3b38e73b7ba&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1089295830571298906/image.png?ex=6ad141cc&is=6acff04c&hm=2b37b60e77f527f34b5981661aeca3a256b16d1a1e0c694c37c6c3b38e73b7ba&" alt="Image attachment" title="Image: image.png (15.72 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1119278792184168478" class="chatlog__message-container" data-message-id="1119278792184168478">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="16/6/23, 10:54"><a href="#chatlog__message-container-1119278792184168478">16/6/23, 10:54</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">hey angel</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1119278835494567969" class="chatlog__message-container" data-message-id="1119278835494567969">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="16/6/23, 10:54"><a href="#chatlog__message-container-1119278835494567969">16/6/23, 10:54</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">que</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1119278905455554691" class="chatlog__message-container" data-message-id="1119278905455554691">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="16/6/23, 10:54"><a href="#chatlog__message-container-1119278905455554691">16/6/23, 10:54</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">no se que paso contigo y blue we</span><span class="chatlog__edited-timestamp" title="16/6/23, 10:55">(edited)</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1119279082941726761" class="chatlog__message-container" data-message-id="1119279082941726761">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="16/6/23, 10:55"><a href="#chatlog__message-container-1119279082941726761">16/6/23, 10:55</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">es que lo bloquee por que estaba jugando con un primo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1119279175510020236" class="chatlog__message-container" data-message-id="1119279175510020236">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="16/6/23, 10:55"><a href="#chatlog__message-container-1119279175510020236">16/6/23, 10:55</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">.-.</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1119279282594779257" class="chatlog__message-container" data-message-id="1119279282594779257">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="16/6/23, 10:56"><a href="#chatlog__message-container-1119279282594779257">16/6/23, 10:56</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">si parece idiota pero el sonido de discord me estaba jodiendo</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1119279346281087096" class="chatlog__message-container" data-message-id="1119279346281087096">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/468274538850025483/a5246c1e612f97725f65257cd5d3b36f.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="n3u4z">N3TU</span><span class="chatlog__timestamp" title="16/6/23, 10:56"><a href="#chatlog__message-container-1119279346281087096">16/6/23, 10:56</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">XD</span></div></div></div></div><div id="chatlog__message-container-1119279486123397343" class="chatlog__message-container" data-message-id="1119279486123397343">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="16/6/23, 10:57">10:57 AM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">ok te dejo we</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1127449700518334537" class="chatlog__message-container" data-message-id="1127449700518334537">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="9/7/23, 0:02"><a href="#chatlog__message-container-1127449700518334537">9/7/23, 0:02</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1127449700170223716/image.png?ex=6ad0f91b&is=6acfa79b&hm=1772703566abb5faaff843b6baa7638398247b5ebdef4c33f68dfd5e1e931ac7&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1127449700170223716/image.png?ex=6ad0f91b&is=6acfa79b&hm=1772703566abb5faaff843b6baa7638398247b5ebdef4c33f68dfd5e1e931ac7&" alt="Image attachment" title="Image: image.png (4.08 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1132706652659908670" class="chatlog__message-container" data-message-id="1132706652659908670">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="23/7/23, 12:11"><a href="#chatlog__message-container-1132706652659908670">23/7/23, 12:11</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1132706652643135539/image.png?ex=6ad0fb46&is=6acfa9c6&hm=75a83837029c94e55348afdf01afba6e5077be87e98aa817c673ac330726c233&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1132706652643135539/image.png?ex=6ad0fb46&is=6acfa9c6&hm=75a83837029c94e55348afdf01afba6e5077be87e98aa817c673ac330726c233&" alt="Image attachment" title="Image: image.png (103.34 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1133606715733049447" class="chatlog__message-container" data-message-id="1133606715733049447">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="25/7/23, 23:48"><a href="#chatlog__message-container-1133606715733049447">25/7/23, 23:48</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1133606715502374912/image.png?ex=6ad0f5c6&is=6acfa446&hm=318bf69c581a08c6344a1d8a3dbf73a326eb9c5d1be01dee842858dfcbe2c70e&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1133606715502374912/image.png?ex=6ad0f5c6&is=6acfa446&hm=318bf69c581a08c6344a1d8a3dbf73a326eb9c5d1be01dee842858dfcbe2c70e&" alt="Image attachment" title="Image: image.png (311.22 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1135009012744724540" class="chatlog__message-container" data-message-id="1135009012744724540">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="29/7/23, 20:40"><a href="#chatlog__message-container-1135009012744724540">29/7/23, 20:40</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">puta madre se me salio</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1135031719708340334" class="chatlog__message-container" data-message-id="1135031719708340334">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="29/7/23, 22:10"><a href="#chatlog__message-container-1135031719708340334">29/7/23, 22:10</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">}</span></div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1135031719490224259/image.png?ex=6ad187a9&is=6ad03629&hm=cb11ad8b806592f75f140c544c4a64b9ab433e8ba2ff539371545f804f229829&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1135031719490224259/image.png?ex=6ad187a9&is=6ad03629&hm=cb11ad8b806592f75f140c544c4a64b9ab433e8ba2ff539371545f804f229829&" alt="Image attachment" title="Image: image.png (201.19 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1137558434783436922" class="chatlog__message-container" data-message-id="1137558434783436922">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="5/8/23, 21:31"><a href="#chatlog__message-container-1137558434783436922">5/8/23, 21:31</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">pipi se olvidaron de añadirme a mi</span></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1152435306675576904" class="chatlog__message-container" data-message-id="1152435306675576904">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="15/9/23, 23:46"><a href="#chatlog__message-container-1152435306675576904">15/9/23, 23:46</a></span>
+          </div><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">oye</span></div></div></div></div><div id="chatlog__message-container-1152435341744144454" class="chatlog__message-container" data-message-id="1152435341744144454">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><div class="chatlog__short-timestamp" title="15/9/23, 23:46">11:46 PM</div></div><div class="chatlog__message-primary"><div class="chatlog__content chatlog__markdown"><span class="chatlog__markdown-preserve">ponte esto</span></div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1152435341538631810/9k.png?ex=6ad0e74c&is=6acf95cc&hm=24d1582ea22dc4c5d7575044d66cad2d6e49668e07390c616fd92c4f1070ac89&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1152435341538631810/9k.png?ex=6ad0e74c&is=6acf95cc&hm=24d1582ea22dc4c5d7575044d66cad2d6e49668e07390c616fd92c4f1070ac89&" alt="Image attachment" title="Image: 9k.png (90.67 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1156055947165315182" class="chatlog__message-container" data-message-id="1156055947165315182">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="25/9/23, 23:33"><a href="#chatlog__message-container-1156055947165315182">25/9/23, 23:33</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1156055946972373032/image.png?ex=6ad0e440&is=6acf92c0&hm=029915cd4fa36fcd550a2e488dadac765b3e23d7984f2452bc48b16cf1825e08&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1156055946972373032/image.png?ex=6ad0e440&is=6acf92c0&hm=029915cd4fa36fcd550a2e488dadac765b3e23d7984f2452bc48b16cf1825e08&" alt="Image attachment" title="Image: image.png (49.95 KB)" loading="lazy"></a></div></div></div></div></div>
+<div class="chatlog__message-group">
+<div id="chatlog__message-container-1161453276546465954" class="chatlog__message-container" data-message-id="1161453276546465954">
+        <div class="chatlog__message"><div class="chatlog__message-aside"><img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/1048433086704140329/78c6b3d01689e8deb05ab7cc6199d00a.png?size=512" alt="Avatar" loading="lazy"></div><div class="chatlog__message-primary"><div class="chatlog__header">
+              <span class="chatlog__author" title="angel1229">Angel</span><span class="chatlog__timestamp" title="10/10/23, 21:00"><a href="#chatlog__message-container-1161453276546465954">10/10/23, 21:00</a></span>
+          </div><div class="chatlog__attachment"><a href="https://cdn.discordapp.com/attachments/1050499538458247169/1161453276189970483/image.png?ex=6ad16927&is=6ad017a7&hm=be1d3ac8b9008fb9b261c763551e21dd2f53a80cc0354dd628af75ac5efbcfac&"><img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/1050499538458247169/1161453276189970483/image.png?ex=6ad16927&is=6ad017a7&hm=be1d3ac8b9008fb9b261c763551e21dd2f53a80cc0354dd628af75ac5efbcfac&" alt="Image attachment" title="Image: image.png (117.59 KB)" loading="lazy"></a></div></div></div></div></div>
+</div>
+<div class="postamble">
+    <div class="postamble__entry">Exported 166 message(s)</div>
+    <div class="postamble__entry">Timezone: UTC-3</div>
+</div>
+</body></html>
