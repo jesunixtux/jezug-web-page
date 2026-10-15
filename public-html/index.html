@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10131c">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Alejandría: archivo histórico y reconstrucción documental, cronologías, fuentes y metodología.">
+<title>Inicio — Alejandría</title>
+<style>
+:root{color-scheme:dark;--bg:#10131c;--sidebar:#151a26;--card:#191f2d;--card2:#202738;--border:#2c3549;--text:#eef0fa;--secondary:#b5bfd4;--muted:#8694ad;--blue:#8898ff;--active:#657af4;--tint:rgba(110,126,244,.14)}
+:root[data-light]{color-scheme:light;--bg:#f4f6fb;--sidebar:#eaf0f8;--card:#fff;--card2:#e9eef8;--border:#d6dfec;--text:#1e2a46;--secondary:#4e5c74;--muted:#6d7b94;--blue:#3f56c8;--active:#5266dc;--tint:rgba(79,103,216,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input{font:inherit}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;background:linear-gradient(180deg,var(--sidebar),var(--bg));border-right:1px solid var(--border);padding:30px 21px 23px}
+.brand{padding:0 11px}.brand strong{font:700 30px/1.12 Georgia,serif;letter-spacing:-.7px}.brand small{display:block;font:10px/1.6 system-ui,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.rule{height:1px;background:var(--border);margin:30px 4px 13px}.menu{display:grid;gap:4px}.menu a{min-height:45px;display:flex;align-items:center;gap:13px;padding:10px 13px;border-radius:8px;font-size:14px;color:var(--secondary)}.menu a:hover{background:var(--card2);color:var(--text)}.menu .selected{background:var(--tint);color:var(--blue);font-weight:700}.menu .separator{border-top:1px solid var(--border);margin:14px 6px 10px}
+.ico{width:19px;height:19px;flex:none;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.side-quote{margin-top:auto;padding:22px 12px 0;border-top:1px solid var(--border);font:italic 15px/1.55 Georgia,serif;color:var(--muted)}.side-quote:after{content:"";display:block;width:24px;height:2px;background:var(--blue);margin-top:16px}
+.topbar{position:sticky;top:0;z-index:5;display:flex;gap:20px;align-items:center;justify-content:space-between;padding:15px clamp(18px,3vw,35px);min-height:77px;border-bottom:1px solid var(--border);background:var(--bg)}.searchbar{display:flex;align-items:center;gap:12px;width:min(760px,100%);min-width:0;height:45px;background:var(--card);border:1px solid var(--border);border-radius:9px;padding:0 16px;color:var(--muted)}.searchbar:focus-within{border-color:var(--blue)}.searchbar input{border:0;outline:0;background:transparent;min-width:0;flex:1;color:var(--text);font-size:13px}.searchbar input::placeholder{color:var(--muted)}.theme{flex:none;border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--card);color:var(--blue);cursor:pointer}
+main{max-width:1450px;margin:0 auto;padding:15px clamp(18px,3vw,35px) 70px}.hero{min-height:377px;position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:center;border:1px solid var(--border);border-radius:12px;background:linear-gradient(105deg,#141b2a 5%,#252f43 96%)}.hero:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.56;background:linear-gradient(90deg,#111724 20%,rgba(17,23,36,.55) 63%,transparent),radial-gradient(ellipse at 87% 20%,rgba(215,225,247,.25),transparent 53%)}
+.hero-decoration{position:absolute;right:3%;top:0;width:49%;height:100%;opacity:.38;z-index:-2;overflow:hidden;pointer-events:none}.sheet{position:absolute;width:57%;height:80%;right:14%;top:14%;border:2px solid #cbd2e1;background:repeating-linear-gradient(0deg,transparent 0 17px,rgba(203,212,225,.25) 18px,transparent 19px),linear-gradient(130deg,#6d7688,#1f283a);transform:rotate(19deg);box-shadow:20px 16px 35px #0b0d17}.sheet:after{content:"";position:absolute;inset:21px;border:1px solid #c6cfda}.sheet.two{right:43%;top:-11%;width:50%;height:82%;transform:rotate(-15deg);background:repeating-linear-gradient(90deg,transparent 0 20px,rgba(203,212,225,.23) 21px,transparent 23px),linear-gradient(70deg,#647084,#192232)}
+.lens{position:absolute;width:133px;height:133px;right:2%;bottom:7%;border:12px solid #bec8d8;border-radius:50%;box-shadow:0 0 0 7px rgba(16,22,36,.4);transform:rotate(-30deg)}.lens:after{content:"";position:absolute;left:110px;top:102px;width:115px;height:16px;border-radius:10px;background:#c1cbd9;transform:rotate(50deg);transform-origin:left center}
+.hero-content{position:relative;padding:clamp(28px,4vw,50px);max-width:760px;z-index:1}.hero h1{font:700 clamp(48px,5.6vw,78px)/1 Georgia,serif;letter-spacing:-1.8px;margin:0 0 10px}.hero h2{font:400 clamp(20px,2.2vw,28px)/1.3 Georgia,serif;margin:0}.accent{width:40px;height:3px;background:var(--active);margin:21px 0}.hero p{font-size:14px;color:#c4cce0;max-width:600px;margin:0}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.button{display:inline-flex;align-items:center;gap:10px;padding:12px 19px;border-radius:6px;border:1px solid #495878;font-size:13px;font-weight:700}.button.main{background:var(--active);border-color:var(--active);color:white}.button:hover{filter:brightness(1.1)}.hero-caption{position:absolute;right:22px;bottom:15px;font:italic 14px/1.4 Georgia,serif;color:#c4cce0}
+.notice{display:flex;align-items:center;gap:13px;background:var(--tint);border:1px solid rgba(126,147,250,.32);border-radius:9px;padding:13px 17px;margin:15px 0;color:var(--secondary);font-size:13px}.notice svg{color:var(--blue)}.notice p{flex:1;margin:0}.notice strong{color:var(--text)}.notice a{color:var(--blue);font-weight:700;white-space:nowrap}.notice a:hover{text-decoration:underline}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:15px 0}.stat{display:flex;align-items:center;gap:16px;border:1px solid var(--border);border-radius:11px;background:var(--card);padding:20px;min-height:116px}.stat .picture{display:grid;place-items:center;flex:none;width:51px;height:51px;background:var(--tint);border-radius:9px;color:var(--blue)}.stat .picture svg{width:27px;height:27px}.stat .number{display:block;font:700 31px/1.1 Georgia,serif}.stat .label{display:block;font-size:13px;color:var(--secondary)}.stat .detail{margin:5px 0 0;font-size:11px;color:var(--muted)}
+.two-cols{display:grid;grid-template-columns:1.15fr .95fr;gap:15px}.panel{border:1px solid var(--border);border-radius:11px;background:var(--card);padding:23px;min-width:0}.panel-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-bottom:1px solid var(--border);padding-bottom:14px;margin-bottom:9px}.panel h3,.section-header h3{font:700 22px/1.25 Georgia,serif;margin:0}.panel-head a,.panel a.text-link{font-size:12px;color:var(--blue)}.panel-head a:hover,.text-link:hover{text-decoration:underline}
+.timeline{list-style:none;margin:0;padding:0}.timeline li{display:grid;grid-template-columns:80px 15px minmax(0,1fr);gap:12px;position:relative;padding:15px 0}.timeline li:not(:last-child):before{content:"";position:absolute;top:28px;bottom:-14px;left:99px;border-left:1px solid #57647f}.timeline time{color:var(--secondary);font-size:13px}.timeline .dot{height:12px;width:12px;background:var(--card);border:2px solid var(--blue);border-radius:50%;z-index:1;margin-top:4px}.timeline li:first-child .dot{background:var(--active);box-shadow:0 0 0 5px var(--tint)}.timeline strong{font-size:14px}.timeline p{margin:3px 0 0;color:var(--muted);font-size:12px}
+.items{display:grid;gap:9px}.item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:11px;display:flex;align-items:center;gap:12px}.item-icon{width:53px;height:53px;display:grid;place-items:center;flex:none;border-radius:7px;background:var(--tint);color:var(--blue)}.item-icon svg{width:26px;height:26px}.item strong{font-size:13px}.item p{margin:3px 0 0;font-size:11px;color:var(--muted)}.tag{display:inline-block;font-size:11px;border-radius:5px;background:rgba(130,150,190,.14);color:var(--secondary);padding:2px 6px}
+.section{margin-top:20px}.section-header{margin-bottom:13px}.section-header p{margin:5px 0 0;color:var(--secondary);font-size:13px}.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.case{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:11px}.case-icon{color:var(--blue);background:var(--tint);width:43px;height:43px;border-radius:9px;display:grid;place-items:center}.case strong{font-size:15px}.case p{color:var(--secondary);font-size:12px;line-height:1.7;margin:0}.case em{font-size:11px;color:var(--muted);font-style:normal;margin-top:auto;padding-top:8px}
+.bottom{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:17px}.bottom p{color:var(--secondary);font-size:13px;margin:8px 0}.pill-list{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0;padding:0;list-style:none}.pill-list li{border:1px solid var(--border);background:var(--card2);border-radius:5px;color:var(--secondary);padding:4px 8px;font-size:11px}
+footer{display:flex;justify-content:space-between;gap:20px;margin-top:28px;padding-top:19px;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}footer a{color:var(--blue)}.search-status{display:none;color:var(--secondary);font-size:12px;margin:8px 0 14px}.search-status.visible{display:block}[hidden]{display:none!important}
+@media(max-width:1110px){.stat{gap:10px;padding:14px}.stat .picture{width:43px;height:43px}.hero-caption{display:none}}
+@media(max-width:880px){.layout{display:block}.sidebar{position:static;height:auto;display:block;padding:17px 18px 5px}.brand{padding-left:5px}.brand strong{font-size:27px}.rule,.side-quote{display:none}.menu{display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin;margin-top:14px;padding-bottom:6px}.menu a{flex:none;white-space:nowrap;min-height:39px;padding:8px 10px;font-size:13px}.menu .separator{display:none}.topbar{position:static;min-height:65px}}
+@media(max-width:680px){main{padding:15px 14px 60px}.hero{min-height:0}.hero-content{padding:29px 22px}.hero h1{font-size:49px}.hero h2{font-size:20px}.hero-decoration{width:90%;opacity:.22}.notice{flex-wrap:wrap;align-items:flex-start}.notice a{margin-left:31px}.stats,.two-cols,.cases,.bottom{grid-template-columns:1fr}.stat{min-height:89px}.panel{padding:19px}footer{display:block}footer span{display:block;margin:8px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a href="index.html" class="brand" aria-label="Alejandría — Inicio"><strong>Alejandría</strong><small>Archivo histórico</small></a>
+<div class="rule"></div>
+<nav class="menu" aria-label="Navegación">
+<a class="selected" href="index.html" aria-current="page"><svg class="ico" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v11h-7v-7h-4v7H3z"/></svg>Inicio</a>
+<a href="#cronologia"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Cronología</a>
+<a href="#casos"><svg class="ico" viewBox="0 0 24 24"><path d="M3 5h7l2 3h9v12H3z"/></svg>Casos</a>
+<a href="#evidencias"><svg class="ico" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM14 3v5h5M8 12h8M8 16h6"/></svg>Evidencias</a>
+<a href="#metodologia"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M11 6 5 17M13 6l6 11M6 19h12"/></svg>Metodología</a>
+<a href="#fuentes"><svg class="ico" viewBox="0 0 24 24"><path d="M4 4h6c2 0 2 .5 2 2v14c0-1.5-.5-2-2-2H4zM20 4h-6c-2 0-2 .5-2 2v14c0-1.5.5-2 2-2h6z"/></svg>Fuentes</a>
+<a href="#notas"><svg class="ico" viewBox="0 0 24 24"><path d="M5 3h14v18H5zM9 8h6M9 12h6M9 16h4"/></svg>Notas</a>
+<div class="separator"></div>
+<a href="Informacion/index.html"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg>Transparencia</a>
+</nav><div class="side-quote">«Comprender el pasado también es una forma de cuidar el presente».</div>
+</aside>
+<div class="workspace">
+<header class="topbar">
+<label class="searchbar" for="search"><svg class="ico" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m15.5 15.5 5 5"/></svg><input id="search" type="search" placeholder="Buscar en esta portada…" aria-describedby="search-status"></label>
+<button id="theme" class="theme" type="button" aria-label="Cambiar tema claro u oscuro" aria-pressed="false"><svg class="ico" viewBox="0 0 24 24"><path d="M20 15A8.5 8.5 0 0 1 9 4 9 9 0 1 0 20 15z"/></svg></button>
+</header>
+<main id="inicio">
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-decoration" aria-hidden="true"><div class="sheet two"></div><div class="sheet"></div><div class="lens"></div></div>
+<div class="hero-content"><h1 id="hero-title">Alejandría</h1><h2>Archivo histórico y reconstrucción documental</h2><div class="accent"></div>
+<p>Un espacio para ordenar conversaciones, antecedentes y fuentes, distinguir hechos de interpretaciones y reconstruir acontecimientos con contexto. La documentación sigue en revisión y no constituye una verdad definitiva.</p>
+<div class="buttons"><a class="button main" href="#casos">Explorar casos <span aria-hidden="true">→</span></a><a class="button" href="#metodologia">Conocer la metodología</a></div></div><div class="hero-caption">Documentar para no olvidar.</div>
+</section>
+<div class="notice" role="note"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 4v6c0 5-3.5 8.5-9 10-5.5-1.5-9-5-9-10V6zM9 12l2 2 4-4"/></svg><p><strong>Aviso de transparencia:</strong> este archivo es mantenido por una persona involucrada en el conflicto. No debe tomarse como fuente independiente ni como una verdad absoluta.</p><a href="Informacion/index.html">Leer el aviso completo →</a></div>
+<section class="stats" aria-label="Inventario documental">
+<div class="stat"><div class="picture"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v12H3z"/></svg></div><div><span class="number">11</span><span class="label">Afirmaciones catalogadas</span><p class="detail">Matriz interna en revisión.</p></div></div>
+<div class="stat"><div class="picture"><svg class="ico" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM14 3v5h5M8 12h8"/></svg></div><div><span class="number">105</span><span class="label">Piezas visuales inventariadas</span><p class="detail">Catalogadas; no todas verificadas.</p></div></div>
+<div class="stat"><div class="picture"><svg class="ico" viewBox="0 0 24 24"><path d="M3 4h18v4H3zM5 8v13h14V8M10 13h4"/></svg></div><div><span class="number">5</span><span class="label">Exportaciones textuales</span><p class="detail">Conservadas en archivo privado.</p></div></div>
+</section>
+<p id="search-status" class="search-status" aria-live="polite"></p>
+<div class="two-cols">
+<section class="panel" id="cronologia" aria-labelledby="chron-title"><div class="panel-head"><h3 id="chron-title">Cronología reciente</h3><a href="#casos">Explorar casos →</a></div>
+<ol class="timeline">
+<li data-search-item><time datetime="2022">2022</time><span class="dot"></span><div><strong>Antecedentes y conversaciones</strong><p>Mensajes y publicaciones utilizados para contextualizar los primeros episodios conservados.</p></div></li>
+<li data-search-item><time datetime="2023">2023</time><span class="dot"></span><div><strong>Conversaciones y testimonios</strong><p>Intercambios que requieren distinguir quién dijo qué, cuándo y en qué contexto.</p></div></li>
+<li data-search-item><time datetime="2024">2024</time><span class="dot"></span><div><strong>Material público previo</strong><p>Antecedentes y versiones públicas conservadas para su comparación.</p></div></li>
+<li data-search-item><time datetime="2026">2026</time><span class="dot"></span><div><strong>Revisión documental</strong><p>Organización de fuentes, correcciones y preparación del archivo histórico.</p></div></li>
+</ol></section>
+<section class="panel" id="evidencias" aria-labelledby="ev-title"><div class="panel-head"><h3 id="ev-title">Evidencias destacadas</h3><a href="#fuentes">Tipos de fuentes →</a></div><div class="items">
+<div class="item" data-search-item><div class="item-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM14 3v5h5M8 12h8"/></svg></div><div><strong>Documentos de terceros</strong><br><span class="tag">Documentos · Dos partes</span><p>Versiones externas sujetas a contraste.</p></div></div>
+<div class="item" data-search-item><div class="item-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M5 3h14v18H5zM9 9h6M9 13h6M9 17h4"/></svg></div><div><strong>Conversaciones preservadas</strong><br><span class="tag">Mensajes · Privados</span><p>Exportaciones textuales, no disponibles para el público.</p></div></div>
+<div class="item" data-search-item><div class="item-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M3 5h18v4H3zM5 9v11h14V9"/></svg></div><div><strong>Inventario de capturas</strong><br><span class="tag">Registro documental</span><p>Referencias y procedencia de materiales catalogados.</p></div></div>
+<div class="item" data-search-item><div class="item-icon"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M11 6 5 17M13 6l6 11M6 19h12"/></svg></div><div><strong>Matriz de afirmaciones</strong><br><span class="tag">Análisis en revisión</span><p>Hechos, alegaciones, admisiones y puntos sin determinar.</p></div></div>
+</div></section></div>
+<section class="section" id="casos" aria-labelledby="cases-title"><div class="section-header"><h3 id="cases-title">Casos y períodos de estudio</h3><p>La clasificación es provisional. Las páginas individuales están todavía en preparación.</p></div>
+<div class="cases">
+<article class="case" data-search-item><div class="case-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v12H3z"/></svg></div><strong>Conflictos de 2022</strong><p>Conversaciones, antecedentes y afirmaciones, distinguiendo declaraciones de hechos efectivamente comprobados.</p><em>Expediente en preparación</em></article>
+<article class="case" data-search-item><div class="case-icon"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M11 6 5 17M13 6l6 11M6 19h12"/></svg></div><strong>Conversaciones de 2023</strong><p>Reconstrucción del contexto, participación individual y límites de los mensajes recuperados.</p><em>Expediente en preparación</em></article>
+<article class="case" data-search-item><div class="case-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M4 4h6v16H4zM14 4h6v16h-6zM10 6l4 2M10 18l4-2"/></svg></div><strong>Publicaciones posteriores</strong><p>Contraste documental de relatos y materiales difundidos durante los años siguientes.</p><em>Expediente en preparación</em></article>
+</div></section>
+<div class="bottom">
+<section class="panel section" id="metodologia"><div class="panel-head"><h3>Metodología</h3></div><p>Una captura puede demostrar que alguien escribió algo, pero no necesariamente que ejecutó lo afirmado. Clasificamos cada conclusión según sus fuentes y límites.</p><ul class="pill-list"><li>Hecho observable</li><li>Admisión</li><li>Alegación externa</li><li>Inferencia</li><li>No determinado</li></ul><a class="text-link" href="Informacion/index.html#lectura">Cómo evaluar las fuentes →</a></section>
+<section class="panel section" id="fuentes"><div class="panel-head"><h3>Fuentes originales</h3></div><p>El corpus reúne documentos, exportaciones textuales, capturas y referencias contextuales. No se exponen enlaces a materiales crudos o datos privados desde esta portada.</p><a class="text-link" href="Informacion/index.html">Transparencia y procedencia →</a></section>
+<section class="panel section" id="notas"><div class="panel-head"><h3>Notas editoriales</h3></div><p>La investigación la mantiene una parte involucrada. La información puede cambiar y cualquier rectificación relevante deberá señalar qué fuente la motivó.</p><a class="text-link" href="Informacion/index.html#correcciones">Política de correcciones →</a></section>
+<section class="panel section"><div class="panel-head"><h3>Estado del proyecto</h3></div><p>Archivo en construcción. Faltan referencias precisas, revisión editorial y preparación de las futuras páginas de casos.</p><a class="text-link" href="Informacion/index.html#estado">Ver estado completo →</a></section>
+</div>
+<footer><span>© Alejandría · Archivo documental en construcción. Una perspectiva interesada, no un veredicto.</span><span><a href="Informacion/index.html">Aviso de transparencia</a> · 15 de octubre de 2026</span></footer>
+</main></div></div>
+<script>
+(function(){
+  "use strict";
+  const input=document.getElementById("search"),status=document.getElementById("search-status");
+  const nodes=Array.from(document.querySelectorAll("[data-search-item]"));
+  const normalize=s=>s.toLocaleLowerCase("es").normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+  const original=nodes.map(n=>normalize(n.textContent));
+  input.addEventListener("input",()=>{
+    const q=normalize(input.value.trim());let found=0;
+    nodes.forEach((node,i)=>{let visible=!q||original[i].includes(q);node.hidden=!visible;if(visible)found++;});
+    status.classList.toggle("visible",!!q);
+    status.textContent=q?(found?found+" coincidencia(s) en esta portada. La búsqueda no incluye documentos privados.":"Sin coincidencias en la portada; los documentos privados no se incluyen."):"";
+  });
+  document.addEventListener("keydown",e=>{
+    if(e.key==="/"&&!["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();input.focus();}
+    if(e.key==="Escape"&&document.activeElement===input){input.value="";input.dispatchEvent(new Event("input"));input.blur();}
+  });
+  const btn=document.getElementById("theme");
+  btn.addEventListener("click",()=>{const light=!document.documentElement.hasAttribute("data-light");document.documentElement.toggleAttribute("data-light",light);btn.setAttribute("aria-pressed",String(light));});
+}());
+</script>
+</body>
+</html>
