@@ -33,6 +33,9 @@ Incorporación del 01-11-2026:
 - [Captura de agradecimiento del canal a sus seguidores — contexto, no evidencia directa de hostigamiento](../evidence/brigidos/2026-11-01_youtube-post-UgkxQ5moTz7bPb7a-agcZUF10bQmFVuCnUI1.png) (SHA-256: `1326623ab8d8d66f6ef8c0d3c83939636549e86f551005d618156af6446698c7`).
 - [Registro descriptivo y clasificación neutral](registros/2026-11-01-losbrigidos-youtube-agradecimiento-seguidores.md).
 
+- [Captura del anuncio sobre modificaciones y regreso del video de «Jezu G»](../evidence/brigidos/2026-11-01_youtube-post-UgkxJpzF4b3QoAfNm0ydwhYp0DFh6q_kSCdO.png) (SHA-256: `86ae7e554a18a80e86d22caedb1c169528f5209b4a12f7cfa215d165ad881539`).
+- [Registro de la declaración del canal y límites de verificación](registros/2026-11-01-losbrigidos-youtube-anuncio-video-jezu-g.md) — declaración contextual, no prueba por sí sola de acoso o exposición de información privada.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
