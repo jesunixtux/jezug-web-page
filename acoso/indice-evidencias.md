@@ -61,6 +61,9 @@ Incorporación del 01-11-2026:
 - [Captura del post «Puro copia y pega el down este»](../evidence/brigidos/2026-11-01_youtube-post-UgkxZEvD7ClMwS8OoLM7d5tnjUGqBTHntskU.png) (SHA-256: `37a9d54333dac8feb5daab41cd7f704d242c38c199bbc7c1e0bc7466b1f7cada`).
 - [Registro de descalificación e insulto con connotación discriminatoria](registros/2026-11-01-losbrigidos-youtube-meme-copia-pega-down.md) — destinatario inferido solo por contexto.
 
+- [Captura del post que muestra el canal «Jezu G» y lo insulta por archivarlo y hacer directos](../evidence/brigidos/2026-11-01_youtube-post-UgkxujgGFN_jXeMaMTUy0bmUL6joOzJN_3qr.png) (SHA-256: `6a3f4b384ed7b5073d4d95c64ccb9853383604e5afc4ce346d52ad83473f0a4b`).
+- [Registro de insultos dirigidos a persona identificable](registros/2026-11-01-losbrigidos-youtube-ataque-canal-archivado-directos.md) — imagen del perfil público del destinatario, descalificaciones sobre apariencia y cobardía.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
