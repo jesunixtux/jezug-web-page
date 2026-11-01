@@ -73,6 +73,9 @@ Incorporación del 01-11-2026:
 - [Captura del meme sobre «dos documentos exponiendo a Jezu G» acreditado a @HectorBlancoFT](../evidence/brigidos/2026-11-01_youtube-post-Ugkxrr7PQuDnupRf84ELd7rEakGfqD3-x__F.png) (SHA-256: `a3949c09b87ab0f4c2e698b70dcbf9eb822e4539ee9cf33f477a200a6a9babd6`).
 - [Registro y vínculo contextual con «Difundan gente»](registros/2026-11-01-losbrigidos-youtube-meme-dos-documentos-hector.md) — no se verificaron los documentos externos.
 
+- [Captura de post vulgar dirigido a «chanchito G»](../evidence/brigidos/2026-11-01_youtube-post-Ugkx0Lgsx6nQDMyLDDEkKEtySnCXCsdvP_Op.png) (SHA-256: `1eee0e8ae182ff9656d02ae9c0e1bfd86146d595db6628a2aa4524d8b92ca711`).
+- [Registro de insulto y límites de la atribución](registros/2026-11-01-losbrigidos-youtube-chanchito-g-insulto-sexualizado.md) — uso figurado de frase sexualizada, destinatario inferido por contexto.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
