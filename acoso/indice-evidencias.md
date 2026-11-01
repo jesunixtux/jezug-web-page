@@ -26,6 +26,10 @@ Incorporación del 01-11-2026:
 - [Registro de la publicación superior sobre la wiki](registros/2026-11-01-losbrigidos-youtube-post-deja-borrar-wiki.md) — URL asignada a la publicación superior por el usuario.
 - [Registro de la publicación inferior «bodrio»](registros/2026-11-01-losbrigidos-youtube-post-bodrio-compartido.md) — asociación de URL pendiente.
 
+- [Captura de publicación que acredita a @HectorBlancoFT y muestra un meme con acusaciones graves](../evidence/brigidos/2026-11-01_youtube-post-Ugkxtj0XBEnwVMlNe_q10vw-d62FSVC5-A1y.png) (SHA-256: `d0adce97b045b3e7d4a2c47b4ee96aac58d9f90c5b25dc57408807cae9e176c3`).
+- [Imagen ampliada del meme aportada por el usuario](../evidence/brigidos/2026-11-01_youtube-meme-ampliado-Ugkxtj0XBEnwVMlNe_q10vw-d62FSVC5-A1y.png) (SHA-256: `7b710f0a4a2f8ec1c5a1ff098849d9233e05df05f95e7ded1414768675e1d278`).
+- [Registro con hechos, atribuciones y límites](registros/2026-11-01-losbrigidos-youtube-meme-acusaciones-menores.md).
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
