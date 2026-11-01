@@ -58,6 +58,9 @@ Incorporación del 01-11-2026:
 - [Captura del meme «Jezu: Yo solo quería doxear gente»](../evidence/brigidos/2026-11-01_youtube-post-UgkxO0WizSlRFPkdp-rnssFlapFoy1tPTekW.png) (SHA-256: `2978c7cf273d9408eea093eae8ae9ff6dbe2dd7f73260687f1667d34bb1b7d69`).
 - [Registro de la atribución satírica y límites](registros/2026-11-01-losbrigidos-youtube-meme-jezu-yo-queria-doxear.md) — frase ficticia, no admisión real.
 
+- [Captura del post «Puro copia y pega el down este»](../evidence/brigidos/2026-11-01_youtube-post-UgkxZEvD7ClMwS8OoLM7d5tnjUGqBTHntskU.png) (SHA-256: `37a9d54333dac8feb5daab41cd7f704d242c38c199bbc7c1e0bc7466b1f7cada`).
+- [Registro de descalificación e insulto con connotación discriminatoria](registros/2026-11-01-losbrigidos-youtube-meme-copia-pega-down.md) — destinatario inferido solo por contexto.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
