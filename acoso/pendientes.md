@@ -34,3 +34,11 @@ Algunas capturas de publicaciones de YouTube ya parecen estar preservadas en `ev
 - **Correspondencia informada por el usuario (01-11-2026):** publicación inferior, «chancho G». La publicación superior, «tu juego», sigue sin URL asignada.
 - **Verificación independiente del contenido de la URL y fecha exacta:** pendiente.
 - **Ficha asociada:** [registro de la publicación «chancho G»](registros/2026-11-01-losbrigidos-youtube-post-chancho-g.md).
+
+## URL de Comunidad aportada el 01-11-2026: capturas de wiki/bodrio
+
+- **URL exacta:** https://www.youtube.com/post/UgkxdYWpojRMC1Yv8JHJ470OH5NfZJKOmkvA
+- **Fuente:** aportada por la persona que archiva junto con la captura de [dos publicaciones («wiki» y «bodrio»)](../evidence/brigidos/2026-11-01_youtube-comunidad-wiki-y-publicacion-no-disponible.png).
+- **Asociación:** pendiente de confirmar si corresponde a la publicación superior («Jezu deja de borrar tu wiki») o a la inferior («Puro bodrio...»). No atribuir la URL a ambas sin confirmación.
+- **Estado del elemento compartido inferior:** la interfaz muestra «Esta publicación ya no está disponible»; causa desconocida.
+- **Verificación independiente de URL y fecha:** pendiente.

@@ -22,6 +22,10 @@ Incorporación del 01-11-2026:
 - [Captura de mención directa a @MENUTCFG con insultos](../evidence/brigidos/2026-11-01_youtube-post-UgkxrkHgNnoele_UHPXwt5D-dHp04Bb-PhMB.png) (SHA-256: `7c21912681cfd83c5a84e9ece8becdcb6277dba8a7f4db4a51334bb20bd60e22`).
 - [Registro documental de la mención e insulto sobre apariencia](registros/2026-11-01-losbrigidos-youtube-mencion-menutcfg-waton.md).
 
+- [Captura conjunta: meme sobre la wiki y publicación compartida no disponible](../evidence/brigidos/2026-11-01_youtube-comunidad-wiki-y-publicacion-no-disponible.png) (SHA-256: `774ea474f1871185ecbff8fa3b97a0a9a8c76bbf74d8c27daccae2ff2ab46df4`).
+- [Registro de la publicación superior sobre la wiki](registros/2026-11-01-losbrigidos-youtube-post-deja-borrar-wiki.md) — asociación de URL pendiente.
+- [Registro de la publicación inferior «bodrio»](registros/2026-11-01-losbrigidos-youtube-post-bodrio-compartido.md) — asociación de URL pendiente.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
