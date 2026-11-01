@@ -14,6 +14,12 @@
 - Debajo aparece un contenedor de contenido compartido con el aviso «Esta publicación ya no está disponible».
 - La imagen no muestra el contenido de la publicación originalmente compartida, ni su autor, ni la causa de su indisponibilidad.
 
+## Aclaración aportada el 01-11-2026
+
+- Según la persona que entregó la captura, la publicación superior es una respuesta o comentario dirigido a **otra publicación que actualmente no está disponible**.
+- Esta aclaración contextual no permite determinar el contenido exacto del post original, su autor ni por qué dejó de estar disponible.
+- Se conserva la captura de la respuesta tal como fue entregada; no se interpreta la indisponibilidad del post original como una eliminación voluntaria o una sanción de plataforma.
+
 ## Interpretación y límites
 
 - El texto contiene una expresión despectiva asociada a una discapacidad, usada en tono de burla. Su pertinencia para una eventual denuncia de hostigamiento o discriminación depende del contexto y destinatario, que esta captura no determina por sí sola.
@@ -24,7 +30,7 @@
 ## Pendientes
 
 - Recuperar el URL directo de la publicación superior.
-- Verificar el contenido compartido, su destinatario y la fecha de publicación, si todavía fuera posible.
+- Recuperar, si fuera posible, el URL y el contenido del post al que responde, su destinatario y las fechas exactas. Actualmente no está disponible.
 - No convertir esta captura en prueba suficiente de una infracción de YouTube sin revisar su contexto.
 
 **Uso previsto:** evidencia de una expresión burlesca potencialmente relacionada con una secuencia de publicaciones; no es una determinación de infracción o responsabilidad legal.
