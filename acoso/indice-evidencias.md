@@ -64,6 +64,9 @@ Incorporación del 01-11-2026:
 - [Captura del post que muestra el canal «Jezu G» y lo insulta por archivarlo y hacer directos](../evidence/brigidos/2026-11-01_youtube-post-UgkxujgGFN_jXeMaMTUy0bmUL6joOzJN_3qr.png) (SHA-256: `6a3f4b384ed7b5073d4d95c64ccb9853383604e5afc4ce346d52ad83473f0a4b`).
 - [Registro de insultos dirigidos a persona identificable](registros/2026-11-01-losbrigidos-youtube-ataque-canal-archivado-directos.md) — imagen del perfil público del destinatario, descalificaciones sobre apariencia y cobardía.
 
+- [Captura de meme «Zimbabue / Jezu de la nada en su canal»](../evidence/brigidos/2026-11-01_youtube-post-UgkxlBa0sTQmTfWV4MXNQEBfSk7l8OEmAkLr.png) (SHA-256: `9e4097ea90bed04bc931690215481a84307cf7b8d77c8128439c8ee65d85c970`).
+- [Registro de referencia nominal sin insultos explícitos](registros/2026-11-01-losbrigidos-youtube-meme-jezu-zimbabwe.md) — contexto de la serie de caricaturas, interpretación incierta.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
