@@ -19,6 +19,9 @@ Incorporación del 01-11-2026:
 - [Captura del meme sobre Ingeniería Informática y «doxeo»](../evidence/brigidos/2026-11-01_youtube-post-UgkxYQWw7L6O0pvELQmKbzCfmTokv9rMFwz6.png) (SHA-256: `29b7d97209e29863a29ebefdfa0438ba8f842b9f52aa9e9a029ce1354d6e3c46`).
 - [Registro documental y límites de la publicación](registros/2026-11-01-losbrigidos-youtube-meme-ingenieria-doxeo.md).
 
+- [Captura de mención directa a @MENUTCFG con insultos](../evidence/brigidos/2026-11-01_youtube-post-UgkxrkHgNnoele_UHPXwt5D-dHp04Bb-PhMB.png) (SHA-256: `7c21912681cfd83c5a84e9ece8becdcb6277dba8a7f4db4a51334bb20bd60e22`).
+- [Registro documental de la mención e insulto sobre apariencia](registros/2026-11-01-losbrigidos-youtube-mencion-menutcfg-waton.md).
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
