@@ -4,7 +4,7 @@
 **Autor visible:** «Los brigidos MAS BRIGIDOS QUE NUNCA».
 **Plataforma:** YouTube, publicación de Comunidad.
 **Fecha exacta:** no determinada (la interfaz indica «hace 5 meses»).
-**URL directa de esta publicación:** pendiente de asociación; se aportó una URL para una captura que contiene dos publicaciones.
+**URL directa de esta publicación:** https://www.youtube.com/post/UgkxdYWpojRMC1Yv8JHJ470OH5NfZJKOmkvA (asignada a la publicación superior por la persona que archiva el 01-11-2026; sin verificación independiente).
 **Imagen original compartida por ambas entradas:** [captura preservada](../../evidence/brigidos/2026-11-01_youtube-comunidad-wiki-y-publicacion-no-disponible.png).
 **SHA-256:** `774ea474f1871185ecbff8fa3b97a0a9a8c76bbf74d8c27daccae2ff2ab46df4`.
 
@@ -24,7 +24,7 @@
 
 ## Pendientes
 
-- Identificar si la URL aportada corresponde a esta publicación superior.
+- Verificar independientemente la correspondencia de la URL aportada con esta publicación superior.
 - Verificar, si es posible, fecha exacta, texto e imagen del post de manera independiente.
 - No atribuir al creador de la publicación la autoría original de la imagen sin evidencia.
 

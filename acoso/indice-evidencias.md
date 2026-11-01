@@ -23,7 +23,7 @@ Incorporación del 01-11-2026:
 - [Registro documental de la mención e insulto sobre apariencia](registros/2026-11-01-losbrigidos-youtube-mencion-menutcfg-waton.md).
 
 - [Captura conjunta: meme sobre la wiki y publicación compartida no disponible](../evidence/brigidos/2026-11-01_youtube-comunidad-wiki-y-publicacion-no-disponible.png) (SHA-256: `774ea474f1871185ecbff8fa3b97a0a9a8c76bbf74d8c27daccae2ff2ab46df4`).
-- [Registro de la publicación superior sobre la wiki](registros/2026-11-01-losbrigidos-youtube-post-deja-borrar-wiki.md) — asociación de URL pendiente.
+- [Registro de la publicación superior sobre la wiki](registros/2026-11-01-losbrigidos-youtube-post-deja-borrar-wiki.md) — URL asignada a la publicación superior por el usuario.
 - [Registro de la publicación inferior «bodrio»](registros/2026-11-01-losbrigidos-youtube-post-bodrio-compartido.md) — asociación de URL pendiente.
 
 Piezas relevantes ya visibles en main:
