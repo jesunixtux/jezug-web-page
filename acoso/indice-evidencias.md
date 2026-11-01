@@ -12,7 +12,9 @@ Incorporación del 01-11-2026:
 - [Registro descriptivo, procedencia y límites](registros/2026-11-01-losbrigidos-youtube-post-menutcfg.md).
 - [Captura conjunta de dos publicaciones de Comunidad («tu juego» y «chancho G»)](../evidence/brigidos/2026-11-01_youtube-comunidad-dos-publicaciones-juego-chancho-g.png) (SHA-256: `819f7ac8712d421a60885ab9eed7cecd9f06223754686453ce825b615065a841`).
 - [Registro de la publicación superior](registros/2026-11-01-losbrigidos-youtube-post-juego.md) — enlace original pendiente.
-- [Registro de la publicación inferior](registros/2026-11-01-losbrigidos-youtube-post-chancho-g.md) — enlace original pendiente.
+- [Registro de la publicación inferior](registros/2026-11-01-losbrigidos-youtube-post-chancho-g.md) — enlace aportado y asociado por el usuario.
+- [Captura de la publicación «Jezu escribiendo su mamada»](../evidence/brigidos/2026-11-01_youtube-post-UgkxHCRf6u1oJrbcIgh5BCWtMIrTIGsqEzBl.png) (SHA-256: `90ea67525e75c250127cc9905b28ebc582bf65ee38aeb6c3481c2673131b5d82`).
+- [Registro de la publicación y sus límites](registros/2026-11-01-losbrigidos-youtube-jezu-escribiendo.md).
 
 Piezas relevantes ya visibles en main:
 
