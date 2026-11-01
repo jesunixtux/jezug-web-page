@@ -127,6 +127,10 @@ Ruta:
 
 Aplicar especial cautela. No republicar nombres, contactos, rostros o datos innecesarios.
 
+## Subtítulos recibidos sin exposición de datos sensibles
+
+- [Registro de recepción del SRT «Jezu G Lo que quiso ocultar»](registros/2026-11-01-losbrigidos-video-srt-metadatos.md) — 841 bloques, 33:29,840, SHA-256 documentado; contenido original recibido como adjunto y no publicado en el repositorio debido a datos personales.
+
 ## Manifest y auditoría
 
 - `evidence/manifest.json`

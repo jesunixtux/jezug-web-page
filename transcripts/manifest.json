@@ -74,8 +74,18 @@
       "availability_status": "historical_url_or_id_pending_verification",
       "transcript_original_path": null,
       "transcript_format_expected": "srt",
-      "transcript_status": "a full SRT was previously referenced in the working corpus; direct file still needs recovery",
-      "edited_path": null
+      "transcript_status": "private_copy_received_not_published",
+      "edited_path": null,
+      "transcript_format": "srt",
+      "transcript_origin": "Spanish auto-generated / DownSub; archivo aportado por el usuario",
+      "transcript_received_date": "2026-11-01",
+      "transcript_sha256": "5c9a38192485e034dbbafb2d52818ce187935cf18015c48ab4bc208c0d658c94",
+      "transcript_size_bytes": 60004,
+      "transcript_cue_count": 841,
+      "transcript_end_time": "00:33:29,840",
+      "transcript_publication": "No incorporado al repositorio público: contiene datos personales; requiere revisión y anonimización.",
+      "transcript_verification": "Integridad del archivo recibida y formato comprobados; sin cotejo con audio/video, fecha de subida ni versión antes/después de edición.",
+      "transcript_metadata_record": "acoso/registros/2026-11-01-losbrigidos-video-srt-metadatos.md"
     },
     {
       "id": "TR-2026-YT-PRIVACY-01",
