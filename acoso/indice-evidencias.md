@@ -46,6 +46,9 @@ Incorporación del 01-11-2026:
 - [Captura de la publicación «La cara que pone el doxer»](../evidence/brigidos/2026-11-01_youtube-post-Ugkxi7e9mhtzDqEiilBihvXLYMv-7rHqEc7p.png) (SHA-256: `5ff4a3789fb936326e34646ad67955ecdc4db6a03c6e27929dcb13acbcab67e8`).
 - [Registro del meme y límites de atribución](registros/2026-11-01-losbrigidos-youtube-meme-cara-doxer.md) — contexto sobre acusaciones de «doxeo», sin destinatario mencionado de forma directa.
 
+- [Captura del meme «Apenas nos ve y se asusta»](../evidence/brigidos/2026-11-01_youtube-post-UgkxSTjDqt9PB75YdrFzVQ4QPLnh6LHp1laD.png) (SHA-256: `2570bd60b069513eeb16b28adb1e80dfa3a551bd54a6d3e8af75b33eed4d7cbb`).
+- [Registro de hechos y atribución incierta](registros/2026-11-01-losbrigidos-youtube-meme-se-asusta.md) — provocación indirecta sin destinatario identificado en el post.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
