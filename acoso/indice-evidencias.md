@@ -55,6 +55,9 @@ Incorporación del 01-11-2026:
 - [Captura del meme circular «mogodown» con caricatura](../evidence/brigidos/2026-11-01_youtube-post-UgkxNSqEDUmONJtcKPtZ-6R6YWPlFig5iB-w.png) (SHA-256: `1851dc854c91e31c09d6fa5d86e10728741c6929345d8d0042cc1237de723596`).
 - [Registro de lenguaje despectivo y atribución contextual](registros/2026-11-01-losbrigidos-youtube-meme-ciclo-mogodown.md) — sin destinatario nombrado directamente.
 
+- [Captura del meme «Jezu: Yo solo quería doxear gente»](../evidence/brigidos/2026-11-01_youtube-post-UgkxO0WizSlRFPkdp-rnssFlapFoy1tPTekW.png) (SHA-256: `2978c7cf273d9408eea093eae8ae9ff6dbe2dd7f73260687f1667d34bb1b7d69`).
+- [Registro de la atribución satírica y límites](registros/2026-11-01-losbrigidos-youtube-meme-jezu-yo-queria-doxear.md) — frase ficticia, no admisión real.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
