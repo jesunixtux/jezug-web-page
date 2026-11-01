@@ -43,6 +43,9 @@ Incorporación del 01-11-2026:
 - [Segunda captura del post dirigido a @MENUTCFG, ahora con un comentario fijado visible](../evidence/brigidos/2026-11-01_youtube-post-Ugkx8Fyp44W9tzTq0UDj59xzVJaM6RYVV2sy-con-comentario-fijado.png) (SHA-256: `43523fadd4932a1662dbb0e2bf756089a40ac73a0f9c38db1e2b28a4a194cd17`).
 - [Análisis del comentario de @HectorBlancoFT y su fijación por el canal](registros/2026-11-01-losbrigidos-youtube-comentario-fijado-hectorblancoft.md) — complemento de la captura ya archivada, no una publicación distinta.
 
+- [Captura de la publicación «La cara que pone el doxer»](../evidence/brigidos/2026-11-01_youtube-post-Ugkxi7e9mhtzDqEiilBihvXLYMv-7rHqEc7p.png) (SHA-256: `5ff4a3789fb936326e34646ad67955ecdc4db6a03c6e27929dcb13acbcab67e8`).
+- [Registro del meme y límites de atribución](registros/2026-11-01-losbrigidos-youtube-meme-cara-doxer.md) — contexto sobre acusaciones de «doxeo», sin destinatario mencionado de forma directa.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
