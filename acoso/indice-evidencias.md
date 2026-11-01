@@ -70,6 +70,9 @@ Incorporación del 01-11-2026:
 - [Captura de la publicación «Difundan gente» que enlaza al video «Documentos sobre Jezu G»](../evidence/brigidos/2026-11-01_youtube-post-UgkxPnAdxWRBOnbBoVOCLDJ9zZiplxOrDlRr.png) (SHA-256: `c2fc8c2be7e0ec1ca4df00a16936697729500e54ca51f3ca58fbe7cc34c0be7e`).
 - [Registro del post, video y SRT recibido](registros/2026-11-01-losbrigidos-youtube-difundan-documentos-jezu-g.md) — llamado a difundir un hilo de X; contenido de los documentos no verificado. SRT con SHA-256 `f5df583bb1a90da41fb835e6f0ee5537ac8e28adeee2a0094fef527af6d70168` recibido como adjunto, no publicado en GitHub.
 
+- [Captura del meme sobre «dos documentos exponiendo a Jezu G» acreditado a @HectorBlancoFT](../evidence/brigidos/2026-11-01_youtube-post-Ugkxrr7PQuDnupRf84ELd7rEakGfqD3-x__F.png) (SHA-256: `a3949c09b87ab0f4c2e698b70dcbf9eb822e4539ee9cf33f477a200a6a9babd6`).
+- [Registro y vínculo contextual con «Difundan gente»](registros/2026-11-01-losbrigidos-youtube-meme-dos-documentos-hector.md) — no se verificaron los documentos externos.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
