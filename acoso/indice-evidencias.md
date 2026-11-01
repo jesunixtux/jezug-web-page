@@ -10,6 +10,9 @@ Incorporación del 01-11-2026:
 
 - [Captura de publicación de Comunidad dirigida a @MENUTCFG](../evidence/brigidos/2026-11-01_youtube-post-Ugkx8Fyp44W9tzTq0UDj59xzVJaM6RYVV2sy.png) (SHA-256: `8116018ac4a18e0cc852c829f138dce7f86022d3e80821af41bb1cda774f4c67`).
 - [Registro descriptivo, procedencia y límites](registros/2026-11-01-losbrigidos-youtube-post-menutcfg.md).
+- [Captura conjunta de dos publicaciones de Comunidad («tu juego» y «chancho G»)](../evidence/brigidos/2026-11-01_youtube-comunidad-dos-publicaciones-juego-chancho-g.png) (SHA-256: `819f7ac8712d421a60885ab9eed7cecd9f06223754686453ce825b615065a841`).
+- [Registro de la publicación superior](registros/2026-11-01-losbrigidos-youtube-post-juego.md) — enlace original pendiente.
+- [Registro de la publicación inferior](registros/2026-11-01-losbrigidos-youtube-post-chancho-g.md) — enlace original pendiente.
 
 Piezas relevantes ya visibles en main:
 
