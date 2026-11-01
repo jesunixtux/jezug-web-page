@@ -67,6 +67,9 @@ Incorporación del 01-11-2026:
 - [Captura de meme «Zimbabue / Jezu de la nada en su canal»](../evidence/brigidos/2026-11-01_youtube-post-UgkxlBa0sTQmTfWV4MXNQEBfSk7l8OEmAkLr.png) (SHA-256: `9e4097ea90bed04bc931690215481a84307cf7b8d77c8128439c8ee65d85c970`).
 - [Registro de referencia nominal sin insultos explícitos](registros/2026-11-01-losbrigidos-youtube-meme-jezu-zimbabwe.md) — contexto de la serie de caricaturas, interpretación incierta.
 
+- [Captura de la publicación «Difundan gente» que enlaza al video «Documentos sobre Jezu G»](../evidence/brigidos/2026-11-01_youtube-post-UgkxPnAdxWRBOnbBoVOCLDJ9zZiplxOrDlRr.png) (SHA-256: `c2fc8c2be7e0ec1ca4df00a16936697729500e54ca51f3ca58fbe7cc34c0be7e`).
+- [Registro del post, video y SRT recibido](registros/2026-11-01-losbrigidos-youtube-difundan-documentos-jezu-g.md) — llamado a difundir un hilo de X; contenido de los documentos no verificado. SRT con SHA-256 `f5df583bb1a90da41fb835e6f0ee5537ac8e28adeee2a0094fef527af6d70168` recibido como adjunto, no publicado en GitHub.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`

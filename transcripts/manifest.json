@@ -99,6 +99,27 @@
       "transcript_status": "pending",
       "edited_path": null,
       "notes": "Keep separate from similarly titled entries unless source verification establishes they are the same upload."
+    },
+    {
+      "id": "TR-2026-BRIGIDOS-DOCUMENTOS-01",
+      "title": "Documentos sobre Jezu G",
+      "author_or_channel": "Los brigidos MAS BRIGIDOS QUE NUNCA",
+      "date": null,
+      "media_type": "video",
+      "original_url": "https://www.youtube.com/watch?v=haEZLMvG0FQ",
+      "availability_status": "supplied_by_user_not_independently_reverified",
+      "associated_community_post": "https://www.youtube.com/post/UgkxPnAdxWRBOnbBoVOCLDJ9zZiplxOrDlRr",
+      "transcript_original_path": null,
+      "transcript_format": "srt",
+      "transcript_origin": "Spanish auto-generated / DownSub; archivo proporcionado por el usuario",
+      "transcript_status": "private_copy_received_not_published",
+      "transcript_received_date": "2026-11-01",
+      "transcript_sha256": "f5df583bb1a90da41fb835e6f0ee5537ac8e28adeee2a0094fef527af6d70168",
+      "transcript_size_bytes": 1225,
+      "transcript_cue_count": 17,
+      "transcript_end_time": "00:00:39,600",
+      "transcript_publication": "SRT original recibido como adjunto de conversación; no redistribuido públicamente; el video y sus documentos externos no fueron revisados de manera independiente.",
+      "metadata_record": "acoso/registros/2026-11-01-losbrigidos-youtube-difundan-documentos-jezu-g.md"
     }
   ]
 }
