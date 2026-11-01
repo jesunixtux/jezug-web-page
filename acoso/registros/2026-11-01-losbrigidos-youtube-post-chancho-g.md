@@ -3,7 +3,7 @@
 **Fuente:** captura original aportada en conversación el 01-11-2026, 661 × 814 px, sin alteraciones.
 **Autor visible en la interfaz:** «Los brigidos MAS BRIGIDOS QUE NUNCA».
 **Fecha exacta de la publicación:** no determinada (la interfaz muestra «hace 5 meses»).
-**URL directa de esta publicación:** pendiente de recuperar.
+**URL directa de esta publicación:** https://www.youtube.com/post/Ugkx3f6_qqeN4yWwQDDNGN0ADiZWYaTLlJBQ (asignada a la publicación inferior por la persona que archiva el 01-11-2026; no verificada de forma independiente).
 **Captura íntegra compartida por ambas entradas:** [ver original](../../evidence/brigidos/2026-11-01_youtube-comunidad-dos-publicaciones-juego-chancho-g.png).
 **SHA-256 de la captura:** `819f7ac8712d421a60885ab9eed7cecd9f06223754686453ce825b615065a841`.
 
@@ -23,7 +23,7 @@
 
 ## Pendientes
 
-- Recuperar el URL directo de la publicación inferior y verificar su fecha.
+- Comprobar de manera independiente la correspondencia de la URL aportada con la publicación inferior y verificar su fecha exacta, si es posible.
 - Si el comentario visible es relevante para una denuncia, conservarlo como evidencia separada antes de analizarlo.
 
 **Uso previsto:** preservación documental de una publicación burlesca y eventual contextualización; no es una determinación de infracción o responsabilidad legal.
