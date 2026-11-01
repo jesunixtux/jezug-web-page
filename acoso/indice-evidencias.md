@@ -52,6 +52,9 @@ Incorporación del 01-11-2026:
 - [Captura del meme «Jezu domao» con trollface](../evidence/brigidos/2026-11-01_youtube-post-UgkxEtmK5aZ1bjDfJsuu7lrmhi_kMkh9AYaN.png) (SHA-256: `5131afa02e5f7eb12e102876f6e42af66c8040b73cb5add2d18514168192fb0e`).
 - [Registro de la burla dirigida por alias](registros/2026-11-01-losbrigidos-youtube-meme-jezu-domao.md) — mención nominal sin amenaza explícita.
 
+- [Captura del meme circular «mogodown» con caricatura](../evidence/brigidos/2026-11-01_youtube-post-UgkxNSqEDUmONJtcKPtZ-6R6YWPlFig5iB-w.png) (SHA-256: `1851dc854c91e31c09d6fa5d86e10728741c6929345d8d0042cc1237de723596`).
+- [Registro de lenguaje despectivo y atribución contextual](registros/2026-11-01-losbrigidos-youtube-meme-ciclo-mogodown.md) — sin destinatario nombrado directamente.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
