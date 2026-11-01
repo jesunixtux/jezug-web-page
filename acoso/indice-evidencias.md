@@ -36,6 +36,10 @@ Incorporación del 01-11-2026:
 - [Captura del anuncio sobre modificaciones y regreso del video de «Jezu G»](../evidence/brigidos/2026-11-01_youtube-post-UgkxJpzF4b3QoAfNm0ydwhYp0DFh6q_kSCdO.png) (SHA-256: `86ae7e554a18a80e86d22caedb1c169528f5209b4a12f7cfa215d165ad881539`).
 - [Registro de la declaración del canal y límites de verificación](registros/2026-11-01-losbrigidos-youtube-anuncio-video-jezu-g.md) — declaración contextual, no prueba por sí sola de acoso o exposición de información privada.
 
+- [Captura de la publicación «Epico» con un montaje de titular sobre peso](../evidence/brigidos/2026-11-01_youtube-post-Ugkxbh6qW2LY077cke-7-bkPezOfgJBjSGHU.png) (SHA-256: `3b4af55d72c8d21ab3725f467313eb3d95ccc200382031dc17028a3cd6f4c7f7`).
+- [Imagen adicional del montaje, aportada por el usuario](../evidence/brigidos/2026-11-01_youtube-imagen-ampliada-Ugkxbh6qW2LY077cke-7-bkPezOfgJBjSGHU.png) (SHA-256: `ab47eb65688bbe257667b53f8fda373cc9690f3f16b75dde302611c9893a9f84`).
+- [Registro del contenido y sus límites](registros/2026-11-01-losbrigidos-youtube-meme-epico-titular-peso.md) — posible burla indirecta solo por contexto, sin destinatario identificado de manera explícita.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
