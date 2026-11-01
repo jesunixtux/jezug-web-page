@@ -30,6 +30,9 @@ Incorporación del 01-11-2026:
 - [Imagen ampliada del meme aportada por el usuario](../evidence/brigidos/2026-11-01_youtube-meme-ampliado-Ugkxtj0XBEnwVMlNe_q10vw-d62FSVC5-A1y.png) (SHA-256: `7b710f0a4a2f8ec1c5a1ff098849d9233e05df05f95e7ded1414768675e1d278`).
 - [Registro con hechos, atribuciones y límites](registros/2026-11-01-losbrigidos-youtube-meme-acusaciones-menores.md).
 
+- [Captura de agradecimiento del canal a sus seguidores — contexto, no evidencia directa de hostigamiento](../evidence/brigidos/2026-11-01_youtube-post-UgkxQ5moTz7bPb7a-agcZUF10bQmFVuCnUI1.png) (SHA-256: `1326623ab8d8d66f6ef8c0d3c83939636549e86f551005d618156af6446698c7`).
+- [Registro descriptivo y clasificación neutral](registros/2026-11-01-losbrigidos-youtube-agradecimiento-seguidores.md).
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
