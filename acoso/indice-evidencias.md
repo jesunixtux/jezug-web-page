@@ -40,6 +40,9 @@ Incorporación del 01-11-2026:
 - [Imagen adicional del montaje, aportada por el usuario](../evidence/brigidos/2026-11-01_youtube-imagen-ampliada-Ugkxbh6qW2LY077cke-7-bkPezOfgJBjSGHU.png) (SHA-256: `ab47eb65688bbe257667b53f8fda373cc9690f3f16b75dde302611c9893a9f84`).
 - [Registro del contenido y sus límites](registros/2026-11-01-losbrigidos-youtube-meme-epico-titular-peso.md) — posible burla indirecta solo por contexto, sin destinatario identificado de manera explícita.
 
+- [Segunda captura del post dirigido a @MENUTCFG, ahora con un comentario fijado visible](../evidence/brigidos/2026-11-01_youtube-post-Ugkx8Fyp44W9tzTq0UDj59xzVJaM6RYVV2sy-con-comentario-fijado.png) (SHA-256: `43523fadd4932a1662dbb0e2bf756089a40ac73a0f9c38db1e2b28a4a194cd17`).
+- [Análisis del comentario de @HectorBlancoFT y su fijación por el canal](registros/2026-11-01-losbrigidos-youtube-comentario-fijado-hectorblancoft.md) — complemento de la captura ya archivada, no una publicación distinta.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`

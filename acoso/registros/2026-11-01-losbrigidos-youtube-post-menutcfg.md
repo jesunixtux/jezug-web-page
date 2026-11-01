@@ -32,3 +32,7 @@
 - Cualquier presentación a YouTube debe distinguir la evidencia visible de las conclusiones pendientes de verificación.
 
 **Uso previsto:** conservación documental y eventual evaluación de denuncia de plataforma. Este registro no determina responsabilidad legal ni autoriza su incorporación a un sitio público distinto del repositorio.
+
+## Ampliación con segunda captura (01-11-2026)
+
+Una [nueva captura de la misma URL](../../evidence/brigidos/2026-11-01_youtube-post-Ugkx8Fyp44W9tzTq0UDj59xzVJaM6RYVV2sy-con-comentario-fijado.png) (SHA-256: `43523fadd4932a1662dbb0e2bf756089a40ac73a0f9c38db1e2b28a4a194cd17`) incluye el encabezado de los comentarios y un comentario visible de `@HectorBlancoFT`, identificado en la interfaz como fijado por `@Losbrigidos`. Contiene un insulto sobre apariencia y una referencia al «efecto Streisand». Se conserva la captura inicial sin modificaciones. Ver [registro complementario del comentario fijado](2026-11-01-losbrigidos-youtube-comentario-fijado-hectorblancoft.md), que distingue hechos de interpretaciones. La sección previa «No se incluyen aquí comentarios» describía exclusivamente la primera captura.
