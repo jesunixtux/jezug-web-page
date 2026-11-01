@@ -76,6 +76,9 @@ Incorporación del 01-11-2026:
 - [Captura de post vulgar dirigido a «chanchito G»](../evidence/brigidos/2026-11-01_youtube-post-Ugkx0Lgsx6nQDMyLDDEkKEtySnCXCsdvP_Op.png) (SHA-256: `1eee0e8ae182ff9656d02ae9c0e1bfd86146d595db6628a2aa4524d8b92ca711`).
 - [Registro de insulto y límites de la atribución](registros/2026-11-01-losbrigidos-youtube-chanchito-g-insulto-sexualizado.md) — uso figurado de frase sexualizada, destinatario inferido por contexto.
 
+- [Captura del acróstico despectivo «MENUTCFG significa» con imagen del perfil público](../evidence/brigidos/2026-11-01_youtube-post-UgkxdtcHqiCydqbCVOvM2ELNp2mDeag1V_Ep.png) (SHA-256: `bd10031a6c0f949fea8dddf23e1e08f07755a4edb43ee5f5d71f76acfe2dca8a`).
+- [Registro de insultos y acusaciones dirigidas a @MENUTCFG](registros/2026-11-01-losbrigidos-youtube-acrostico-menutcfg.md) — destinatario explícito, relevancia alta para evaluación de posible hostigamiento.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
