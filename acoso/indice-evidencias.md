@@ -16,6 +16,9 @@ Incorporación del 01-11-2026:
 - [Captura de la publicación «Jezu escribiendo su mamada»](../evidence/brigidos/2026-11-01_youtube-post-UgkxHCRf6u1oJrbcIgh5BCWtMIrTIGsqEzBl.png) (SHA-256: `90ea67525e75c250127cc9905b28ebc582bf65ee38aeb6c3481c2673131b5d82`).
 - [Registro de la publicación y sus límites](registros/2026-11-01-losbrigidos-youtube-jezu-escribiendo.md).
 
+- [Captura del meme sobre Ingeniería Informática y «doxeo»](../evidence/brigidos/2026-11-01_youtube-post-UgkxYQWw7L6O0pvELQmKbzCfmTokv9rMFwz6.png) (SHA-256: `29b7d97209e29863a29ebefdfa0438ba8f842b9f52aa9e9a029ce1354d6e3c46`).
+- [Registro documental y límites de la publicación](registros/2026-11-01-losbrigidos-youtube-meme-ingenieria-doxeo.md).
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
