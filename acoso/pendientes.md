@@ -25,3 +25,11 @@
 ## Community posts
 
 Algunas capturas de publicaciones de YouTube ya parecen estar preservadas en `evidence/brigidos/`, pero falta una correspondencia uno-a-uno entre cada captura y las publicaciones recordadas en conversaciones recientes. Revisarlas visualmente antes de citarlas.
+
+## Enlace de Comunidad aportado el 01-11-2026: asociación pendiente
+
+- **URL exacta:** https://www.youtube.com/post/Ugkx3f6_qqeN4yWwQDDNGN0ADiZWYaTLlJBQ
+- **Origen del dato:** enlace proporcionado por la persona que conserva el archivo en conversación el 01-11-2026.
+- **Captura candidata:** [dos publicaciones («tu juego» y «chancho G»)](../evidence/brigidos/2026-11-01_youtube-comunidad-dos-publicaciones-juego-chancho-g.png).
+- **Correspondencia:** **pendiente de determinar** si la URL pertenece a la publicación superior o a la inferior. No atribuirla a ambas sin verificación.
+- **Verificación directa del contenido de la URL:** pendiente.
