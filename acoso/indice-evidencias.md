@@ -6,6 +6,11 @@ Este archivo evita duplicar binarios. Los originales permanecen en `evidence/`.
 
 Ruta principal: `evidence/brigidos/`
 
+Incorporación del 01-11-2026:
+
+- [Captura de publicación de Comunidad dirigida a @MENUTCFG](../evidence/brigidos/2026-11-01_youtube-post-Ugkx8Fyp44W9tzTq0UDj59xzVJaM6RYVV2sy.png) (SHA-256: `8116018ac4a18e0cc852c829f138dce7f86022d3e80821af41bb1cda774f4c67`).
+- [Registro descriptivo, procedencia y límites](registros/2026-11-01-losbrigidos-youtube-post-menutcfg.md).
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
