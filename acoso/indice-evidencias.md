@@ -49,6 +49,9 @@ Incorporación del 01-11-2026:
 - [Captura del meme «Apenas nos ve y se asusta»](../evidence/brigidos/2026-11-01_youtube-post-UgkxSTjDqt9PB75YdrFzVQ4QPLnh6LHp1laD.png) (SHA-256: `2570bd60b069513eeb16b28adb1e80dfa3a551bd54a6d3e8af75b33eed4d7cbb`).
 - [Registro de hechos y atribución incierta](registros/2026-11-01-losbrigidos-youtube-meme-se-asusta.md) — provocación indirecta sin destinatario identificado en el post.
 
+- [Captura del meme «Jezu domao» con trollface](../evidence/brigidos/2026-11-01_youtube-post-UgkxEtmK5aZ1bjDfJsuu7lrmhi_kMkh9AYaN.png) (SHA-256: `5131afa02e5f7eb12e102876f6e42af66c8040b73cb5add2d18514168192fb0e`).
+- [Registro de la burla dirigida por alias](registros/2026-11-01-losbrigidos-youtube-meme-jezu-domao.md) — mención nominal sin amenaza explícita.
+
 Piezas relevantes ya visibles en main:
 
 - `fecha-desconocida_fase3-001_youtube-respuesta-publica-jezu.png`
